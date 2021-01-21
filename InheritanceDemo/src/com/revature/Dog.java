@@ -10,6 +10,7 @@ public class Dog extends Animal {//You cannot extend multiple classes
 	}
 	
 	public Dog(String name) {
+		//super() //There is an invisible super 
 		this.name=name;
 	}
 	

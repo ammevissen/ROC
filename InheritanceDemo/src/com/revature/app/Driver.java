@@ -2,6 +2,7 @@ package com.revature.app;
 
 import com.revature.Dog;
 import com.revature.Animal;
+import com.revature.Cat;
 
 public class Driver {
 
@@ -25,6 +26,24 @@ public class Driver {
 		Animal myAnimal=dog;
 		Dog myDog=dog;
 	
+		
+		Animal animal=dog2;
+		System.out.println(animal.numOfLegs);
+
+		
+		((Dog) animal).playFetch();
+		System.out.println(animal instanceof Dog);
+		
+		animal=new Cat("Fluffy");
+		System.out.println(animal.numOfLegs);
+		
+		
+		Cat whiskers =new Cat("Whiskers", "Yellow", "Tuna");
+		System.out.println(whiskers.name);
+		System.out.println(whiskers.eyeColor);
+		System.out.println(whiskers.favoriteFood);
+		System.out.println(whiskers.numOfLegs);
+		
 	}
 
 }
