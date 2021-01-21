@@ -8,7 +8,9 @@ public class Animal{
 	}
 	
 	public Animal(int numOfLegs) {
+		this();
 		this.numOfLegs=numOfLegs;
+		System.out.println("Calling Animal Constuctor with num of legs: "+ this.numOfLegs);
 	}
 	
 	public int numOfLegs;
