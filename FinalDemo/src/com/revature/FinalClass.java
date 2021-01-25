@@ -1,5 +1,5 @@
 package com.revature;
 
-public class FinalClass {
+final public class FinalClass {//nothing can extends FinalClass
 
 }

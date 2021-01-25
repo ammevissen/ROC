@@ -26,10 +26,11 @@ public class FinalVariable {
 		
 		
 		
-		final String s="Hello";
+		final String s="Hello";//Strings are immutable, with final can not assign string to different string address 
+		String s2=s.concat("There!");
 		s.concat("There!");
-		System.out.println("String s "+s);
-		
+		System.out.println("String s: "+s);
+		System.out.println("String s2: "+s2);
 		
 		
 	}
