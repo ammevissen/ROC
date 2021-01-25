@@ -1,6 +1,6 @@
 package com.revature.model;
 
-public class Rectangle extends Shape implements Drawable{
+public class Rectangle extends Shape{
 	
 	private double width;
 	private double length;

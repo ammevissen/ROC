@@ -1,6 +1,6 @@
 package com.revature.model;
 
-public abstract class Shape {
+public abstract class Shape implements Drawable, Calculable{
 
 	protected double area;
 	protected int edges;

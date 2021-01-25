@@ -3,9 +3,10 @@ package com.revature.model;
 public interface Drawable {
 
 	//interfaces can only have abstract methods;
-	
+
+	//equivalent to public static void draw();
 	void draw();//abstract keyword is added implicitly
-	//all methods in an interface will also be public
+		//all methods in an interface will also be public
 	
 	//We can have variables inside interfaces, but they will be implicitly 'public static final'
 	int testInt=1;//this is a public static final int
@@ -24,9 +25,10 @@ public interface Drawable {
 	
 	//interfaces can also contain static methods
 	//static methods, just like in classes, are not inherited
-	//
-	
-	
+	//so these belong to the interface itself just like in the case of classes.
+	public static void myStaticMethod(){
+	System.out.println("My static method");
+	}
 	
 	
 }

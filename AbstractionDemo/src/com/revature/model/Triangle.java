@@ -1,6 +1,6 @@
 package com.revature.model;
 
-public class Triangle extends Shape implements Drawable{
+public class Triangle extends Shape{
 	
 	private double base;
 	private double height;
