@@ -17,14 +17,17 @@ public class QueueDemo {
 		
 		String element;
 		while (!myQueue.isEmpty()) {
-			element=myQueue.poll();
+			element=myQueue.poll();//Retrieves and removes the head
 			System.out.println(element);
 		}
 		
 		System.out.println("========");
 		//Java for whatever reason allows us to iterate over the queue, which ideally is not what we would
 		//really want to do, because really should ideally want to only be able to look at whoever is in the front of the line
-		
+		for (String i: myQueue) {
+			System.out.println(i);
+		}
+		System.out.println("it's empty!");
 		
 		
 		

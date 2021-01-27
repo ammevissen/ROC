@@ -37,7 +37,7 @@ public class ExceptionDriver {
 		//}
 		System.out.println("program execution continued normally");
 		//This runs into the debate over whether custom exceptions should be checked or unchecked
-		//checked exceptions are clearly made visible to a developer who is using some methods that were coded by soeone eles
+		//checked exceptions are clearly made visible to a developer who is using some methods that were coded by someone else
 		//However, they will need to handle the exception
 		
 		//In the case of RuntimeExceptions, this forces you to go through and read documentation about what exceptions

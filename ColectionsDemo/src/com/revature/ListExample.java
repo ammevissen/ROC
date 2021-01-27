@@ -95,10 +95,10 @@ public class ListExample {
 		System.out.println("list1 contains 'Apples': "+list1.indexOf("Apples"));//returns index of first element of that value, and -1 if element not in list
 		
 		System.out.println("============");
-		//Collections has a lot of static methods (cannot itantiate) that can be used to perform operations on various Collections
+		//Collections has a lot of static methods (cannot instantiate) that can be used to perform operations on various Collections
 		//This is known as a utility class
 		System.out.println(list1);
-		Collections.sort(list1);//sort the list inplace
+		Collections.sort(list1);//sort the list in place
 		System.out.println(list1);
 		
 		Collections.reverse(list1);
