@@ -73,15 +73,58 @@ public class PlayerCrudDaoImpl implements PlayerCrudDao{
 	}
 
 	@Override
-	public int updatePlayerPhonenumber(int id, String phoneNumber) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int updatePlayerPhonenumber(int id, String phoneNumber) throws PlayerNotFoundException, DatabaseConnectivityException{
+		PlayerCrudDao PCD=new PlayerCrudDaoImpl();
+		
+		//https://www.postgresqltutorial.com/postgresql-update/
+		try(Connection connection=ConnectionUtil.getConnection()){
+			Player player=PCD.getPlayerById(id);
+			if (!player.getPhoneNumber().equals(phoneNumber)){
+				//String sql = "UPDATE jdbc_demo_1.player SET phone_number= "+phoneNumber+" WHERE id="+id;
+				String sql = "UPDATE jdbc_demo_1.player SET phone_number=? WHERE id=?";
+				
+				PreparedStatement preparedStatement;
+				preparedStatement = connection.prepareStatement(sql);
+				preparedStatement.setString(1, phoneNumber);
+				preparedStatement.setInt(2, id);
+
+				preparedStatement.executeUpdate();
+		
+				}
+			}
+			catch (IOException | SQLException e) {
+				System.out.println("Something went wrong with the connection");
+				e.printStackTrace();
+			}
+		
+		
+		return 1;
 	}
 
 	@Override
-	public boolean deletePlayerById(int id) {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean deletePlayerById(int id) throws DatabaseConnectivityException{
+		
+		int success=0;
+		try(Connection connection=ConnectionUtil.getConnection()){
+		
+			
+			String sql = "DELETE FROM jdbc_demo_1.player WHERE id=?";
+				
+				PreparedStatement preparedStatement;
+				preparedStatement = connection.prepareStatement(sql);
+				preparedStatement.setInt(1, id);
+				success=preparedStatement.executeUpdate();
+		
+			}
+			catch (IOException | SQLException e) {
+				System.out.println("Something went wrong with the connection");
+				e.printStackTrace();
+			}
+		if (success==1) {
+			return true;
+		}else{
+			return(false);
+		}
 	}
 
 	@Override

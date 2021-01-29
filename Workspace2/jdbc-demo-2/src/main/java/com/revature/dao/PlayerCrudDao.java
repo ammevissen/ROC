@@ -10,7 +10,7 @@ public interface PlayerCrudDao {
 
 	public int createPlayer(Player player) throws DatabaseConnectivityException;
 	public Player getPlayerById(int id) throws DatabaseConnectivityException, PlayerNotFoundException;
-	public int updatePlayerPhonenumber(int id, String phoneNumber) throws DatabaseConnectivityException;
+	public int updatePlayerPhonenumber(int id, String phoneNumber) throws PlayerNotFoundException, DatabaseConnectivityException;
 	public boolean deletePlayerById(int id) throws DatabaseConnectivityException;
 	
 	public List<Player>getAllPlayers() throws DatabaseConnectivityException;

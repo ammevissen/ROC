@@ -70,13 +70,26 @@ public class Main {
 //		}
 		
 		PlayerCrudDao dao = new PlayerCrudDaoImpl();
+//		try {
+//			Player player = dao.getPlayerById(1);
+//			System.out.println(player);
+//			
+//			List<Player> players = dao.getAllPlayers();
+//			System.out.println(players);
+//		} catch (PlayerNotFoundException | DatabaseConnectivityException e) {
+//			System.out.println(e.getMessage());
+//		}
+		
+//		try {
+//			System.out.println(dao.updatePlayerPhonenumber(1, "123-456-7890")+" good");
+//		} catch (PlayerNotFoundException | DatabaseConnectivityException e) {
+//			System.out.println(e.getMessage());
+//		}
+		
+		
 		try {
-			Player player = dao.getPlayerById(1);
-			System.out.println(player);
-			
-			List<Player> players = dao.getAllPlayers();
-			System.out.println(players);
-		} catch (PlayerNotFoundException | DatabaseConnectivityException e) {
+			System.out.println(dao.deletePlayerById(1));
+		} catch (DatabaseConnectivityException e) {
 			System.out.println(e.getMessage());
 		}
 		
