@@ -103,7 +103,7 @@ public class PlayerCrudDaoImpl implements PlayerCrudDao{
 
 	@Override
 	public boolean deletePlayerById(int id) throws DatabaseConnectivityException{
-		
+		//https://www.postgresqltutorial.com/postgresql-delete/
 		int success=0;
 		try(Connection connection=ConnectionUtil.getConnection()){
 		
