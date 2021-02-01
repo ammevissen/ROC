@@ -14,10 +14,11 @@ public class Application {
 		Menu mainMenu=new MainMenu();
 		mainMenu.display();
 		
+		Menu.sc.close();
+		System.out.println("Goodbye!");
 		
 		
-		
-		
+	
 	}
 
 }
