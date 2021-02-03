@@ -13,4 +13,9 @@ public class CreateAccountMenu implements MenuSystem {
 		
 	}
 
+	@Override
+	public void displaySecure(int accountNumber) {
+		display();
+	}
+	
 }

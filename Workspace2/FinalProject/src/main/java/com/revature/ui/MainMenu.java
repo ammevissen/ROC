@@ -64,8 +64,8 @@ public class MainMenu implements MenuSystem {
 					CustomerLogin customerLogin=new CustomerLogin();
 					if (customerLogin.login(loginNumber, password)) {
 						log.debug("heading to customer menu");
-						MenuSystem customerMenu=new CustomerMenu();
-						customerMenu.display();
+						CustomerMenu customerMenu=new CustomerMenu();
+						customerMenu.displaySecure(loginNumber);
 					}else {
 						log.info("Incorrect account number and/or password");
 					}
@@ -82,6 +82,11 @@ public class MainMenu implements MenuSystem {
 			
 		}while (choice!=1);
 		log.debug("Out of while loop, exiting Main Menu");
+	}
+	
+	@Override
+	public void displaySecure(int accountNumber) {
+		display();
 	}
 
 }

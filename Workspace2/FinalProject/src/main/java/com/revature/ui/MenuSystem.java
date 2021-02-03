@@ -8,10 +8,13 @@ import com.revature.main.Application;
 
 public interface MenuSystem {
 
+
+//	private static Logger log=Logger.getLogger(MenuSystem.class);
 	public static Scanner sc=new Scanner(System.in);
-//	private static Logger log=Logger.getLogger(Application.class);
 
 	
-	public void display();
+	public void display(); 
+	
+	public void displaySecure(int accountNumber);
 	
 }
