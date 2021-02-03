@@ -1,0 +1,15 @@
+{TRACE}   [com.log4j.dem.Main]  Hello from Trace{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-02 10:33:56,161  
+{DEBUG}   [com.log4j.dem.Main]  Hello from Debug{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-02 10:33:56,163  
+{INFO}   [com.log4j.dem.Main]  Hello from Info{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-02 10:33:56,163  
+{WARN}   [com.log4j.dem.Main]  Hello from Warn{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-02 10:33:56,163  
+{ERROR}   [com.log4j.dem.Main]  Hello from Error{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-02 10:33:56,163  
+{FATAL}   [com.log4j.dem.Main]  Hello from Fatal{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-02 10:33:56,164  
+{INFO}   [com.log4j.dem.service.MyService]  hello from iAmServiceMethod1{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-02 10:33:56,165  
+{DEBUG}   [com.log4j.dem.service.MyService]  User info was entered istest Username{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-02 10:33:56,166  
+{INFO}   [com.log4j.dem.service.MyService]  bye from iAmServiceMethod1{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-02 10:33:56,166  
+{INFO}   [com.log4j.dem.Main]  Hello from Info{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-02 15:32:54,411  
+{WARN}   [com.log4j.dem.Main]  Hello from Warn{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-02 15:32:54,412  
+{ERROR}   [com.log4j.dem.Main]  Hello from Error{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-02 15:32:54,412  
+{FATAL}   [com.log4j.dem.Main]  Hello from Fatal{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-02 15:32:54,412  
+{INFO}   [com.log4j.dem.service.MyService]  hello from iAmServiceMethod1{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-02 15:32:54,432  
+{INFO}   [com.log4j.dem.service.MyService]  bye from iAmServiceMethod1{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-02 15:32:54,433  

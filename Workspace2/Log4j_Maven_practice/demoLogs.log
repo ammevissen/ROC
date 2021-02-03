@@ -1,0 +1,18 @@
+{INFO}   [com.revature.main.Driver]  Hello from Info{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:13:23,620  
+{INFO}   [com.revature.main.Driver]  Hello from Info{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:17:20,551  
+{DEBUG}   [com.revature.main.Driver]  Hello from Info{MMM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:17:20,553  
+{INFO}   [com.revature.main.Driver]  Hello from Info{MM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:18:37,220  
+{DEBUG}   [com.revature.main.Driver]  Hello from Debug{MM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:18:37,223  
+{INFO}   [com.revature.main.Driver]  Hello from Info{MM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:21:45,513  
+{DEBUG}   [com.revature.main.Driver]  Hello from Debug{MM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:21:45,517  
+{INFO}   [com.revature.main.Driver]  Hello from Info{MM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:42:54,541  
+{DEBUG}   [com.revature.main.Driver]  Hello from Debug{MM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:42:54,544  
+{INFO}   [com.revature.main.Driver]  Hello from Info{MM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:47:33,731  
+{DEBUG}   [com.revature.main.Driver]  Hello from Debug{MM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:47:33,732  
+{DEBUG}   [com.revature.main.Driver]  hello{MM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:47:43,046  
+{INFO}   [com.revature.main.Driver]  Hello from Info{MM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:48:02,390  
+{DEBUG}   [com.revature.main.Driver]  Hello from Debug{MM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:48:02,392  
+{DEBUG}   [com.revature.main.Driver]  hi{MM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:48:06,549  
+{INFO}   [com.revature.main.Driver]  End{MM-dd-yyyy EEEE z HH:mm:ss}   2021-02-03 13:48:06,549  
+{INFO}   [com.revature.main.Driver]  Hello from Info    02-03-2021 Wednesday CST 13:52:06   
+{DEBUG}   [com.revature.main.Driver]  Hello from Debug    02-03-2021 Wednesday CST 13:52:06   
