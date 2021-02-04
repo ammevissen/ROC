@@ -11,7 +11,7 @@ public class SearchForAccountEmployee implements MenuSystem{
 	@Override
 	public void display() {
 		int choice=0;
-		log.info("Employee Search for Account Menu");
+		log.info("Search for Account as Employee Menu");
 
 		do {
 			log.info("1.) Exit Employee Search for Account Menu");

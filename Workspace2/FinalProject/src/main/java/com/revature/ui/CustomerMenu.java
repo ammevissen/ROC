@@ -38,14 +38,27 @@ public class CustomerMenu implements MenuSystem {
 					log.info("Exiting Customer Menu");
 					break;
 				case 2:
-					
+					log.debug("Getting Checking Account Balance");
 					break;					
 				case 3:
+					log.debug("Getting Saving Account Balance");
+
 					break;
 				case 4:
+					log.debug("Heading to Deposit Money");
 					break;
+				case 5:
+					log.debug("Heading to Withdraw Money");
+					break;					
+				case 6:
+					log.debug("Getting Checking Account Transactions");
+
+					break;
+				case 7:
+					log.debug("Getting Saving Account Transactions");
+
 				default:
-					log.info("Pease enter a value between 1 and 4");
+					log.info("Pease enter a value between 1 and 7");
 					break;
 			}
 			
