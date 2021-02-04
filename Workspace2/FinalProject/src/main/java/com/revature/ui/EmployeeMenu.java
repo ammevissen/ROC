@@ -17,7 +17,7 @@ public class EmployeeMenu implements MenuSystem {
 			log.info("2.) Search for account");
 			log.info("3.) View transactions log");
 			//log.info("4.) Create new employee account");
-			choice=Integer.getInteger(MenuSystem.sc.nextLine());
+			choice=Integer.parseInt(MenuSystem.sc.nextLine());
 			log.debug("user's choice was "+choice);
 			switch(choice){
 				case 1:

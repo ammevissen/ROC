@@ -24,7 +24,7 @@ public class WithdrawMoney implements MenuSystem{
 			log.info("2.) Withdraw Cash or Check");
 			log.info("3.) Withdraw from another Account");
 
-			choice=Integer.getInteger(MenuSystem.sc.nextLine());
+			choice=Integer.parseInt(MenuSystem.sc.nextLine());
 			log.debug("user's choice was "+choice);
 			switch(choice){
 				case 1:
@@ -32,9 +32,11 @@ public class WithdrawMoney implements MenuSystem{
 					break;
 				case 2:
 					log.debug("Withdraw Cash or Check");
+					System.out.println("2");
 					break;					
 				case 3:
 					log.debug("Withdraw from another Account");
+					System.out.println("3");
 					break;
 
 				default:

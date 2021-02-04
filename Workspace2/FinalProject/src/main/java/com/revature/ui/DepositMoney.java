@@ -25,16 +25,18 @@ public class DepositMoney implements MenuSystem{
 			log.info("2.) Deposit Cash or Check");
 			log.info("3.) Deposit from another Account");
 
-			choice=Integer.getInteger(MenuSystem.sc.nextLine());
+			choice=Integer.parseInt(MenuSystem.sc.nextLine());
 			log.debug("user's choice was "+choice);
 			switch(choice){
 				case 1:
 					log.info("Exiting Deposit Menu");
 					break;
 				case 2:
+					System.out.println("2");
 					log.debug("Deposit Cash or Check");
 					break;					
 				case 3:
+					System.out.println("3");
 					log.debug("Deposit from another Account");
 					break;
 

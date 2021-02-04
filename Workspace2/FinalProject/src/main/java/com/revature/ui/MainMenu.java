@@ -27,7 +27,7 @@ public class MainMenu implements MenuSystem {
 			log.info("3.) Login as customer");
 			log.info("4.) Create customer account");
 			
-			choice=Integer.getInteger(MenuSystem.sc.nextLine());
+			choice=Integer.parseInt(MenuSystem.sc.nextLine());
 			log.debug("user's choice was "+choice);
 			switch(choice){
 				case 1:
@@ -36,7 +36,7 @@ public class MainMenu implements MenuSystem {
 				case 2:
 					log.debug("attempting to login to employee menu");
 					log.info("Please enter account number");
-					loginNumber=Integer.getInteger(MenuSystem.sc.nextLine());
+					loginNumber=Integer.parseInt(MenuSystem.sc.nextLine());
 					log.debug(loginNumber);
 					
 					log.info("Please enter password");
@@ -55,7 +55,7 @@ public class MainMenu implements MenuSystem {
 				case 3:
 					log.debug("attempting to login to customer menu");
 					log.info("Please enter account number");
-					loginNumber=Integer.getInteger(MenuSystem.sc.nextLine());
+					loginNumber=Integer.parseInt(MenuSystem.sc.nextLine());
 					log.debug(loginNumber);
 					
 					log.info("Please enter password");
