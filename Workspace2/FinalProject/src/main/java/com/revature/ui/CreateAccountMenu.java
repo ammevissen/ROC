@@ -2,20 +2,19 @@ package com.revature.ui;
 
 import org.apache.log4j.Logger;
 
+import com.revature.model.CustomerAccount;
+import com.revature.service.CustomerService;
+
 public class CreateAccountMenu implements MenuSystem {
 
-	private static Logger log=Logger.getLogger(MainMenu.class);
+	private static Logger log=Logger.getLogger(CreateAccountMenu.class);
 
 	@Override
 	public void display() {
-		log.debug("heading to create account");
-		System.out.println("In account creation");
-		
+		log.debug("heading to create account");		
+		CustomerService accountCreation=new CustomerService();	
+		accountCreation.accountCreation();
 	}
 
-	@Override
-	public void displaySecure(int accountNumber) {
-		display();
-	}
 	
 }

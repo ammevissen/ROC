@@ -22,7 +22,7 @@ public class ConnectionUtil {
 		String password="2005Twins";
 			
 		Connection connection=DriverManager.getConnection(url, username, password);
-		System.out.println("connected: "+connection);
+		//System.out.println("connected: "+connection);
 		return connection;
 	}
 

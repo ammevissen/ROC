@@ -2,21 +2,14 @@ package com.revature.ui;
 
 import org.apache.log4j.Logger;
 
-import com.revature.util.CustomerLogin;
-import com.revature.util.EmployeeLogin;
+//import com.revature.util.CustomerLogin;
+//import com.revature.util.EmployeeLogin;
 
 
-public class CustomerMenu implements MenuSystem {
+public class CustomerMenu implements MenuSystemSecure {
 
-	private static Logger log=Logger.getLogger(MainMenu.class);
+	private static Logger log=Logger.getLogger(CustomerMenu.class);
 
-	@Override
-	public void display() {
-		log.debug("In Customer Menu without Account Number");
-		log.info("Exiting Customer Menu");
-		
-	}
-	
 	public void displaySecure(int accountNumber) {
 		int choice=0;
 		log.info("Customer Menu");

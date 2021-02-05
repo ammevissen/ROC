@@ -35,15 +35,8 @@ public class MainMenu implements MenuSystem {
 					break;
 				case 2:
 					log.debug("attempting to login to employee menu");
-					log.info("Please enter account number");
-					loginNumber=Integer.parseInt(MenuSystem.sc.nextLine());
-					log.debug(loginNumber);
-					
-					log.info("Please enter password");
-					password=MenuSystem.sc.nextLine();
-					log.debug("password entered");
 					EmployeeLogin employeeLogin=new EmployeeLogin();
-					if (employeeLogin.login(loginNumber, password)) {
+					if (employeeLogin.login()) {
 						log.debug("heading to employee menu");
 						MenuSystem employeeMenu=new EmployeeMenu();
 						employeeMenu.display();						
@@ -54,7 +47,7 @@ public class MainMenu implements MenuSystem {
 					break;					
 				case 3:
 					log.debug("attempting to login to customer menu");
-					log.info("Please enter account number");
+					log.info("Please enter account number");  //combine login methods, pass employee/customer to differentiate 
 					loginNumber=Integer.parseInt(MenuSystem.sc.nextLine());
 					log.debug(loginNumber);
 					
@@ -83,10 +76,6 @@ public class MainMenu implements MenuSystem {
 		}while (choice!=1);
 		log.debug("Out of while loop, exiting Main Menu");
 	}
-	
-	@Override
-	public void displaySecure(int accountNumber) {
-		display();
-	}
+
 
 }

@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 
 public class EmployeeMenu implements MenuSystem {
 
-	private static Logger log=Logger.getLogger(MainMenu.class);
+	private static Logger log=Logger.getLogger(EmployeeMenu.class);
 	
 	@Override
 	public void display() {
@@ -44,10 +44,6 @@ public class EmployeeMenu implements MenuSystem {
 		log.debug("Out of while loop, exiting Employee Menu");
 
 	}
-	
-	@Override
-	public void displaySecure(int accountNumber) {
-		display();
-	}
+
 
 }

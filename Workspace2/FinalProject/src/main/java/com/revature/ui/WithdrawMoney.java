@@ -3,16 +3,10 @@ package com.revature.ui;
 import org.apache.log4j.Logger;
 
 
-public class WithdrawMoney implements MenuSystem{
+public class WithdrawMoney implements MenuSystemSecure{
 
-	private static Logger log=Logger.getLogger(MainMenu.class);
+	private static Logger log=Logger.getLogger(WithdrawMoney.class);
 	
-	@Override
-	public void display() {
-		log.debug("In Withdraw Menu without Account Number");
-		log.info("Exiting Customer Menu");
-	}
-
 	@Override
 	public void displaySecure(int accountNumber) {
 		int choice=0;

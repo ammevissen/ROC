@@ -2,10 +2,12 @@ package com.revature.ui;
 
 import org.apache.log4j.Logger;
 
+import com.revature.service.EmployeeService;
+
 
 public class SearchForAccountEmployee implements MenuSystem{
 
-	private static Logger log=Logger.getLogger(MainMenu.class);
+	private static Logger log=Logger.getLogger(SearchForAccountEmployee.class);
 
 	
 	@Override
@@ -28,24 +30,39 @@ public class SearchForAccountEmployee implements MenuSystem{
 					log.info("Exiting Employee Search for Account Menu");
 					break;
 				case 2:
-					System.out.println("2");
+					//System.out.println("2");
+					log.info("Enter the first name of the account to search for:");
+					String firstName=MenuSystem.sc.nextLine();
 					log.debug("Entering Search for Account by First Name");
+					EmployeeService.customer("firstName", firstName);
 					break;					
 				case 3:
-					System.out.println("3");
+					//System.out.println("3");
+					log.info("Enter the last name of the account to search for:");
+					String lastName=MenuSystem.sc.nextLine();
 					log.debug("Entering Search for Account by Last Name");
+					EmployeeService.customer("lastName", lastName);
 					break;
 				case 4:
-					System.out.println("4");
-					log.debug("Entering Search for Account Number");
+					//System.out.println("4");
+					log.info("Enter the account number of the account to search for:");
+					int acc=Integer.parseInt(MenuSystem.sc.nextLine());
+					log.debug("Entering Search for Account by Account Number: "+acc);
+					EmployeeService.customer("accountNumber", acc);
 					break;
 				case 5:
-					System.out.println("5");
-					log.debug("Entering Search for Checking Account Number");
+					//System.out.println("5");
+					log.info("Enter the account number of the account to search for:");
+					int accChecking=Integer.parseInt(MenuSystem.sc.nextLine());
+					log.debug("Entering Search for Account by Checking Account Number: "+accChecking);
+					EmployeeService.customer("checkingID", accChecking);
 					break;
 				case 6:
-					System.out.println("6");
-					log.debug("Entering Search for Savings Account Number");
+					//System.out.println("6");
+					log.info("Enter the account number of the account to search for:");
+					int accSaving=Integer.parseInt(MenuSystem.sc.nextLine());
+					log.debug("Entering Search for Account by Saving Account Number: "+accSaving);
+					EmployeeService.customer("savnigsID", accSaving);
 					break;
 
 				default:
@@ -57,11 +74,6 @@ public class SearchForAccountEmployee implements MenuSystem{
 		log.debug("Out of while loop, exiting Search for Account as Employee Menu");		
 	}
 
-
-	@Override
-	public void displaySecure(int accountNumber) {
-		display();
-	}
 	
 	
 

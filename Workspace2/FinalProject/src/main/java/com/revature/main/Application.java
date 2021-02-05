@@ -18,7 +18,6 @@ public class Application {
 		
 		MenuSystem.sc.close();
 		log.info("Goodbye!");
-
 		
 	}
 

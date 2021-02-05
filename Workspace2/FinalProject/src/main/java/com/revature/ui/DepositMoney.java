@@ -3,16 +3,9 @@ package com.revature.ui;
 import org.apache.log4j.Logger;
 
 
-public class DepositMoney implements MenuSystem{
+public class DepositMoney implements MenuSystemSecure{
 
-	private static Logger log=Logger.getLogger(MainMenu.class);
-
-	
-	@Override
-	public void display() {
-		log.debug("In Deposit Menu without Account Number");
-		log.info("Exiting Customer Menu");		
-	}
+	private static Logger log=Logger.getLogger(DepositMoney.class);
 
 	@Override
 	public void displaySecure(int accountNumber) {
