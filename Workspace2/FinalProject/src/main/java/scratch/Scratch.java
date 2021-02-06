@@ -230,9 +230,8 @@ public class Scratch {
 				tempResult.setAccountID(account.getInt("accountID"));
 				tempResult.setAmount(account.getInt("trasancitonAmount"));
 				tempResult.setTrasancitonType(account.getString("trasancitonType"));
-				if (account.getInt("trasanciontPartner")!=0) {
-					tempResult.setTrasanciontPartner(account.getInt("trasanciontPartner"));
-				}
+				tempResult.setTrasanciontPartner(account.getInt("trasanciontPartner"));
+				
 				
 				result.add(tempResult);
 			}

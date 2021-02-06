@@ -4,7 +4,9 @@ import org.apache.log4j.Logger;
 
 import com.revature.DAO.CustomerDAO;
 import com.revature.DAO.CustomerDAOImpl;
+import com.revature.exceptions.AccountNotFoundException;
 import com.revature.exceptions.DatabaseConnectionException;
+import com.revature.model.CustomerAccount;
 //import com.revature.ui.EmployeeMenu;
 import com.revature.ui.MenuSystem;
 import com.revature.util.EmployeeLogin;
@@ -74,13 +76,7 @@ public class CustomerService {
 		log.info("for employee verifcation:");
 		log.info("first name: "+firstName+" last name: "+lastName+" password entered"+" initial checking deposit: "+initialChecking+" initial saving deposit: "+initialSaving);
 		
-//		log.info("Please enter employee account number");
-//		int loginNumber=Integer.parseInt(MenuSystem.sc.nextLine());
-//		log.debug(loginNumber);
-//		
-//		log.info("Please enter employee password");  //move to be part of employee login method so not duplicated
-//		String passwordemployee=MenuSystem.sc.nextLine();
-//		log.debug("password entered");
+
 		EmployeeLogin employeeLogin=new EmployeeLogin();
 		
 		
@@ -113,6 +109,40 @@ public class CustomerService {
 		}
 		
 	}
+
+	public static void getAccountBalance(String searchBy, String searchFor, int account) {
+		CustomerDAO DAO=new CustomerDAOImpl();
+		CustomerAccount result=null;
+		
+		try {
+			result = DAO.getAccountInfo(searchBy, account);
+		} catch (DatabaseConnectionException e){
+			e.printStackTrace();
+		}catch(AccountNotFoundException e){
+			log.debug("customer account not found");
+		}
+		
+		if (result!=null) {
+			switch (searchFor) {
+			case "checking account balance":
+				log.info(result.getCheckingBalance());
+				break;
+			case "savings account balance":
+				log.info(result.getSavingBalance());
+				break;
+			
+			}
+		}
+		
+		
+	}
+	
+//	log.info("2.) View checking account balance");
+//	log.info("3.) View savings account balance");
+//	log.info("4.) Deposit Money");
+//	log.info("5.) Withdraw Money");
+//	log.info("6.) View checking account transactions");
+//	log.info("7.) View savings account transactions");
 	
 	
 }

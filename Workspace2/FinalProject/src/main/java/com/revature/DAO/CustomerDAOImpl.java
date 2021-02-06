@@ -188,7 +188,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	@Override
 	public List<CustomerTransaction> getTransactionsInfo(int accountNum) throws DatabaseConnectionException{
 		
-		List<CustomerTransaction> result=new ArrayList<>(); //=new CustomerAccount();
+List<CustomerTransaction> result=new ArrayList<>(); //=new CustomerAccount();
 		
 		try(Connection connection=ConnectionUtil.getConnection()){
 			
@@ -204,9 +204,8 @@ public class CustomerDAOImpl implements CustomerDAO {
 				tempResult.setAccountID(account.getInt("accountID"));
 				tempResult.setAmount(account.getInt("trasancitonAmount"));
 				tempResult.setTrasancitonType(account.getString("trasancitonType"));
-				if (account.getInt("trasanciontPartner")!=0) {
-					tempResult.setTrasanciontPartner(account.getInt("trasanciontPartner"));
-				}
+				tempResult.setTrasanciontPartner(account.getInt("trasanciontPartner"));
+				
 				
 				result.add(tempResult);
 			}

@@ -1200,3 +1200,243 @@
 {DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.trasactions WHERE accountID = 31    02-05-2021 Friday CST 17:18:29   
 {DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.trasactions WHERE accountID = 31    02-05-2021 Friday CST 17:19:28   
 {INFO}   [com.revature.DAO.CustomerDAOImpl]  CustomerTransaction [accountID=31, amount=10.0, trasancitonType=Initial Deposit, trasanciontPartner=0]    02-05-2021 Friday CST 17:19:28   
+{INFO}   [com.revature.main.Application]  Welcome to the bank    02-05-2021 Friday CST 17:19:40   
+{INFO}   [com.revature.ui.MainMenu]  Main Menu    02-05-2021 Friday CST 17:19:40   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-05-2021 Friday CST 17:19:40   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-05-2021 Friday CST 17:19:40   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-05-2021 Friday CST 17:19:40   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-05-2021 Friday CST 17:19:40   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 4    02-05-2021 Friday CST 17:19:44   
+{DEBUG}   [com.revature.ui.MainMenu]  heading to create account menu    02-05-2021 Friday CST 17:19:44   
+{DEBUG}   [com.revature.ui.CreateAccountMenu]  heading to create account    02-05-2021 Friday CST 17:19:44   
+{INFO}   [com.revature.service.CustomerService]  Please enter your first name:    02-05-2021 Friday CST 17:19:44   
+{DEBUG}   [com.revature.service.CustomerService]  first name: andy    02-05-2021 Friday CST 17:19:46   
+{INFO}   [com.revature.service.CustomerService]  Please enter your last name:    02-05-2021 Friday CST 17:19:46   
+{DEBUG}   [com.revature.service.CustomerService]  first name: mev    02-05-2021 Friday CST 17:19:47   
+{INFO}   [com.revature.service.CustomerService]  Please enter your password:    02-05-2021 Friday CST 17:19:47   
+{DEBUG}   [com.revature.service.CustomerService]  password entered    02-05-2021 Friday CST 17:19:56   
+{INFO}   [com.revature.service.CustomerService]  Please enter your initial checking acount deposit (enter 0 for none):     02-05-2021 Friday CST 17:19:56   
+{DEBUG}   [com.revature.service.CustomerService]  Initial checking amount: 10.0    02-05-2021 Friday CST 17:20:00   
+{INFO}   [com.revature.service.CustomerService]  Please enter your initial saving acount deposit (enter 0 for none):     02-05-2021 Friday CST 17:20:00   
+{DEBUG}   [com.revature.service.CustomerService]  Initial checking amount: 100.0    02-05-2021 Friday CST 17:20:01   
+{INFO}   [com.revature.service.CustomerService]  for employee verifcation:    02-05-2021 Friday CST 17:20:01   
+{INFO}   [com.revature.service.CustomerService]  first name: andy last name: mev password entered initial checking deposit: 10.0 initial saving deposit: 100.0    02-05-2021 Friday CST 17:20:01   
+{INFO}   [com.revature.service.CustomerService]  To approve, login.  To dissaprove, input incorrect login information:    02-05-2021 Friday CST 17:20:01   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee account number    02-05-2021 Friday CST 17:20:01   
+{DEBUG}   [com.revature.util.EmployeeLogin]  1    02-05-2021 Friday CST 17:20:03   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee password    02-05-2021 Friday CST 17:20:03   
+{DEBUG}   [com.revature.util.EmployeeLogin]  password entered    02-05-2021 Friday CST 17:20:09   
+{DEBUG}   [com.revature.util.EmployeeLogin]  correct password    02-05-2021 Friday CST 17:20:10   
+{DEBUG}   [com.revature.service.CustomerService]  employee has approved    02-05-2021 Friday CST 17:20:10   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  getting max account number    02-05-2021 Friday CST 17:20:10   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  New Account Number: 4    02-05-2021 Friday CST 17:20:10   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  creating acc string    02-05-2021 Friday CST 17:20:10   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  pstmt created    02-05-2021 Friday CST 17:20:10   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  pstmtChecking created    02-05-2021 Friday CST 17:20:10   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  pstmtSavking created    02-05-2021 Friday CST 17:20:10   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  account creationg executing    02-05-2021 Friday CST 17:20:10   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  result of account creation: 1    02-05-2021 Friday CST 17:20:11   
+{INFO}   [com.revature.service.CustomerService]  your account was succesfully created    02-05-2021 Friday CST 17:20:11   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-05-2021 Friday CST 17:20:11   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-05-2021 Friday CST 17:20:11   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-05-2021 Friday CST 17:20:11   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-05-2021 Friday CST 17:20:11   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 2    02-05-2021 Friday CST 17:20:17   
+{DEBUG}   [com.revature.ui.MainMenu]  attempting to login to employee menu    02-05-2021 Friday CST 17:20:17   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee account number    02-05-2021 Friday CST 17:20:17   
+{DEBUG}   [com.revature.util.EmployeeLogin]  1    02-05-2021 Friday CST 17:20:18   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee password    02-05-2021 Friday CST 17:20:18   
+{DEBUG}   [com.revature.util.EmployeeLogin]  password entered    02-05-2021 Friday CST 17:20:27   
+{DEBUG}   [com.revature.util.EmployeeLogin]  correct password    02-05-2021 Friday CST 17:20:27   
+{DEBUG}   [com.revature.ui.MainMenu]  heading to employee menu    02-05-2021 Friday CST 17:20:27   
+{INFO}   [com.revature.ui.EmployeeMenu]  Employee Menu    02-05-2021 Friday CST 17:20:27   
+{INFO}   [com.revature.ui.EmployeeMenu]  1.) Exit Employee Menu    02-05-2021 Friday CST 17:20:27   
+{INFO}   [com.revature.ui.EmployeeMenu]  2.) Search for account    02-05-2021 Friday CST 17:20:27   
+{INFO}   [com.revature.ui.EmployeeMenu]  3.) View transactions log    02-05-2021 Friday CST 17:20:27   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  user's choice was 3    02-05-2021 Friday CST 17:20:29   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  heading to view transactions as employee menu    02-05-2021 Friday CST 17:20:29   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Employee View Transactions Menu    02-05-2021 Friday CST 17:20:29   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-05-2021 Friday CST 17:20:29   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by Account Number    02-05-2021 Friday CST 17:20:29   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by Checking Account Number    02-05-2021 Friday CST 17:20:29   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by Savings Account Number    02-05-2021 Friday CST 17:20:29   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 2    02-05-2021 Friday CST 17:20:33   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Please enter the Account number of interest:     02-05-2021 Friday CST 17:20:33   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  Account Number checking: 3    02-05-2021 Friday CST 17:20:36   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.trasactions WHERE accountID = 31    02-05-2021 Friday CST 17:20:36   
+{INFO}   [com.revature.service.EmployeeService]  CustomerTransaction [accountID=31, amount=10.0, trasancitonType=Initial Deposit, trasanciontPartner=0]    02-05-2021 Friday CST 17:20:36   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.trasactions WHERE accountID = 32    02-05-2021 Friday CST 17:20:36   
+{INFO}   [com.revature.service.EmployeeService]  CustomerTransaction [accountID=32, amount=100.0, trasancitonType=Initial Deposit, trasanciontPartner=0]    02-05-2021 Friday CST 17:20:36   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-05-2021 Friday CST 17:20:36   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by Account Number    02-05-2021 Friday CST 17:20:36   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by Checking Account Number    02-05-2021 Friday CST 17:20:36   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by Savings Account Number    02-05-2021 Friday CST 17:20:36   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 3    02-05-2021 Friday CST 17:20:42   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Please enter the Checking Account number of interest:     02-05-2021 Friday CST 17:20:42   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  Initial checking amount: 31    02-05-2021 Friday CST 17:20:44   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.trasactions WHERE accountID = 31    02-05-2021 Friday CST 17:20:44   
+{INFO}   [com.revature.service.EmployeeService]  CustomerTransaction [accountID=31, amount=10.0, trasancitonType=Initial Deposit, trasanciontPartner=0]    02-05-2021 Friday CST 17:20:44   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-05-2021 Friday CST 17:20:44   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by Account Number    02-05-2021 Friday CST 17:20:44   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by Checking Account Number    02-05-2021 Friday CST 17:20:44   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by Savings Account Number    02-05-2021 Friday CST 17:20:44   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 4    02-05-2021 Friday CST 17:20:46   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Please enter the Saving Account number of interest:     02-05-2021 Friday CST 17:20:46   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  Initial checking amount: 32    02-05-2021 Friday CST 17:20:48   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.trasactions WHERE accountID = 32    02-05-2021 Friday CST 17:20:48   
+{INFO}   [com.revature.service.EmployeeService]  CustomerTransaction [accountID=32, amount=100.0, trasancitonType=Initial Deposit, trasanciontPartner=0]    02-05-2021 Friday CST 17:20:48   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-05-2021 Friday CST 17:20:48   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by Account Number    02-05-2021 Friday CST 17:20:48   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by Checking Account Number    02-05-2021 Friday CST 17:20:48   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by Savings Account Number    02-05-2021 Friday CST 17:20:48   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 4    02-05-2021 Friday CST 17:20:49   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Please enter the Saving Account number of interest:     02-05-2021 Friday CST 17:20:49   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  Initial checking amount: 32    02-05-2021 Friday CST 17:20:50   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.trasactions WHERE accountID = 32    02-05-2021 Friday CST 17:20:50   
+{INFO}   [com.revature.service.EmployeeService]  CustomerTransaction [accountID=32, amount=100.0, trasancitonType=Initial Deposit, trasanciontPartner=0]    02-05-2021 Friday CST 17:20:50   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-05-2021 Friday CST 17:20:50   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by Account Number    02-05-2021 Friday CST 17:20:50   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by Checking Account Number    02-05-2021 Friday CST 17:20:50   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by Savings Account Number    02-05-2021 Friday CST 17:20:50   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 4    02-05-2021 Friday CST 17:20:51   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Please enter the Saving Account number of interest:     02-05-2021 Friday CST 17:20:51   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  Initial checking amount: 31    02-05-2021 Friday CST 17:20:52   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.trasactions WHERE accountID = 31    02-05-2021 Friday CST 17:20:52   
+{INFO}   [com.revature.service.EmployeeService]  CustomerTransaction [accountID=31, amount=10.0, trasancitonType=Initial Deposit, trasanciontPartner=0]    02-05-2021 Friday CST 17:20:52   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-05-2021 Friday CST 17:20:52   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by Account Number    02-05-2021 Friday CST 17:20:52   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by Checking Account Number    02-05-2021 Friday CST 17:20:52   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by Savings Account Number    02-05-2021 Friday CST 17:20:52   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.trasactions WHERE accountID = 31    02-06-2021 Saturday CST 15:15:02   
+{INFO}   [com.revature.DAO.CustomerDAOImpl]  CustomerTransaction [accountID=31, amount=10.0, trasancitonType=Initial Deposit, trasanciontPartner=0]    02-06-2021 Saturday CST 15:15:02   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.trasactions WHERE accountID = 31    02-06-2021 Saturday CST 15:16:30   
+{INFO}   [com.revature.DAO.CustomerDAOImpl]  CustomerTransaction [accountID=31, amount=10.0, trasancitonType=Initial Deposit, trasanciontPartner=0]    02-06-2021 Saturday CST 15:16:30   
+{INFO}   [com.revature.main.Application]  Welcome to the bank    02-06-2021 Saturday CST 15:18:39   
+{INFO}   [com.revature.ui.MainMenu]  Main Menu    02-06-2021 Saturday CST 15:18:39   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-06-2021 Saturday CST 15:18:39   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-06-2021 Saturday CST 15:18:39   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-06-2021 Saturday CST 15:18:39   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-06-2021 Saturday CST 15:18:39   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 3    02-06-2021 Saturday CST 15:18:50   
+{DEBUG}   [com.revature.ui.MainMenu]  attempting to login to customer menu    02-06-2021 Saturday CST 15:18:50   
+{INFO}   [com.revature.ui.MainMenu]  Please enter account number    02-06-2021 Saturday CST 15:18:50   
+{DEBUG}   [com.revature.ui.MainMenu]  3    02-06-2021 Saturday CST 15:18:52   
+{INFO}   [com.revature.ui.MainMenu]  Please enter password    02-06-2021 Saturday CST 15:18:52   
+{DEBUG}   [com.revature.ui.MainMenu]  password entered    02-06-2021 Saturday CST 15:18:59   
+{DEBUG}   [com.revature.util.CustomerLogin]  correct password    02-06-2021 Saturday CST 15:18:59   
+{DEBUG}   [com.revature.ui.MainMenu]  heading to customer menu    02-06-2021 Saturday CST 15:18:59   
+{INFO}   [com.revature.ui.CustomerMenu]  Customer Menu    02-06-2021 Saturday CST 15:18:59   
+{INFO}   [com.revature.ui.CustomerMenu]  1.) Exit Customer Menu    02-06-2021 Saturday CST 15:18:59   
+{INFO}   [com.revature.ui.CustomerMenu]  2.) View checking account balance    02-06-2021 Saturday CST 15:18:59   
+{INFO}   [com.revature.ui.CustomerMenu]  3.) View savings account balance    02-06-2021 Saturday CST 15:18:59   
+{INFO}   [com.revature.ui.CustomerMenu]  4.) Deposit Money    02-06-2021 Saturday CST 15:18:59   
+{INFO}   [com.revature.ui.CustomerMenu]  5.) Withdraw Money    02-06-2021 Saturday CST 15:18:59   
+{INFO}   [com.revature.ui.CustomerMenu]  6.) View checking account transactions    02-06-2021 Saturday CST 15:18:59   
+{INFO}   [com.revature.ui.CustomerMenu]  7.) View savings account transactions    02-06-2021 Saturday CST 15:18:59   
+{DEBUG}   [com.revature.ui.CustomerMenu]  user's choice was 6    02-06-2021 Saturday CST 15:19:10   
+{DEBUG}   [com.revature.ui.CustomerMenu]  Getting Checking Account Transactions    02-06-2021 Saturday CST 15:19:10   
+{INFO}   [com.revature.ui.CustomerMenu]  1.) Exit Customer Menu    02-06-2021 Saturday CST 15:19:10   
+{INFO}   [com.revature.ui.CustomerMenu]  2.) View checking account balance    02-06-2021 Saturday CST 15:19:10   
+{INFO}   [com.revature.ui.CustomerMenu]  3.) View savings account balance    02-06-2021 Saturday CST 15:19:10   
+{INFO}   [com.revature.ui.CustomerMenu]  4.) Deposit Money    02-06-2021 Saturday CST 15:19:10   
+{INFO}   [com.revature.ui.CustomerMenu]  5.) Withdraw Money    02-06-2021 Saturday CST 15:19:10   
+{INFO}   [com.revature.ui.CustomerMenu]  6.) View checking account transactions    02-06-2021 Saturday CST 15:19:10   
+{INFO}   [com.revature.ui.CustomerMenu]  7.) View savings account transactions    02-06-2021 Saturday CST 15:19:10   
+{DEBUG}   [com.revature.ui.CustomerMenu]  user's choice was 7    02-06-2021 Saturday CST 15:19:13   
+{DEBUG}   [com.revature.ui.CustomerMenu]  Getting Saving Account Transactions    02-06-2021 Saturday CST 15:19:13   
+{INFO}   [com.revature.ui.CustomerMenu]  Pease enter a value between 1 and 7    02-06-2021 Saturday CST 15:19:13   
+{INFO}   [com.revature.ui.CustomerMenu]  1.) Exit Customer Menu    02-06-2021 Saturday CST 15:19:13   
+{INFO}   [com.revature.ui.CustomerMenu]  2.) View checking account balance    02-06-2021 Saturday CST 15:19:13   
+{INFO}   [com.revature.ui.CustomerMenu]  3.) View savings account balance    02-06-2021 Saturday CST 15:19:13   
+{INFO}   [com.revature.ui.CustomerMenu]  4.) Deposit Money    02-06-2021 Saturday CST 15:19:13   
+{INFO}   [com.revature.ui.CustomerMenu]  5.) Withdraw Money    02-06-2021 Saturday CST 15:19:13   
+{INFO}   [com.revature.ui.CustomerMenu]  6.) View checking account transactions    02-06-2021 Saturday CST 15:19:13   
+{INFO}   [com.revature.ui.CustomerMenu]  7.) View savings account transactions    02-06-2021 Saturday CST 15:19:13   
+{DEBUG}   [com.revature.ui.CustomerMenu]  user's choice was 1    02-06-2021 Saturday CST 15:19:23   
+{INFO}   [com.revature.ui.CustomerMenu]  Exiting Customer Menu    02-06-2021 Saturday CST 15:19:23   
+{DEBUG}   [com.revature.ui.CustomerMenu]  Out of while loop, exiting Customer Menu    02-06-2021 Saturday CST 15:19:23   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-06-2021 Saturday CST 15:19:23   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-06-2021 Saturday CST 15:19:23   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-06-2021 Saturday CST 15:19:23   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-06-2021 Saturday CST 15:19:23   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 2    02-06-2021 Saturday CST 15:19:26   
+{DEBUG}   [com.revature.ui.MainMenu]  attempting to login to employee menu    02-06-2021 Saturday CST 15:19:26   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee account number    02-06-2021 Saturday CST 15:19:26   
+{DEBUG}   [com.revature.util.EmployeeLogin]  1    02-06-2021 Saturday CST 15:19:27   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee password    02-06-2021 Saturday CST 15:19:27   
+{DEBUG}   [com.revature.util.EmployeeLogin]  password entered    02-06-2021 Saturday CST 15:19:33   
+{DEBUG}   [com.revature.util.EmployeeLogin]  correct password    02-06-2021 Saturday CST 15:19:33   
+{DEBUG}   [com.revature.ui.MainMenu]  heading to employee menu    02-06-2021 Saturday CST 15:19:33   
+{INFO}   [com.revature.ui.EmployeeMenu]  Employee Menu    02-06-2021 Saturday CST 15:19:33   
+{INFO}   [com.revature.ui.EmployeeMenu]  1.) Exit Employee Menu    02-06-2021 Saturday CST 15:19:33   
+{INFO}   [com.revature.ui.EmployeeMenu]  2.) Search for account    02-06-2021 Saturday CST 15:19:33   
+{INFO}   [com.revature.ui.EmployeeMenu]  3.) View transactions log    02-06-2021 Saturday CST 15:19:33   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  user's choice was 3    02-06-2021 Saturday CST 15:19:35   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  heading to view transactions as employee menu    02-06-2021 Saturday CST 15:19:35   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Employee View Transactions Menu    02-06-2021 Saturday CST 15:19:35   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-06-2021 Saturday CST 15:19:35   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by Account Number    02-06-2021 Saturday CST 15:19:35   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by Checking Account Number    02-06-2021 Saturday CST 15:19:35   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by Savings Account Number    02-06-2021 Saturday CST 15:19:35   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 2    02-06-2021 Saturday CST 15:19:37   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Please enter the Account number of interest:     02-06-2021 Saturday CST 15:19:37   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  Account Number checking: 3    02-06-2021 Saturday CST 15:19:40   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.trasactions WHERE accountID = 31    02-06-2021 Saturday CST 15:19:40   
+{INFO}   [com.revature.service.EmployeeService]  CustomerTransaction [accountID=31, amount=10.0, trasancitonType=Initial Deposit, trasanciontPartner=0]    02-06-2021 Saturday CST 15:19:40   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.trasactions WHERE accountID = 32    02-06-2021 Saturday CST 15:19:40   
+{INFO}   [com.revature.service.EmployeeService]  CustomerTransaction [accountID=32, amount=100.0, trasancitonType=Initial Deposit, trasanciontPartner=0]    02-06-2021 Saturday CST 15:19:40   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-06-2021 Saturday CST 15:19:40   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by Account Number    02-06-2021 Saturday CST 15:19:40   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by Checking Account Number    02-06-2021 Saturday CST 15:19:40   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by Savings Account Number    02-06-2021 Saturday CST 15:19:40   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 3    02-06-2021 Saturday CST 15:19:47   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Please enter the Checking Account number of interest:     02-06-2021 Saturday CST 15:19:47   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  Initial checking amount: 32    02-06-2021 Saturday CST 15:19:50   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  please enter a valid checking account number    02-06-2021 Saturday CST 15:19:50   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-06-2021 Saturday CST 15:19:50   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by Account Number    02-06-2021 Saturday CST 15:19:50   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by Checking Account Number    02-06-2021 Saturday CST 15:19:50   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by Savings Account Number    02-06-2021 Saturday CST 15:19:50   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 3    02-06-2021 Saturday CST 15:19:53   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Please enter the Checking Account number of interest:     02-06-2021 Saturday CST 15:19:53   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  Initial checking amount: 31    02-06-2021 Saturday CST 15:19:54   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.trasactions WHERE accountID = 31    02-06-2021 Saturday CST 15:19:54   
+{INFO}   [com.revature.service.EmployeeService]  CustomerTransaction [accountID=31, amount=10.0, trasancitonType=Initial Deposit, trasanciontPartner=0]    02-06-2021 Saturday CST 15:19:54   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-06-2021 Saturday CST 15:19:54   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by Account Number    02-06-2021 Saturday CST 15:19:54   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by Checking Account Number    02-06-2021 Saturday CST 15:19:54   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by Savings Account Number    02-06-2021 Saturday CST 15:19:54   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 4    02-06-2021 Saturday CST 15:19:57   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Please enter the Saving Account number of interest:     02-06-2021 Saturday CST 15:19:57   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  Initial checking amount: 31    02-06-2021 Saturday CST 15:20:01   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.trasactions WHERE accountID = 31    02-06-2021 Saturday CST 15:20:01   
+{INFO}   [com.revature.service.EmployeeService]  CustomerTransaction [accountID=31, amount=10.0, trasancitonType=Initial Deposit, trasanciontPartner=0]    02-06-2021 Saturday CST 15:20:01   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-06-2021 Saturday CST 15:20:01   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by Account Number    02-06-2021 Saturday CST 15:20:01   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by Checking Account Number    02-06-2021 Saturday CST 15:20:01   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by Savings Account Number    02-06-2021 Saturday CST 15:20:01   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 4    02-06-2021 Saturday CST 15:20:04   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Please enter the Saving Account number of interest:     02-06-2021 Saturday CST 15:20:04   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  Initial checking amount: 32    02-06-2021 Saturday CST 15:20:05   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  please enter a valid savings account number    02-06-2021 Saturday CST 15:20:05   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-06-2021 Saturday CST 15:20:05   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by Account Number    02-06-2021 Saturday CST 15:20:05   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by Checking Account Number    02-06-2021 Saturday CST 15:20:05   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by Savings Account Number    02-06-2021 Saturday CST 15:20:05   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 1    02-06-2021 Saturday CST 15:20:07   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Exiting Employee View Transactions Menu    02-06-2021 Saturday CST 15:20:07   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  Out of while loop, exiting View Transactions as Employee Menu    02-06-2021 Saturday CST 15:20:07   
+{INFO}   [com.revature.ui.EmployeeMenu]  1.) Exit Employee Menu    02-06-2021 Saturday CST 15:20:07   
+{INFO}   [com.revature.ui.EmployeeMenu]  2.) Search for account    02-06-2021 Saturday CST 15:20:07   
+{INFO}   [com.revature.ui.EmployeeMenu]  3.) View transactions log    02-06-2021 Saturday CST 15:20:07   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  user's choice was 1    02-06-2021 Saturday CST 15:20:08   
+{INFO}   [com.revature.ui.EmployeeMenu]  Exiting Employee Menu    02-06-2021 Saturday CST 15:20:08   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  Out of while loop, exiting Employee Menu    02-06-2021 Saturday CST 15:20:08   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-06-2021 Saturday CST 15:20:08   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-06-2021 Saturday CST 15:20:08   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-06-2021 Saturday CST 15:20:08   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-06-2021 Saturday CST 15:20:08   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 1    02-06-2021 Saturday CST 15:20:08   
+{INFO}   [com.revature.ui.MainMenu]  Exiting Main Menu    02-06-2021 Saturday CST 15:20:08   
+{DEBUG}   [com.revature.ui.MainMenu]  Out of while loop, exiting Main Menu    02-06-2021 Saturday CST 15:20:08   
+{INFO}   [com.revature.main.Application]  Goodbye!    02-06-2021 Saturday CST 15:20:08   

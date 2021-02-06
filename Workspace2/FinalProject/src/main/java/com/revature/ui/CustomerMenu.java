@@ -2,6 +2,9 @@ package com.revature.ui;
 
 import org.apache.log4j.Logger;
 
+import com.revature.service.CustomerService;
+import com.revature.service.EmployeeService;
+
 //import com.revature.util.CustomerLogin;
 //import com.revature.util.EmployeeLogin;
 
@@ -31,12 +34,14 @@ public class CustomerMenu implements MenuSystemSecure {
 					log.info("Exiting Customer Menu");
 					break;
 				case 2:
-					System.out.println("2");
+					//System.out.println("2");
 					log.debug("Getting Checking Account Balance");
+					CustomerService.getAccountBalance("accountNumber", "checking account balance", accountNumber);
 					break;					
 				case 3:
-					System.out.println("3");
+					//System.out.println("3");
 					log.debug("Getting Saving Account Balance");
+					CustomerService.getAccountBalance("accountNumber", "savings account balance", accountNumber);
 
 					break;
 				case 4:
@@ -50,12 +55,12 @@ public class CustomerMenu implements MenuSystemSecure {
 				case 6:
 					System.out.println("6");
 					log.debug("Getting Checking Account Transactions");
-
+					EmployeeService.transactions(accountNumber*10+1);
 					break;
 				case 7:
 					System.out.println("7");
 					log.debug("Getting Saving Account Transactions");
-
+					EmployeeService.transactions(accountNumber*10+2);
 				default:
 					log.info("Pease enter a value between 1 and 7");
 					break;

@@ -53,15 +53,14 @@ public class ViewTransactionsAsEmployee implements MenuSystem {
 						log.info("Please enter the checking account number as an integer");
 					}
 
-					break;
-				case 4:
+					break;			case 4:
 //					log.debug("Entering View by Savings Account Number");
 //					System.out.println("4");
 					try {
 						log.info("Please enter the Saving Account number of interest: ");
 						int savingAccNumber=Integer.parseInt(MenuSystem.sc.nextLine());
 						log.debug("Initial checking amount: "+savingAccNumber);
-						if (savingAccNumber%10==1) {
+						if (savingAccNumber%10==2) {
 							EmployeeService.transactions(savingAccNumber);
 						}else {
 							log.info("please enter a valid savings account number");
