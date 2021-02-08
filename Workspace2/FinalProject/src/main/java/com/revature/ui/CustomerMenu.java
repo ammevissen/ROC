@@ -36,21 +36,25 @@ public class CustomerMenu implements MenuSystemSecure {
 				case 2:
 					//System.out.println("2");
 					log.debug("Getting Checking Account Balance");
-					CustomerService.getAccountBalance("accountNumber", "checking account balance", accountNumber);
+					log.info( "Checking account balance"+CustomerService.getAccountBalance("accountNumber", "checking account balance", accountNumber));
 					break;					
 				case 3:
 					//System.out.println("3");
 					log.debug("Getting Saving Account Balance");
-					CustomerService.getAccountBalance("accountNumber", "savings account balance", accountNumber);
+					log.info( "Saving account balance"+CustomerService.getAccountBalance("accountNumber", "savings account balance", accountNumber));
 
 					break;
 				case 4:
 					System.out.println("4");
 					log.debug("Heading to Deposit Money");
+					MenuSystemSecure depositMoney= new DepositMoney(); 
+					depositMoney.displaySecure(accountNumber);
 					break;
 				case 5:
 					System.out.println("5");
 					log.debug("Heading to Withdraw Money");
+					MenuSystemSecure withdrawMoney= new WithdrawMoney(); 
+					withdrawMoney.displaySecure(accountNumber);
 					break;					
 				case 6:
 					System.out.println("6");

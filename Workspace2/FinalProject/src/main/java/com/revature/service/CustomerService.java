@@ -110,7 +110,7 @@ public class CustomerService {
 		
 	}
 
-	public static void getAccountBalance(String searchBy, String searchFor, int account) {
+	public static double getAccountBalance(String searchBy, String searchFor, int account) {
 		CustomerDAO DAO=new CustomerDAOImpl();
 		CustomerAccount result=null;
 		
@@ -120,21 +120,18 @@ public class CustomerService {
 			e.printStackTrace();
 		}catch(AccountNotFoundException e){
 			log.debug("customer account not found");
+			return(0);
 		}
 		
 		if (result!=null) {
 			switch (searchFor) {
 			case "checking account balance":
-				log.info(result.getCheckingBalance());
-				break;
+				return(result.getCheckingBalance());
 			case "savings account balance":
-				log.info(result.getSavingBalance());
-				break;
-			
+				return(result.getSavingBalance());			
 			}
 		}
-		
-		
+		return(0);
 	}
 	
 //	log.info("2.) View checking account balance");
@@ -143,6 +140,76 @@ public class CustomerService {
 //	log.info("5.) Withdraw Money");
 //	log.info("6.) View checking account transactions");
 //	log.info("7.) View savings account transactions");
+	
+	public static void MoneyExchange(int accountNumber, String type, int otherAccountNumber) {
+		int choice=0;
+		//get other account
+		if (otherAccountNumber<0){
+			try {
+				log.info("Please enter the other account number (checking accounts should end in a 1 and savings accounts should end in a 2)");
+				otherAccountNumber=Integer.parseInt(MenuSystem.sc.nextLine());
+				log.debug("Account type: "+otherAccountNumber);
+				if ((otherAccountNumber%10)!=1 && (otherAccountNumber%10)!=2) {
+					log.info("please enter a valid account number");
+					return;	
+				}
+				
+			}catch (NumberFormatException e) {
+				log.info("Please enter a number for the "+type+" amount");
+			}
+		}	
+		
+		//get if exchange with checking or savings account
+		try {
+			log.info("1.) to "+type+" from checking account");
+			log.info("2.) to "+type+" from savings account");
+
+			choice=Integer.parseInt(MenuSystem.sc.nextLine());
+			log.debug("Account type: "+choice);
+			if (choice==1 || choice==2) {
+				accountNumber=accountNumber*10+choice;
+			}else {
+				log.info("please enter a valid account type");
+				return;	
+			}
+		}catch (NumberFormatException e) {
+			log.info("Please enter a number 1 or a 2 for the account type");
+			return;
+		}
+			
+		//get transaction amount
+		double amount=0;
+		
+		try {
+			log.info("Please enter the "+type+" amount");
+			amount=Double.parseDouble(MenuSystem.sc.nextLine());
+			log.debug(type+" amount: "+amount);
+		
+			}catch (NumberFormatException e) {
+				log.info("Please enter a number in the form of 0.00 for the "+type+ " value");
+				return;
+			}
+		
+			if ((amount*100)%1!=0.0 || amount<0){
+				log.info("The amount for the "+type+" should be greater and or equal to 0 and contain no more than 2 digits after the decimal");
+				return;
+			}
+				
+		//check if other account has enough money
+		if (accountNumber%10==1) {
+			if (amount>CustomerService.getAccountBalance("accountNumber", "checking account balance", accountNumber)) {		
+				return;
+			}
+		}else {
+			if (amount>CustomerService.getAccountBalance("accountNumber", "saving account balance", accountNumber)) {		
+				return;
+			}	
+		}
+		
+		//update account amounts and add to transactions
+		
+		
+	}
 	
 	
 }

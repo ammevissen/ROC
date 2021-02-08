@@ -1,7 +1,7 @@
 package com.revature.ui;
 
 import org.apache.log4j.Logger;
-
+import com.revature.service.CustomerService;
 
 public class DepositMoney implements MenuSystemSecure{
 
@@ -27,10 +27,12 @@ public class DepositMoney implements MenuSystemSecure{
 				case 2:
 					System.out.println("2");
 					log.debug("Deposit Cash or Check");
+					CustomerService.depositMoney(accountNumber, 0);
 					break;					
 				case 3:
 					System.out.println("3");
 					log.debug("Deposit from another Account");
+					CustomerService.depositMoney(accountNumber, -1);
 					break;
 
 				default:

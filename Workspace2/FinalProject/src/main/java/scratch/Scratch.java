@@ -213,37 +213,147 @@ public class Scratch {
 //		}
 //		System.out.println("done");
 		
-		int accountNum=31;
-		List<CustomerTransaction> result=new ArrayList<>(); //=new CustomerAccount();
+//		int accountNum=31;
+//		List<CustomerTransaction> result=new ArrayList<>(); //=new CustomerAccount();
+//		
+//		try(Connection connection=ConnectionUtil.getConnection()){
+//			
+//			String getAccount="SELECT * FROM ROC_Banking.trasactions WHERE accountID = ?";
+//			PreparedStatement pstmt=connection.prepareStatement(getAccount);		
+//			pstmt.setInt(1, accountNum);
+//
+//			
+//			log.debug(pstmt);
+//			ResultSet account=pstmt.executeQuery();
+//			while (account.next()) {
+//				CustomerTransaction tempResult= new CustomerTransaction();
+//				tempResult.setAccountID(account.getInt("accountID"));
+//				tempResult.setAmount(account.getInt("trasancitonAmount"));
+//				tempResult.setTrasancitonType(account.getString("trasancitonType"));
+//				tempResult.setTrasanciontPartner(account.getInt("trasanciontPartner"));
+//				
+//				
+//				result.add(tempResult);
+//			}
+//		
+//		} catch (IOException | SQLException e) {
+//			throw new DatabaseConnectionException("Something went wrong with establishing a connection");
+//		}  
+//
+//		
+//		for (CustomerTransaction account: result) {
+//			log.info(account);
+//		}
+		
+		int accountNumber=31;
+		int otherAccountNumber=42;
+		double amount=1;
 		
 		try(Connection connection=ConnectionUtil.getConnection()){
+			//log.debug("getting max account number");
+			String deposit="INSERT INTO ROC_Banking.trasactions (accuontID, trasancitonAmount, trasancitonType, trasanciontPartner)"
+					+"VALUES(?, ?, ?, ?)";
+			PreparedStatement pstmtDeposit=connection.prepareStatement(deposit);	
+			pstmtDeposit.setInt(1, accountNumber);
+			pstmtDeposit.setDouble(2, amount);
+			pstmtDeposit.setString(3, "Deposit");
+			pstmtDeposit.setInt(4, otherAccountNumber);
 			
-			String getAccount="SELECT * FROM ROC_Banking.trasactions WHERE accountID = ?";
-			PreparedStatement pstmt=connection.prepareStatement(getAccount);		
-			pstmt.setInt(1, accountNum);
-
+			String withdraw="INSERT INTO ROC_Banking.trasactions (accuontID, trasancitonAmount, trasancitonType, trasanciontPartner)"
+					+"VALUES(?, ?, ?, ?)";
+			PreparedStatement pstmtWithdraw=connection.prepareStatement(withdraw);	
+			pstmtWithdraw.setInt(1, otherAccountNumber);
+			pstmtWithdraw.setDouble(2, amount);
+			pstmtWithdraw.setString(3, "Withdraw");
+			pstmtWithdraw.setInt(4, accountNumber);
 			
-			log.debug(pstmt);
-			ResultSet account=pstmt.executeQuery();
-			while (account.next()) {
-				CustomerTransaction tempResult= new CustomerTransaction();
-				tempResult.setAccountID(account.getInt("accountID"));
-				tempResult.setAmount(account.getInt("trasancitonAmount"));
-				tempResult.setTrasancitonType(account.getString("trasancitonType"));
-				tempResult.setTrasanciontPartner(account.getInt("trasanciontPartner"));
-				
-				
-				result.add(tempResult);
+			
+			double currentDeposit=0;
+			double currentWithdraw=0;
+			double newDeposit=0;
+			double newWithdraw=0;
+			
+			if (accountNumber%10==1 || accountNumber%10==2) {
+				String getDeposit="";
+				if (accountNumber%10==1) {
+					getDeposit="SELECT checkingBalance FROM ROC_Banking.customer WHERE checkingID=?";
+				}else if(accountNumber%10==2){
+					getDeposit="SELECT savingBalance FROM ROC_Banking.customer WHERE savnigsID=?";				
+				}
+			
+				PreparedStatement pstmt=connection.prepareStatement(getDeposit);		
+				pstmt.setInt(1, accountNumber);
+				ResultSet resultCurrentDeposit=pstmt.executeQuery();
+				resultCurrentDeposit.next();
+				currentDeposit=resultCurrentDeposit.getDouble(1);
+				newDeposit=currentDeposit+amount;
 			}
-		
-		} catch (IOException | SQLException e) {
-			throw new DatabaseConnectionException("Something went wrong with establishing a connection");
-		}  
+			
 
+			if (otherAccountNumber%10==1 || otherAccountNumber%10==2) {
+				String getWithdaw="";
+				if (otherAccountNumber%10==1) {
+					getWithdaw="SELECT checkingBalance FROM ROC_Banking.customer WHERE checkingID=?";
+				}else if(otherAccountNumber%10==2){
+					getWithdaw="SELECT savingBalance FROM ROC_Banking.customer WHERE savnigsID=?";				
+				}
+			
+				PreparedStatement pstmt=connection.prepareStatement(getWithdaw);		
+				pstmt.setInt(1, otherAccountNumber);
+				ResultSet resultCurrentWithdraw=pstmt.executeQuery();
+				resultCurrentWithdraw.next();
+				currentWithdraw=resultCurrentWithdraw.getDouble(1);
+				newWithdraw=currentWithdraw-amount;
+			}
+
+			int tempResult;
+			int result=1;
+			
+			if (accountNumber%10==1 || accountNumber%10==2) {
+				String updateDeposit="";
+				if (accountNumber%10==1) {
+					updateDeposit="UPDATE ROC_Banking.customer SET checkingBalance =? WHERE checkingid=?";
+				}else if(accountNumber%10==2){
+					updateDeposit="UPDATE ROC_Banking.customer SET savingBalance =? WHERE savnigsID=?";				
+				}
+			
+				PreparedStatement pstmt=connection.prepareStatement(updateDeposit);		
+				pstmt.setDouble(1, newDeposit);
+				pstmt.setInt(2, accountNumber);
+				tempResult=pstmt.executeUpdate();
+				result=Math.min(result, tempResult);
+				
+			}
+			
+			if (otherAccountNumber%10==1 || otherAccountNumber%10==2) {
+				String updateWithdraw="";
+				if (otherAccountNumber%10==1) {
+					updateWithdraw="UPDATE ROC_Banking.customer SET checkingBalance =? WHERE checkingid=?";
+				}else if(otherAccountNumber%10==2){
+					updateWithdraw="UPDATE ROC_Banking.customer SET savingBalance =? WHERE savnigsID=?";				
+				}
+			
+				PreparedStatement pstmt=connection.prepareStatement(updateWithdraw);		
+				pstmt.setDouble(1, newWithdraw);
+				pstmt.setInt(2, otherAccountNumber);
+				tempResult=pstmt.executeUpdate();
+				result=Math.min(result, tempResult);
+			}
+			
+			
+			tempResult=pstmtDeposit.executeUpdate();
+			result=Math.min(result, tempResult);
+			
+			tempResult=pstmtWithdraw.executeUpdate();
+			result=Math.min(result, tempResult);
+			
+			
+			System.out.println(result);
+		} catch (IOException | SQLException e) {
+			//throw new DatabaseConnectionException("Something went wrong with establishing a connection");
+			e.getMessage();
+		} 
 		
-		for (CustomerTransaction account: result) {
-			log.info(account);
-		}
 	}
 
 }

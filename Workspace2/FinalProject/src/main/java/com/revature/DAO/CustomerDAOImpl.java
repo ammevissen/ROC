@@ -218,4 +218,14 @@ List<CustomerTransaction> result=new ArrayList<>(); //=new CustomerAccount();
 		return(result);
 	}
 	
+	//exhcange money
+	/*
+	 * update account 1
+	 * if account 2!=0:
+	 * update account 2
+	 * add transaction 1
+	 * if account 2!=0:
+	 * add transaction 2 
+	 */
+	
 }
