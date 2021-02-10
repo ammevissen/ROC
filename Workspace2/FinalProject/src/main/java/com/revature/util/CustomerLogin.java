@@ -9,7 +9,6 @@ import com.revature.exceptions.DatabaseConnectionException;
 
 public class CustomerLogin {
 
-	//public int attempts=3;
 	private static Logger log=Logger.getLogger(CustomerLogin.class);
 
 	public static boolean login(int accountNumber, String password) {
@@ -17,14 +16,18 @@ public class CustomerLogin {
 		
 		CustomerDAO DAO=new CustomerDAOImpl();
 		String dbPassword=null;
+		
+		//attempts to get the password
 		try {
 			dbPassword = DAO.getPassword(accountNumber);
 		} catch (DatabaseConnectionException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			//if the account cannot be found, returns false
+			log.info("account not found");
+			return(false);
+			//e.printStackTrace();
 		}
 	
-
+		//compares the password entered with the password in the database
 		if (dbPassword!=null && password.equals(dbPassword)) {
 			log.debug("correct password");
 			return(true);			

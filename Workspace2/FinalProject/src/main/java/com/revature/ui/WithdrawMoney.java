@@ -17,15 +17,15 @@ public class WithdrawMoney implements MenuSystemSecure{
 		
 		do {
 			log.info("1.) Exit Withdraw Menu");
-			log.info("2.) Withdraw Cash or Check");
-			log.info("3.) Withdraw from another Account");
+			log.info("2.) Withdraw cash or check");
+			log.info("3.) Transfer money to another account");
 
 
 			try {
 				choice=Integer.parseInt(MenuSystem.sc.nextLine());
 				log.debug("user's choice was "+choice);
 			}catch (NumberFormatException e){
-				log.info("Please enter an integer between 1 and 3m");
+				choice=0;
 			}
 
 			switch(choice){

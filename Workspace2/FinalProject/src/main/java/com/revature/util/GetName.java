@@ -11,6 +11,8 @@ public class GetName {
 	
 	
 	public static String getName(String message) {;
+		//asks the user for a name
+	
 		log.info(message);
 		String name=MenuSystem.sc.nextLine();
 		log.debug("last name: "+name);

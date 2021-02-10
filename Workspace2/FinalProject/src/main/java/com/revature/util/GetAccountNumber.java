@@ -10,10 +10,13 @@ public class GetAccountNumber {
 
 	
 	public static int getAccountNumber(String message) {
+		//asks the user for an account number
 		log.info(message);
 		int accountNumber;
+		
+		//gets the account number from the user and verifies that it is a valid account number.
+		//returns the account number if it is valid, and returns -1 if it is not a valid account number.
 		try {
-			log.info("Please enter employee account number");
 			accountNumber=Integer.parseInt(MenuSystem.sc.nextLine());
 			log.debug(accountNumber);
 			

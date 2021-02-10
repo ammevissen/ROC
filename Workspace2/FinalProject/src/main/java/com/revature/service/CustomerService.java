@@ -135,12 +135,15 @@ public class CustomerService {
 		}
 		
 		if (result!=null) {
+			log.debug(result);
 			switch (searchFor) {
 			case "checking account balance":
 				return(result.getCheckingBalance());
 			case "savings account balance":
 				return(result.getSavingBalance());			
 			}
+		}else {
+			log.debug("getAccountBalance=null");
 		}
 		return(0);
 	}
@@ -162,9 +165,10 @@ public class CustomerService {
 					return;	
 				}
 				
-			}catch (NumberFormatException e) {
-				log.info("Please enter a number for the "+type+" amount");
-				return;
+				}catch (NumberFormatException e) {
+					//log.info("Please enter a number for the "+type+" amount");
+					log.info("please enter a valid account number");
+					return;
 			}
 		}	
 		
@@ -207,15 +211,15 @@ public class CustomerService {
 		
 		//check if withdraw account has enough money
 		if (type.equals("Withdraw")) {
-			log.debug("Account balance: "+CustomerService.getAccountBalance("accountNumber", "checking account balance", accountNumber/10));
 			if (accountNumber%10==1) {
+				//log.debug("Account balance: "+CustomerService.getAccountBalance("accountNumber", "checking account balance", accountNumber/10));				
 				if (amount>CustomerService.getAccountBalance("accountNumber", "checking account balance", accountNumber/10)) {		
 					log.info("Insufficient Funds");
 					return;
 				}
 			}else if (accountNumber%10==2){
-				log.debug("Account balance: "+CustomerService.getAccountBalance("accountNumber", "saving account balance", accountNumber/10));
-				if (amount>CustomerService.getAccountBalance("accountNumber", "saving account balance", accountNumber/10)) {		
+				//log.debug("Account balance: "+CustomerService.getAccountBalance("accountNumber", "savings account balance", accountNumber/10));
+				if (amount>CustomerService.getAccountBalance("accountNumber", "savings account balance", accountNumber/10)) {		
 					log.info("Insufficient Funds");
 					return;
 				}	
@@ -223,14 +227,14 @@ public class CustomerService {
 		}else {
 			if (otherAccountNumber!=0) {
 				if (otherAccountNumber%10==1) {
-					log.debug("Other account balance: "+CustomerService.getAccountBalance("accountNumber", "checking account balance", otherAccountNumber/10));
+					//log.debug("Other account balance: "+CustomerService.getAccountBalance("accountNumber", "checking account balance", otherAccountNumber/10));
 					if (amount>CustomerService.getAccountBalance("accountNumber", "checking account balance", otherAccountNumber/10)) {		
 						log.info("Insufficient Funds");
 						return;
 					}
 				}else if(otherAccountNumber%10==2){
-					log.debug("Other account balance: "+CustomerService.getAccountBalance("accountNumber", "saving account balance", otherAccountNumber/10));
-					if (amount>CustomerService.getAccountBalance("accountNumber", "saving account balance", otherAccountNumber/10)) {		
+					//log.debug("Other account balance: "+CustomerService.getAccountBalance("accountNumber", "savings account balance", otherAccountNumber/10));
+					if (amount>CustomerService.getAccountBalance("accountNumber", "savings account balance", otherAccountNumber/10)) {		
 						log.info("Insufficient Funds");
 						return;
 					}
@@ -264,9 +268,9 @@ public class CustomerService {
 			result=dao.exchangeMoney(otherAccountNumber, accountNumber, amount);
 		}
 		if (result==1) {
-			log.info("Transaction succesfull");
+			log.info("Transaction succesful");
 		}else {
-			log.info("Transaction failled");
+			log.info("Transaction failed");
 		}
 		
 	}

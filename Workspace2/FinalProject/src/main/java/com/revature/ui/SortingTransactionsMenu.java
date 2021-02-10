@@ -22,30 +22,37 @@ public class SortingTransactionsMenu{
 
 		do {
 			log.info("1.) Exit Transactions Sort Menu");
-			log.info("2.) Sort by Account Number");
-			log.info("3.) Sort by Date");
-			log.info("4.) Sort by Time");
-			log.info("5.) Sort by Transaction Partner");
+			log.info("2.) Sort by amount");
+			log.info("3.) Sort by date");
+			log.info("4.) Sort by time");
+			log.info("5.) Sort by transaction partner");
 
 			try {
 				choice=Integer.parseInt(MenuSystem.sc.nextLine());
 				log.debug("user's choice was "+choice);
 			}catch (NumberFormatException e){
-				log.info("Please enter an integer between 1 and 4");
+				choice=0;
 			}
 
 			
 			switch(choice){
 				case 1:
-					transations=Comparator.compareAmount(transations);
+					log.info("Exiting Transactions Sort Menu");
 					break;
 				case 2:
-					transations=Comparator.compareDate(transations);
+					log.debug("sorting by amount");
+					transations=Comparator.compareAmount(transations);
 					break;
 				case 3:
-					transations=Comparator.compareTime(transations);
+					log.debug("sorting by date");
+					transations=Comparator.compareDate(transations);
 					break;
 				case 4:
+					log.debug("sorting by time");
+					transations=Comparator.compareTime(transations);
+					break;
+				case 5:
+					log.debug("sorting by transaction partner");
 					transations=Comparator.compareTrasanciontPartner(transations);
 					break;
 

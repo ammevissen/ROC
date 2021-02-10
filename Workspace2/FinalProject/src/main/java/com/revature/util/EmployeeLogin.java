@@ -22,32 +22,21 @@ public class EmployeeLogin {
 			return false;
 		}
 		
-//		int accountNumber=-1;
-//		try {
-//			log.info("Please enter employee account number");
-//			accountNumber=Integer.parseInt(MenuSystem.sc.nextLine());
-//			log.debug(accountNumber);
-//		}catch (NumberFormatException e) {
-//			log.info("Please enter a valid account number");
-//			return(false);
-//		}
-		
-//		log.info("Please enter employee password");  //move to be part of employee login method so not duplicated
-//		String password=MenuSystem.sc.nextLine();
-//		log.debug("password entered");
-		
+
 		EmployeeDAO DAO=new EmployeeDAOImpl();
 		String dbPassword=null;
 		
-		
+		//attempts to get the password		
 		try {
 			dbPassword = DAO.getPassword(accountNumber);
 		} catch (DatabaseConnectionException e) {
-			// TODO Auto-generated catch block
-			//System.out.println("DAO error");
-			e.printStackTrace();
+			//if the account cannot be found, returns false
+			log.info("account not found");
+			return(false);
+			//e.printStackTrace();
 		}
 	
+		//compares the password entered with the password in the database
 		if (dbPassword!=null && password.equals(dbPassword)) {
 			log.debug("correct password");
 			return(true);			

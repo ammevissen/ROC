@@ -32,7 +32,7 @@ public class MainMenu implements MenuSystem {
 				choice=Integer.parseInt(MenuSystem.sc.nextLine());
 				log.debug("user's choice was "+choice);
 			}catch (NumberFormatException e){
-				log.info("Please enter an integer between 1 and 4");
+				choice=0;
 			}
 			
 			switch(choice){

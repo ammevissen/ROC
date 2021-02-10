@@ -10,10 +10,14 @@ public class GetCurrencyNumber {
 
 	
 	public static double getCurrencyValue(String message) {
+		//asks the user for an amount of currency
+		
 		log.info(message);
 		double currency=-1;
+		
+		//gets the amount of currency from the user and verifies that it is of type double.
+		//returns the currency if it is valid, and returns -1 if it is not a valid double.
 		try {
-			log.info("Please enter your initial checking acount deposit (enter 0 for none): ");
 			currency=Double.parseDouble(MenuSystem.sc.nextLine());
 			log.debug("value: "+currency);
 		

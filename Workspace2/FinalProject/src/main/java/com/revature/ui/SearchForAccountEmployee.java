@@ -28,7 +28,7 @@ public class SearchForAccountEmployee implements MenuSystem{
 				choice=Integer.parseInt(MenuSystem.sc.nextLine());
 				log.debug("user's choice was "+choice);
 			}catch (NumberFormatException e){
-				log.info("Please enter an integer between 1 and 6");
+				choice=0;
 			}
 
 			switch(choice){
@@ -58,16 +58,16 @@ public class SearchForAccountEmployee implements MenuSystem{
 					break;
 				case 5:
 					//System.out.println("5");
-					log.info("Enter the account number of the account to search for:");
+					log.info("Enter the checking account number of the account to search for:");
 					int accChecking=Integer.parseInt(MenuSystem.sc.nextLine());
-					log.debug("Entering Search for Account by Checking Account Number: "+accChecking);
+					log.debug("Entering Search for checking Account by Checking Account Number: "+accChecking);
 					EmployeeService.customer("checkingID", accChecking);
 					break;
 				case 6:
 					//System.out.println("6");
-					log.info("Enter the account number of the account to search for:");
+					log.info("Enter the savings account number of the account to search for:");
 					int accSaving=Integer.parseInt(MenuSystem.sc.nextLine());
-					log.debug("Entering Search for Account by Saving Account Number: "+accSaving);
+					log.debug("Entering Search for savings account by Saving Account Number: "+accSaving);
 					EmployeeService.customer("savnigsID", accSaving);
 					break;
 

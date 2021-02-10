@@ -34,7 +34,7 @@ public class CustomerMenu implements MenuSystemSecure {
 				choice=Integer.parseInt(MenuSystem.sc.nextLine());
 				log.debug("user's choice was "+choice);
 			}catch (NumberFormatException e){
-				log.info("Please enter an integer between 1 and 7");
+				choice=0;
 			}
 			
 			switch(choice){
@@ -44,12 +44,12 @@ public class CustomerMenu implements MenuSystemSecure {
 				case 2:
 					//System.out.println("2");
 					log.debug("Getting Checking Account Balance");
-					log.info( "Checking account balance"+CustomerService.getAccountBalance("accountNumber", "checking account balance", accountNumber));
+					log.info( "Checking account balance "+CustomerService.getAccountBalance("accountNumber", "checking account balance", accountNumber));
 					break;					
 				case 3:
 					//System.out.println("3");
 					log.debug("Getting Saving Account Balance");
-					log.info( "Saving account balance"+CustomerService.getAccountBalance("accountNumber", "savings account balance", accountNumber));
+					log.info( "Saving account balance "+CustomerService.getAccountBalance("accountNumber", "savings account balance", accountNumber));
 
 					break;
 				case 4:
