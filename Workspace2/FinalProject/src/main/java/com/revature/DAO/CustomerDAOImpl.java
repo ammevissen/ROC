@@ -33,6 +33,8 @@ public class CustomerDAOImpl implements CustomerDAO {
 		
 		
 		try(Connection connection=ConnectionUtil.getConnection()){
+			connection.setAutoCommit(false);
+			
 			log.debug("getting max account number");
 			String getAccNum="SELECT max(accountNumber) FROM ROC_Banking.customer";
 			PreparedStatement stmt=connection.prepareStatement(getAccNum);		
@@ -92,6 +94,15 @@ public class CustomerDAOImpl implements CustomerDAO {
 			tempResult=pstmtSavking.executeUpdate();
 			result=Math.min(result, tempResult);
 			log.debug("result of account creation: "+result);
+			
+			if (result==1) {
+				log.debug("commited");
+				connection.commit();
+			}else {
+				log.debug("rolledback");
+				connection.rollback();
+			}
+			
 			
 		} catch (IOException | SQLException e) {
 			log.debug("Something went wrong with establishing a connection");
@@ -228,6 +239,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	public int exchangeMoney(int accountNumber, int otherAccountNumber, double amount) {
 		
 		try(Connection connection=ConnectionUtil.getConnection()){
+			connection.setAutoCommit(false);
 			//log.debug("getting max account number");
 			String deposit="INSERT INTO roc_banking.trasactions (accountID, trasancitonAmount, trasancitonType, trasanciontPartner)"
 					+"VALUES(?, ?, ?, ?)";
@@ -330,9 +342,18 @@ public class CustomerDAOImpl implements CustomerDAO {
 			result=Math.min(result, tempResult);
 			}
 			
-			//System.out.println(result);
-			return(result);
 
+			log.debug("result: "+result);
+			if (result==1) {
+				log.debug("commited");
+				connection.commit();
+			}else {
+				log.debug("rolledback");
+				connection.rollback();
+			}
+
+			return(result);
+			
 		} catch (IOException | SQLException e) {
 			//throw new DatabaseConnectionException("Something went wrong with establishing a connection");
 			e.getMessage();
