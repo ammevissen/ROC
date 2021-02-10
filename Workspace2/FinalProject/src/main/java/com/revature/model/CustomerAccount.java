@@ -1,5 +1,7 @@
 package com.revature.model;
 
+import java.time.LocalDate;
+
 public class CustomerAccount {
 
 	private int accountNumber;
@@ -9,13 +11,14 @@ public class CustomerAccount {
 	private int savingsID;
 	private double checkingBalance;
 	private double savingBalance;
-
+	private LocalDate dob;
+	
 	public CustomerAccount(){
 		super();
 	}
 	
 	public CustomerAccount(int accountNumber, String firstName, String lastName, int checkingID, int savingsID,
-			double checkingBalance, double savingBalance) {
+			double checkingBalance, double savingBalance, LocalDate dob) {
 		super();
 		this.accountNumber = accountNumber;
 		this.firstName = firstName;
@@ -24,6 +27,7 @@ public class CustomerAccount {
 		this.savingsID = savingsID;
 		this.checkingBalance = checkingBalance;
 		this.savingBalance = savingBalance;
+		this.dob=dob;
 	}
 
 
@@ -83,11 +87,19 @@ public class CustomerAccount {
 		this.savingBalance = savingBalance;
 	}
 
+	public LocalDate getDob() {
+		return dob;
+	}
+
+	public void setDob(LocalDate dob) {
+		this.dob = dob;
+	}
+
 	@Override
 	public String toString() {
 		return "CustomerAccount [accountNumber=" + accountNumber + ", firstName=" + firstName + ", lastName=" + lastName
 				+ ", checkingID=" + checkingID + ", savingsID=" + savingsID + ", checkingBalance=" + checkingBalance
-				+ ", savingBalance=" + savingBalance + "]";
+				+ ", savingBalance=" + savingBalance + ", dob=" + dob + "]";
 	}
 
 	@Override
@@ -99,6 +111,7 @@ public class CustomerAccount {
 		temp = Double.doubleToLongBits(checkingBalance);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		result = prime * result + checkingID;
+		result = prime * result + ((dob == null) ? 0 : dob.hashCode());
 		result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
 		result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
 		temp = Double.doubleToLongBits(savingBalance);
@@ -122,6 +135,11 @@ public class CustomerAccount {
 			return false;
 		if (checkingID != other.checkingID)
 			return false;
+		if (dob == null) {
+			if (other.dob != null)
+				return false;
+		} else if (!dob.equals(other.dob))
+			return false;
 		if (firstName == null) {
 			if (other.firstName != null)
 				return false;
@@ -138,11 +156,7 @@ public class CustomerAccount {
 			return false;
 		return true;
 	}
-	
-	
-	
-	
-	
-	
-	
+
+
+		
 }

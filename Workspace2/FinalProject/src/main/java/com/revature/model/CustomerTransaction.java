@@ -1,24 +1,30 @@
 package com.revature.model;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 public class CustomerTransaction {
 
 	private int accountID;
 	private double amount;
 	private String trasancitonType;
 	private int trasanciontPartner;
-	
+	private LocalTime timeCreated;
+	private LocalDate dateCreated;
 	
 	public CustomerTransaction(){
 		super();
 	}
 
 
-	public CustomerTransaction(int accountID, double amount, String trasancitonType, int trasanciontPartner) {
+	public CustomerTransaction(int accountID, double amount, String trasancitonType, int trasanciontPartner, LocalTime timeCreated, LocalDate dateCreated) {
 		super();
 		this.accountID = accountID;
 		this.amount = amount;
 		this.trasancitonType = trasancitonType;
 		this.trasanciontPartner = trasanciontPartner;
+		this.timeCreated=timeCreated;
+		this.dateCreated=dateCreated;
 	}
 
 
@@ -62,10 +68,31 @@ public class CustomerTransaction {
 	}
 
 
+	public LocalTime getTimeCreated() {
+		return timeCreated;
+	}
+
+
+	public void setTimeCreated(LocalTime timeCreated) {
+		this.timeCreated = timeCreated;
+	}
+
+
+	public LocalDate getDateCreated() {
+		return dateCreated;
+	}
+
+
+	public void setDateCreated(LocalDate dateCreated) {
+		this.dateCreated = dateCreated;
+	}
+
+
 	@Override
 	public String toString() {
 		return "CustomerTransaction [accountID=" + accountID + ", amount=" + amount + ", trasancitonType="
-				+ trasancitonType + ", trasanciontPartner=" + trasanciontPartner + "]";
+				+ trasancitonType + ", trasanciontPartner=" + trasanciontPartner + ", timeCreated=" + timeCreated
+				+ ", dateCreated=" + dateCreated + "]";
 	}
 
 
@@ -77,6 +104,8 @@ public class CustomerTransaction {
 		long temp;
 		temp = Double.doubleToLongBits(amount);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
+		result = prime * result + ((dateCreated == null) ? 0 : dateCreated.hashCode());
+		result = prime * result + ((timeCreated == null) ? 0 : timeCreated.hashCode());
 		result = prime * result + trasanciontPartner;
 		result = prime * result + ((trasancitonType == null) ? 0 : trasancitonType.hashCode());
 		return result;
@@ -96,6 +125,16 @@ public class CustomerTransaction {
 			return false;
 		if (Double.doubleToLongBits(amount) != Double.doubleToLongBits(other.amount))
 			return false;
+		if (dateCreated == null) {
+			if (other.dateCreated != null)
+				return false;
+		} else if (!dateCreated.equals(other.dateCreated))
+			return false;
+		if (timeCreated == null) {
+			if (other.timeCreated != null)
+				return false;
+		} else if (!timeCreated.equals(other.timeCreated))
+			return false;
 		if (trasanciontPartner != other.trasanciontPartner)
 			return false;
 		if (trasancitonType == null) {
@@ -105,7 +144,7 @@ public class CustomerTransaction {
 			return false;
 		return true;
 	}
-	
-	
+
+
 	
 }

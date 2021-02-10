@@ -12,7 +12,7 @@ public class CustomerLogin {
 	//public int attempts=3;
 	private static Logger log=Logger.getLogger(CustomerLogin.class);
 
-	public boolean login(int accountNumber, String password) {
+	public static boolean login(int accountNumber, String password) {
 		
 		
 		CustomerDAO DAO=new CustomerDAOImpl();

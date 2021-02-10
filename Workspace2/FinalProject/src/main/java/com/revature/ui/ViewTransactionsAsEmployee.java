@@ -21,8 +21,14 @@ public class ViewTransactionsAsEmployee implements MenuSystem {
 			log.info("3.) View by Checking Account Number");
 			log.info("4.) View by Savings Account Number");
 
-			choice=Integer.parseInt(MenuSystem.sc.nextLine());
-			log.debug("user's choice was "+choice);
+
+			try {
+				choice=Integer.parseInt(MenuSystem.sc.nextLine());
+				log.debug("user's choice was "+choice);
+			}catch (NumberFormatException e){
+				log.info("Please enter an integer between 1 and 4");
+			}
+
 			switch(choice){
 				case 1:
 					log.info("Exiting Employee View Transactions Menu");

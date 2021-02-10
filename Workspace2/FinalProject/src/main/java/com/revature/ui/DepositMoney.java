@@ -18,8 +18,13 @@ public class DepositMoney implements MenuSystemSecure{
 			log.info("2.) Deposit Cash or Check");
 			log.info("3.) Deposit from another Account");
 
-			choice=Integer.parseInt(MenuSystem.sc.nextLine());
-			log.debug("user's choice was "+choice);
+			try {
+				choice=Integer.parseInt(MenuSystem.sc.nextLine());
+				log.debug("user's choice was "+choice);
+			}catch (NumberFormatException e){
+				log.info("Please enter an integer between 1 and 3");
+			}
+
 			switch(choice){
 				case 1:
 					log.info("Exiting Deposit Menu");
@@ -27,12 +32,12 @@ public class DepositMoney implements MenuSystemSecure{
 				case 2:
 					System.out.println("2");
 					log.debug("Deposit Cash or Check");
-					CustomerService.depositMoney(accountNumber, 0);
+					CustomerService.MoneyExchange(accountNumber, "Deposit", 0);
 					break;					
 				case 3:
 					System.out.println("3");
 					log.debug("Deposit from another Account");
-					CustomerService.depositMoney(accountNumber, -1);
+					CustomerService.MoneyExchange(accountNumber, "Deposit", -1);
 					break;
 
 				default:

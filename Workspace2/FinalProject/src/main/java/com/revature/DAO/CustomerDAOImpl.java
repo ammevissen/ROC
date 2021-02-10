@@ -5,6 +5,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,7 +24,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	private static Logger log=Logger.getLogger(CustomerDAOImpl.class);
 
 	@Override
-	public int CreateCustomerAccount(String firstName, String lastName, String password, double initialChecking, double initialSaving) throws DatabaseConnectionException{
+	public int CreateCustomerAccount(String firstName, String lastName, String password, double initialChecking, double initialSaving, LocalDate dob) throws DatabaseConnectionException{
 		int result=1;
 		int tempResult;
 		int accountNumber;
@@ -44,8 +46,8 @@ public class CustomerDAOImpl implements CustomerDAO {
 			savingID=accountNumber*10+2;
 			
 			log.debug("creating acc string");
-			String acc="INSERT INTO ROC_Banking.customer (accountNumber, firstName, lastName, customerPassword, checkingID, savnigsID, checkingBalance, savingBalance)"
-						+"VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
+			String acc="INSERT INTO ROC_Banking.customer (accountNumber, firstName, lastName, customerPassword, checkingID, savnigsID, checkingBalance, savingBalance, DOB)"
+						+"VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)";
 			
 			PreparedStatement pstmt=connection.prepareStatement(acc);	
 			log.debug("pstmt created");
@@ -57,7 +59,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 			pstmt.setInt(6, savingID);
 			pstmt.setDouble(7, initialChecking);
 			pstmt.setDouble(8, initialSaving);
-			
+			pstmt.setObject(9, dob);
 			
 			
 			String strChecking="INSERT INTO ROC_Banking.trasactions (accountID, trasancitonAmount, trasancitonType)"
@@ -142,6 +144,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 				tempResult.setSavingsID(account.getInt("savnigsID"));
 				tempResult.setCheckingBalance(account.getDouble("checkingBalance"));
 				tempResult.setSavingBalance(account.getDouble("savingBalance"));
+				tempResult.setDob(account.getObject("DOB", LocalDate.class));;
 				result.add(tempResult);
 			}
 		
@@ -172,6 +175,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 				result.setSavingsID(account.getInt("savnigsID"));
 				result.setCheckingBalance(account.getDouble("checkingBalance"));
 				result.setSavingBalance(account.getDouble("savingBalance"));
+				result.setDob(account.getObject("DOB", LocalDate.class));
 
 			}else {
 				throw new AccountNotFoundException("No account was found with "+searchBy+" "+accountNum);
@@ -188,7 +192,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 	@Override
 	public List<CustomerTransaction> getTransactionsInfo(int accountNum) throws DatabaseConnectionException{
 		
-List<CustomerTransaction> result=new ArrayList<>(); //=new CustomerAccount();
+		List<CustomerTransaction> result=new ArrayList<>(); //=new CustomerAccount();
 		
 		try(Connection connection=ConnectionUtil.getConnection()){
 			
@@ -205,6 +209,8 @@ List<CustomerTransaction> result=new ArrayList<>(); //=new CustomerAccount();
 				tempResult.setAmount(account.getInt("trasancitonAmount"));
 				tempResult.setTrasancitonType(account.getString("trasancitonType"));
 				tempResult.setTrasanciontPartner(account.getInt("trasanciontPartner"));
+				tempResult.setDateCreated(account.getObject("dateCreated", LocalDate.class));
+				tempResult.setTimeCreated(account.getObject("timeCreated", LocalTime.class));
 				
 				
 				result.add(tempResult);
@@ -217,15 +223,123 @@ List<CustomerTransaction> result=new ArrayList<>(); //=new CustomerAccount();
 		
 		return(result);
 	}
+
 	
-	//exhcange money
-	/*
-	 * update account 1
-	 * if account 2!=0:
-	 * update account 2
-	 * add transaction 1
-	 * if account 2!=0:
-	 * add transaction 2 
-	 */
+	public int exchangeMoney(int accountNumber, int otherAccountNumber, double amount) {
+		
+		try(Connection connection=ConnectionUtil.getConnection()){
+			//log.debug("getting max account number");
+			String deposit="INSERT INTO roc_banking.trasactions (accountID, trasancitonAmount, trasancitonType, trasanciontPartner)"
+					+"VALUES(?, ?, ?, ?)";
+			PreparedStatement pstmtDeposit=connection.prepareStatement(deposit);	
+			pstmtDeposit.setInt(1, accountNumber);
+			pstmtDeposit.setDouble(2, amount);
+			pstmtDeposit.setString(3, "Deposit");
+			pstmtDeposit.setInt(4, otherAccountNumber);
+			
+			
+			String withdraw="INSERT INTO roc_banking.trasactions (accountID, trasancitonAmount, trasancitonType, trasanciontPartner)"
+					+"VALUES(?, ?, ?, ?)";
+			PreparedStatement pstmtWithdraw=connection.prepareStatement(withdraw);	
+			pstmtWithdraw.setInt(1, otherAccountNumber);
+			pstmtWithdraw.setDouble(2, amount);
+			pstmtWithdraw.setString(3, "Withdraw");
+			pstmtWithdraw.setInt(4, accountNumber);
+			
+			
+			double currentDeposit=0;
+			double currentWithdraw=0;
+			double newDeposit=0;
+			double newWithdraw=0;
+			
+			if (accountNumber%10==1 || accountNumber%10==2) {
+				String getDeposit="";
+				if (accountNumber%10==1) {
+					getDeposit="SELECT checkingBalance FROM roc_banking.customer WHERE checkingID=?";
+				}else if(accountNumber%10==2){
+					getDeposit="SELECT savingBalance FROM roc_banking.customer WHERE savnigsID=?";				
+				}
+			
+				PreparedStatement pstmt=connection.prepareStatement(getDeposit);		
+				pstmt.setInt(1, accountNumber);
+				ResultSet resultCurrentDeposit=pstmt.executeQuery();
+				resultCurrentDeposit.next();
+				currentDeposit=resultCurrentDeposit.getDouble(1);
+				newDeposit=currentDeposit+amount;
+			}
+			
+
+			if (otherAccountNumber%10==1 || otherAccountNumber%10==2) {
+				String getWithdaw="";
+				if (otherAccountNumber%10==1) {
+					getWithdaw="SELECT checkingBalance FROM roc_banking.customer WHERE checkingID=?";
+				}else if(otherAccountNumber%10==2){
+					getWithdaw="SELECT savingBalance FROM roc_banking.customer WHERE savnigsID=?";				
+				}
+			
+				PreparedStatement pstmt=connection.prepareStatement(getWithdaw);		
+				pstmt.setInt(1, otherAccountNumber);
+				ResultSet resultCurrentWithdraw=pstmt.executeQuery();
+				resultCurrentWithdraw.next();
+				currentWithdraw=resultCurrentWithdraw.getDouble(1);
+				newWithdraw=currentWithdraw-amount;
+			}
+
+			int tempResult;
+			int result=1;
+			
+			if (accountNumber%10==1 || accountNumber%10==2) {
+				String updateDeposit="";
+				if (accountNumber%10==1) {
+					updateDeposit="UPDATE ROC_Banking.customer SET checkingBalance =? WHERE checkingid=?";
+				}else if(accountNumber%10==2){
+					updateDeposit="UPDATE ROC_Banking.customer SET savingBalance =? WHERE savnigsID=?";				
+				}
+			
+				PreparedStatement pstmt=connection.prepareStatement(updateDeposit);		
+				pstmt.setDouble(1, newDeposit);
+				pstmt.setInt(2, accountNumber);
+				tempResult=pstmt.executeUpdate();
+				result=Math.min(result, tempResult);
+				
+			}
+			
+			if (otherAccountNumber%10==1 || otherAccountNumber%10==2) {
+				String updateWithdraw="";
+				if (otherAccountNumber%10==1) {
+					updateWithdraw="UPDATE ROC_Banking.customer SET checkingBalance =? WHERE checkingid=?";
+				}else if(otherAccountNumber%10==2){
+					updateWithdraw="UPDATE ROC_Banking.customer SET savingBalance =? WHERE savnigsID=?";				
+				}
+			
+				PreparedStatement pstmt=connection.prepareStatement(updateWithdraw);		
+				pstmt.setDouble(1, newWithdraw);
+				pstmt.setInt(2, otherAccountNumber);
+				tempResult=pstmt.executeUpdate();
+				result=Math.min(result, tempResult);
+			}
+			
+			
+			if (accountNumber!=0) {
+			tempResult=pstmtDeposit.executeUpdate();
+			result=Math.min(result, tempResult);
+			}
+			
+			if (otherAccountNumber!=0) {
+			tempResult=pstmtWithdraw.executeUpdate();
+			result=Math.min(result, tempResult);
+			}
+			
+			//System.out.println(result);
+			return(result);
+
+		} catch (IOException | SQLException e) {
+			//throw new DatabaseConnectionException("Something went wrong with establishing a connection");
+			e.getMessage();
+		}
+		
+		//System.out.println("broke out of try");
+		return(0);
+	}
 	
 }

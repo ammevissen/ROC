@@ -23,8 +23,14 @@ public class SearchForAccountEmployee implements MenuSystem{
 			log.info("5.) Search for account by checking account number");
 			log.info("6.) Search for account by savings account number");
 
-			choice=Integer.parseInt(MenuSystem.sc.nextLine());
-			log.debug("user's choice was "+choice);
+
+			try {
+				choice=Integer.parseInt(MenuSystem.sc.nextLine());
+				log.debug("user's choice was "+choice);
+			}catch (NumberFormatException e){
+				log.info("Please enter an integer between 1 and 6");
+			}
+
 			switch(choice){
 				case 1:
 					log.info("Exiting Employee Search for Account Menu");

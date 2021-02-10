@@ -1,11 +1,13 @@
-package com.app.service;
+package com.app.service.Impl;
+
+import com.app.service.MyService;
 
 public class MyServiceImpl implements MyService {
 	
 	@Override
 	public boolean isValidEvenNumber(int n) {
 		
-		return(false);
+		return(n%2==0);
 	}
 
 }

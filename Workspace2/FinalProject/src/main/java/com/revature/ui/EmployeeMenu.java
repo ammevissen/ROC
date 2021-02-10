@@ -17,8 +17,14 @@ public class EmployeeMenu implements MenuSystem {
 			log.info("2.) Search for account");
 			log.info("3.) View transactions log");
 			//log.info("4.) Create new employee account");
-			choice=Integer.parseInt(MenuSystem.sc.nextLine());
-			log.debug("user's choice was "+choice);
+
+			try {
+				choice=Integer.parseInt(MenuSystem.sc.nextLine());
+				log.debug("user's choice was "+choice);
+			}catch (NumberFormatException e){
+				log.info("Please enter an integer between 1 and 3");
+			}
+
 			switch(choice){
 				case 1:
 					log.info("Exiting Employee Menu");

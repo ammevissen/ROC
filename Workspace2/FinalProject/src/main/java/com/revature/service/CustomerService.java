@@ -1,5 +1,10 @@
 package com.revature.service;
 
+import java.text.ParseException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
+
 import org.apache.log4j.Logger;
 
 import com.revature.DAO.CustomerDAO;
@@ -7,9 +12,16 @@ import com.revature.DAO.CustomerDAOImpl;
 import com.revature.exceptions.AccountNotFoundException;
 import com.revature.exceptions.DatabaseConnectionException;
 import com.revature.model.CustomerAccount;
+import com.revature.ui.CustomerMenu;
 //import com.revature.ui.EmployeeMenu;
 import com.revature.ui.MenuSystem;
+import com.revature.util.CustomerLogin;
 import com.revature.util.EmployeeLogin;
+import com.revature.util.GetCurrencyNumber;
+import com.revature.util.GetName;
+import com.revature.util.ValidCurrency;
+import com.revature.util.ValidName;
+import com.revature.util.ValidPassword;
 
 
 public class CustomerService {
@@ -20,69 +32,69 @@ public class CustomerService {
 		
 		CustomerDAO DAO=new CustomerDAOImpl();
 		
-		log.info("Please enter your first name:");
-		String firstName=MenuSystem.sc.nextLine();
-		log.debug("first name: "+firstName);
+		String firstName=GetName.getName("Please enter your first name:");
 		
-		if (firstName==null || firstName.equals("/n") || firstName.equals("")){
+		if (ValidName.isNotValidPassword(firstName)){
 			log.info("Your first name cannot be left blank.");
 			log.info("Your account was not succesfully created please try again");
 			return(false);
 		}
 
 		
-		log.info("Please enter your last name:");
-		String lastName=MenuSystem.sc.nextLine();
-		log.debug("first name: "+lastName);
+		
+		String lastName=GetName.getName("Please enter your last name:");
 
-		if (lastName==null || lastName.equals("/n") || lastName.equals("")){
+		if (ValidName.isNotValidPassword(lastName)){
 			log.info("Your last name cannot be left blank.");
 			log.info("Your account was not succesfully created please try again");
 			return(false);
 		}
 
-		log.info("Please enter your password:");
+		log.info("Please enter your password: (must be at least 8 characters long)");
 		String password=MenuSystem.sc.nextLine();
 		log.debug("password entered");
-		if (password==null || password.equals("/n") || password.equals("")){
+		
+		if (ValidPassword.isNotValidPassword(password)){
 			log.info("Password cannot be left blank.");
 			log.info("Your account was not succesfully created please try again");
 			return(false);
 		}
 		
-		double initialChecking=0;
-		double initialSaving=0;
+		double initialChecking=GetCurrencyNumber.getCurrencyValue("Please enter your initial checking acount deposit (enter 0 for none): ");
+		double initialSaving=GetCurrencyNumber.getCurrencyValue("Please enter your initial saving acount deposit (enter 0 for none): ");
+				
 		
-		try {
-			log.info("Please enter your initial checking acount deposit (enter 0 for none): ");
-			initialChecking=Double.parseDouble(MenuSystem.sc.nextLine());
-			log.debug("Initial checking amount: "+initialChecking);
-		
-			log.info("Please enter your initial saving acount deposit (enter 0 for none): ");
-			initialSaving=Double.parseDouble(MenuSystem.sc.nextLine());
-			log.debug("Initial checking amount: "+initialSaving);
-		}catch (NumberFormatException e) {
-			log.info("Please enter a number in the form of 0.00 for initial checking and savings account values");
-			log.info("Your account was not succesfully created please try again");
-			return(false);
-		}
-		
-		if ((initialChecking*100)%1!=0.0 || initialChecking<0 || (initialSaving*100)%1!=0.0 || initialSaving<0 ){
+		if (ValidCurrency.isNotValidCurrency(initialChecking) || ValidCurrency.isNotValidCurrency(initialSaving)) {
 			log.info("Initial checking ans savings values should be greater and or equal to 0 and contain no more than 2 digits after the decimal");
 			log.info("Your account was not succesfully created please try again");
 			return(false);
 		}
 		
+		
+		log.info("Please enter your date of birth: YYYY-MM-DD");
+		String dobString=MenuSystem.sc.nextLine();
+		log.debug("DOB: "+dobString);
+		LocalDate dob;
+		
+		try {
+			dob=LocalDate.parse(dobString, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+			log.info("Date object is "+dob);
+		}catch (DateTimeParseException e) {
+			log.info("Invalid Date");
+			return(false);
+		}		
+
+				
 		log.info("for employee verifcation:");
-		log.info("first name: "+firstName+" last name: "+lastName+" password entered"+" initial checking deposit: "+initialChecking+" initial saving deposit: "+initialSaving);
+		log.info("first name: "+firstName+" last name: "+lastName+" password entered"+" initial checking deposit: "+initialChecking+" initial saving deposit: "+initialSaving+" date of birth "+dob);
 		
 
-		EmployeeLogin employeeLogin=new EmployeeLogin();
+		//EmployeeLogin employeeLogin=new EmployeeLogin();
 		
 		
 		log.info("To approve, login.  To dissaprove, input incorrect login information:");
 		
-		if (employeeLogin.login()) {
+		if (EmployeeLogin.login(EmployeeLogin.getAccountNumber(), EmployeeLogin.getPassword())) {
 			log.debug("employee has approved");
 			
 		}else {
@@ -94,9 +106,8 @@ public class CustomerService {
 		
 		int result=0;
 		try {
-			result=DAO.CreateCustomerAccount(firstName, lastName, password, initialChecking, initialSaving);
+			result=DAO.CreateCustomerAccount(firstName, lastName, password, initialChecking, initialSaving, dob);
 		} catch (DatabaseConnectionException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -133,36 +144,34 @@ public class CustomerService {
 		}
 		return(0);
 	}
-	
-//	log.info("2.) View checking account balance");
-//	log.info("3.) View savings account balance");
-//	log.info("4.) Deposit Money");
-//	log.info("5.) Withdraw Money");
-//	log.info("6.) View checking account transactions");
-//	log.info("7.) View savings account transactions");
-	
+		
 	public static void MoneyExchange(int accountNumber, String type, int otherAccountNumber) {
 		int choice=0;
+		CustomerDAO dao=new CustomerDAOImpl();
+		int result=1;
+		double amount=0;
+
 		//get other account
 		if (otherAccountNumber<0){
 			try {
 				log.info("Please enter the other account number (checking accounts should end in a 1 and savings accounts should end in a 2)");
 				otherAccountNumber=Integer.parseInt(MenuSystem.sc.nextLine());
 				log.debug("Account type: "+otherAccountNumber);
-				if ((otherAccountNumber%10)!=1 && (otherAccountNumber%10)!=2) {
+				if ((otherAccountNumber%10)!=1 && (otherAccountNumber%10)!=2 && (otherAccountNumber)>0) {
 					log.info("please enter a valid account number");
 					return;	
 				}
 				
 			}catch (NumberFormatException e) {
 				log.info("Please enter a number for the "+type+" amount");
+				return;
 			}
 		}	
 		
 		//get if exchange with checking or savings account
 		try {
-			log.info("1.) to "+type+" from checking account");
-			log.info("2.) to "+type+" from savings account");
+			log.info("1.) "+type+" to/from checking account");
+			log.info("2.) "+type+" to/from savings account");
 
 			choice=Integer.parseInt(MenuSystem.sc.nextLine());
 			log.debug("Account type: "+choice);
@@ -178,7 +187,6 @@ public class CustomerService {
 		}
 			
 		//get transaction amount
-		double amount=0;
 		
 		try {
 			log.info("Please enter the "+type+" amount");
@@ -194,20 +202,72 @@ public class CustomerService {
 				log.info("The amount for the "+type+" should be greater and or equal to 0 and contain no more than 2 digits after the decimal");
 				return;
 			}
-				
-		//check if other account has enough money
-		if (accountNumber%10==1) {
-			if (amount>CustomerService.getAccountBalance("accountNumber", "checking account balance", accountNumber)) {		
-				return;
+
+
+		
+		//check if withdraw account has enough money
+		if (type.equals("Withdraw")) {
+			log.debug("Account balance: "+CustomerService.getAccountBalance("accountNumber", "checking account balance", accountNumber/10));
+			if (accountNumber%10==1) {
+				if (amount>CustomerService.getAccountBalance("accountNumber", "checking account balance", accountNumber/10)) {		
+					log.info("Insufficient Funds");
+					return;
+				}
+			}else if (accountNumber%10==2){
+				log.debug("Account balance: "+CustomerService.getAccountBalance("accountNumber", "saving account balance", accountNumber/10));
+				if (amount>CustomerService.getAccountBalance("accountNumber", "saving account balance", accountNumber/10)) {		
+					log.info("Insufficient Funds");
+					return;
+				}	
 			}
 		}else {
-			if (amount>CustomerService.getAccountBalance("accountNumber", "saving account balance", accountNumber)) {		
-				return;
-			}	
+			if (otherAccountNumber!=0) {
+				if (otherAccountNumber%10==1) {
+					log.debug("Other account balance: "+CustomerService.getAccountBalance("accountNumber", "checking account balance", otherAccountNumber/10));
+					if (amount>CustomerService.getAccountBalance("accountNumber", "checking account balance", otherAccountNumber/10)) {		
+						log.info("Insufficient Funds");
+						return;
+					}
+				}else if(otherAccountNumber%10==2){
+					log.debug("Other account balance: "+CustomerService.getAccountBalance("accountNumber", "saving account balance", otherAccountNumber/10));
+					if (amount>CustomerService.getAccountBalance("accountNumber", "saving account balance", otherAccountNumber/10)) {		
+						log.info("Insufficient Funds");
+						return;
+					}
+				}	
+			}
 		}
+
 		
-		//update account amounts and add to transactions
-		
+		log.info(accountNumber+" will "+type+" "+amount+" to "+otherAccountNumber);		
+		//other account verification:
+		if (otherAccountNumber>0 && otherAccountNumber/10!=accountNumber/10) {
+			log.info("To complete transaction, "+otherAccountNumber+" must enter password");
+			log.info("Please enter password");
+			String password=MenuSystem.sc.nextLine();
+			log.debug("password entered");
+			
+			CustomerLogin customerLogin=new CustomerLogin();
+			if (customerLogin.login(otherAccountNumber/10, password)) {
+				log.info("Login successful");
+			}else {
+				log.info("Incorrect account number and/or password");
+				return;
+			}
+			
+			
+		}
+		//update account amounts and add to transactions		
+		if (type=="Deposit") {
+			result=dao.exchangeMoney(accountNumber, otherAccountNumber, amount);
+		}else {			
+			result=dao.exchangeMoney(otherAccountNumber, accountNumber, amount);
+		}
+		if (result==1) {
+			log.info("Transaction succesfull");
+		}else {
+			log.info("Transaction failled");
+		}
 		
 	}
 	

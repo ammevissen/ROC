@@ -27,8 +27,13 @@ public class CustomerMenu implements MenuSystemSecure {
 			log.info("6.) View checking account transactions");
 			log.info("7.) View savings account transactions");
 
-			choice=Integer.parseInt(MenuSystem.sc.nextLine());
-			log.debug("user's choice was "+choice);
+			try {
+				choice=Integer.parseInt(MenuSystem.sc.nextLine());
+				log.debug("user's choice was "+choice);
+			}catch (NumberFormatException e){
+				log.info("Please enter an integer between 1 and 7");
+			}
+			
 			switch(choice){
 				case 1:
 					log.info("Exiting Customer Menu");

@@ -15,7 +15,7 @@ public class ReadAndValidateDate {
 		Date d=null;
 		
 		try {
-			d=sdf.parse(s); //parses String and converts/parses it to date objce
+			d=sdf.parse(s); //parses String and converts/parses it to date object
 			System.out.println("Date object is "+d);
 		}catch (ParseException e) {
 			System.out.println("Invalid Date");
@@ -24,7 +24,7 @@ public class ReadAndValidateDate {
 		s="30.02.2000"; //dd.MM.yyyy
 
 		try {
-			d=sdf.parse(s); //parses String and converts/parses it to date objce
+			d=sdf.parse(s); //parses String and converts/parses it to date object
 			System.out.println("Date object is "+d);
 		}catch (ParseException e) {
 			System.out.println("Invalid Date");

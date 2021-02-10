@@ -27,16 +27,22 @@ public class MainMenu implements MenuSystem {
 			log.info("3.) Login as customer");
 			log.info("4.) Create customer account");
 			
-			choice=Integer.parseInt(MenuSystem.sc.nextLine());
-			log.debug("user's choice was "+choice);
+			
+			try {
+				choice=Integer.parseInt(MenuSystem.sc.nextLine());
+				log.debug("user's choice was "+choice);
+			}catch (NumberFormatException e){
+				log.info("Please enter an integer between 1 and 4");
+			}
+			
 			switch(choice){
 				case 1:
 					log.info("Exiting Main Menu");
 					break;
 				case 2:
 					log.debug("attempting to login to employee menu");
-					EmployeeLogin employeeLogin=new EmployeeLogin();
-					if (employeeLogin.login()) {
+					//EmployeeLogin employeeLogin=new EmployeeLogin();
+					if (EmployeeLogin.login(EmployeeLogin.getAccountNumber(), EmployeeLogin.getPassword())) {
 						log.debug("heading to employee menu");
 						MenuSystem employeeMenu=new EmployeeMenu();
 						employeeMenu.display();						
@@ -48,20 +54,25 @@ public class MainMenu implements MenuSystem {
 				case 3:
 					log.debug("attempting to login to customer menu");
 					log.info("Please enter account number");  //combine login methods, pass employee/customer to differentiate 
-					loginNumber=Integer.parseInt(MenuSystem.sc.nextLine());
-					log.debug(loginNumber);
-					
-					log.info("Please enter password");
-					password=MenuSystem.sc.nextLine();
-					log.debug("password entered");
-					CustomerLogin customerLogin=new CustomerLogin();
-					if (customerLogin.login(loginNumber, password)) {
-						log.debug("heading to customer menu");
-						CustomerMenu customerMenu=new CustomerMenu();
-						customerMenu.displaySecure(loginNumber);
-					}else {
-						log.info("Incorrect account number and/or password");
+
+					try {
+						loginNumber=Integer.parseInt(MenuSystem.sc.nextLine());
+						log.debug(loginNumber);
+						log.info("Please enter password");
+						password=MenuSystem.sc.nextLine();
+						log.debug("password entered");
+						CustomerLogin customerLogin=new CustomerLogin();
+						if (customerLogin.login(loginNumber, password)) {
+							log.debug("heading to customer menu");
+							CustomerMenu customerMenu=new CustomerMenu();
+							customerMenu.displaySecure(loginNumber);
+						}else {
+							log.info("Incorrect account number and/or password");
+						}
+					}catch (NumberFormatException e) {
+						log.info("Please enter a valid account number");
 					}
+					
 					break;
 				case 4:
 					log.debug("heading to create account menu");
