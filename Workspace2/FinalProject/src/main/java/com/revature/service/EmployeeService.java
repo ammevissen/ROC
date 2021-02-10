@@ -61,12 +61,28 @@ public class EmployeeService {
 		}
 	}
 	
-	public static void allAccountTransactions(int accountNumber) {
-		EmployeeService.transactions(accountNumber*10+1);
-		EmployeeService.transactions(accountNumber*10+2);
+	public static List<CustomerTransaction> allAccountTransactions(int accountNumber) {
+		List<CustomerTransaction> results=new ArrayList<>();
+		
+		List<CustomerTransaction> temp1=EmployeeService.transactions(accountNumber*10+1);
+		List<CustomerTransaction> temp2=EmployeeService.transactions(accountNumber*10+2);
+		
+		if (temp1!=null) {
+			for (CustomerTransaction transaction: temp1) {
+				results.add(transaction);
+			}
+		}
+		
+		if (temp2!=null) {
+			for (CustomerTransaction transaction: temp2) {
+				results.add(transaction);
+			}
+		}
+		
+		return results;
 	}
 	
-	public static void transactions(int accountNumber) {
+	public static List<CustomerTransaction> transactions(int accountNumber) {
 		CustomerDAO DAO=new CustomerDAOImpl();
 		List<CustomerTransaction> result=new ArrayList<>();
 		
@@ -76,17 +92,18 @@ public class EmployeeService {
 			e.printStackTrace();
 		}
 		if (result.size()>0) {
-			for (CustomerTransaction account: result) {
-				log.info(account);
-			}	
+			//now handled by transaction class
+//			for (CustomerTransaction account: result) {
+//				log.info(account);
+//			}	
 		} else {
 			if (accountNumber%10==1) {
 				log.info("no checking accounts found with "+accountNumber);
 			}else if (accountNumber%10==2){
 				log.info("no savings accounts found with "+accountNumber);
-				
+			return null;
 			}
-		}
-		
+		}	
+		return result;
 	}	
 }

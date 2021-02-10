@@ -22,10 +22,10 @@ public class Main {
 		System.out.println("printing all of the accounts retrived from DB");
 		printAccountDetails(accountList);
 		
-		System.out.println("\n Sorting list by default based on accountId");
-		Collections.sort(accountList);//comparable
-		printAccountDetails(accountList);
-		
+//		System.out.println("\n Sorting list by default based on accountId");
+//		Collections.sort(accountList);//comparable
+//		printAccountDetails(accountList);
+//		
 		System.out.println("\nSorting list  based on account active status");
 		Collections.sort(accountList,new AccountActiveStatusComparator()); //Comparator
 		printAccountDetails(accountList);

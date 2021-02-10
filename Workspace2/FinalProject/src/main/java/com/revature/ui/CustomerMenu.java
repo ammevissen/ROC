@@ -1,7 +1,10 @@
 package com.revature.ui;
 
+import java.util.List;
+
 import org.apache.log4j.Logger;
 
+import com.revature.model.CustomerTransaction;
 import com.revature.service.CustomerService;
 import com.revature.service.EmployeeService;
 
@@ -50,26 +53,33 @@ public class CustomerMenu implements MenuSystemSecure {
 
 					break;
 				case 4:
-					System.out.println("4");
+					//System.out.println("4");
 					log.debug("Heading to Deposit Money");
 					MenuSystemSecure depositMoney= new DepositMoney(); 
 					depositMoney.displaySecure(accountNumber);
 					break;
 				case 5:
-					System.out.println("5");
+					//System.out.println("5");
 					log.debug("Heading to Withdraw Money");
 					MenuSystemSecure withdrawMoney= new WithdrawMoney(); 
 					withdrawMoney.displaySecure(accountNumber);
 					break;					
 				case 6:
-					System.out.println("6");
+					//System.out.println("6");
 					log.debug("Getting Checking Account Transactions");
-					EmployeeService.transactions(accountNumber*10+1);
+					//EmployeeService.transactions(accountNumber*10+1);
+					List<CustomerTransaction> checkingTransactions=EmployeeService.transactions(accountNumber*10+1);
+					SortingTransactionsMenu sortingCheckingTransactionsMenu=new SortingTransactionsMenu();
+					sortingCheckingTransactionsMenu.display(checkingTransactions);
 					break;
 				case 7:
-					System.out.println("7");
+					//System.out.println("7");
 					log.debug("Getting Saving Account Transactions");
-					EmployeeService.transactions(accountNumber*10+2);
+					//EmployeeService.transactions(accountNumber*10+2);
+					List<CustomerTransaction> savingsTransactions=EmployeeService.transactions(accountNumber*10+2);
+					SortingTransactionsMenu sortingSavingsTransactionsMenu=new SortingTransactionsMenu();
+					sortingSavingsTransactionsMenu.display(savingsTransactions);
+
 				default:
 					log.info("Pease enter a value between 1 and 7");
 					break;

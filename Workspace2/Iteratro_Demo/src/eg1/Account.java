@@ -1,6 +1,6 @@
 package eg1;
 
-public class Account implements Comparable<Account>{
+public class Account{// implements Comparable<Account>{
 
 	private long accountId;
 	private String customerName;
@@ -114,12 +114,12 @@ public class Account implements Comparable<Account>{
 		return true;
 	}
 	
-	@Override
-	public int compareTo(Account o) {
-		Long l1=this.accountId;
-		Long l2=o.accountId;
-		return l1.compareTo(l2);
-	}
+//	@Override
+//	public int compareTo(Account o) {
+//		Long l1=this.accountId;
+//		Long l2=o.accountId;
+//		return l1.compareTo(l2);
+//	}
 	
 }
 

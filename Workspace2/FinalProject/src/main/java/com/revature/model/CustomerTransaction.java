@@ -2,8 +2,14 @@ package com.revature.model;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Iterator;
+import java.util.List;
 
-public class CustomerTransaction {
+import org.apache.log4j.Logger;
+
+public class CustomerTransaction{
+	
+	private static Logger log=Logger.getLogger(CustomerTransaction.class);
 
 	private int accountID;
 	private double amount;
@@ -146,5 +152,11 @@ public class CustomerTransaction {
 	}
 
 
+	public static void print(List<CustomerTransaction> transactions) {
+		Iterator<CustomerTransaction> t=transactions.iterator();
+		while(t.hasNext()) {
+			log.info(t.next());
+		}
+	}
 	
 }

@@ -9,7 +9,7 @@ public class GetAccountNumber {
 	private static Logger log=Logger.getLogger(GetAccountNumber.class);
 
 	
-	public static double getAccountNumber(String message) {
+	public static int getAccountNumber(String message) {
 		log.info(message);
 		int accountNumber;
 		try {

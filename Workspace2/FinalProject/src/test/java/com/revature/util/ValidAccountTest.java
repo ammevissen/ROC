@@ -8,17 +8,17 @@ class ValidAccountTest {
 
 	@Test
 	void testValidAccountNumber() {
-		ValidAccount.isNotValidAccount(1);
+		assertFalse(ValidAccount.isNotValidAccount(1));
 	}
 	
 	@Test
 	void testInvalidAccountNumber() {
-		ValidAccount.isNotValidAccount(0);
+		assertTrue(ValidAccount.isNotValidAccount(0));
 	}
 
 	@Test
 	void testInvalidAccountNumber2() {
-		ValidAccount.isNotValidAccount(-11);
+		assertTrue(ValidAccount.isNotValidAccount(-11));
 	}
 
 

@@ -23,13 +23,11 @@ import com.revature.ui.MenuSystem;
 import com.revature.util.ConnectionUtil;
 import com.revature.util.EmployeeLogin;
 
-import eg1.Account;
-
 import java.math.BigDecimal;
 
 public class Scratch {
 
-	private static Logger log=Logger.getLogger(CustomerDAOImpl.class);
+	private static Logger log=Logger.getLogger(Scratch.class);
 	
 	public static void main(String[] args) throws DatabaseConnectionException {
 		// TODO Auto-generated method stub
@@ -530,10 +528,10 @@ public class Scratch {
 //				tempResult.setAmount(account.getInt("trasancitonAmount"));
 //				tempResult.setTrasancitonType(account.getString("trasancitonType"));
 //				tempResult.setTrasanciontPartner(account.getInt("trasanciontPartner"));
-////				System.out.println(account.getDate("dateCreated"));
+//				System.out.println(account.getDate("dateCreated"));
 //				System.out.println("time: "+account.getTime("timeCreated"));
 //				
-//				LocalDate dob=LocalDate.parse("2021-02-09", DateTimeFormatter.ofPattern("yyyy-MM-dd"));
+//				LocalDate dob=LocalDate.parse("2021-02-10", DateTimeFormatter.ofPattern("yyyy-MM-dd"));
 ////				System.out.println("dob: "+dob);
 //				
 ////				System.out.println(account.getDate("dateCreated").equals(dob));
@@ -541,7 +539,7 @@ public class Scratch {
 //				
 ////				System.out.println("last date: "+LocalDate.parse(account.getString("dateCreated"), DateTimeFormatter.ofPattern("yyyy-MM-dd")).equals(dob));
 //				
-//				LocalTime time=LocalTime.parse("21:50:20", DateTimeFormatter.ofPattern("HH:mm:ss"));
+//				LocalTime time=LocalTime.parse("09:47:04", DateTimeFormatter.ofPattern("HH:mm:ss"));
 //				System.out.println("test time: "+time);
 //				LocalTime dbTime=account.getObject("timeCreated", LocalTime.class);
 //				System.out.println("last time: "+dbTime.equals(time));
