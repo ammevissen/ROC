@@ -25,8 +25,8 @@ public class CustomerMenu implements MenuSystemSecure {
 			log.info("1.) Exit Customer Menu");
 			log.info("2.) View checking account balance");
 			log.info("3.) View savings account balance");
-			log.info("4.) Deposit Money");
-			log.info("5.) Withdraw Money");
+			log.info("4.) Deposit money");
+			log.info("5.) Withdraw money");
 			log.info("6.) View checking account transactions");
 			log.info("7.) View savings account transactions");
 
@@ -41,41 +41,38 @@ public class CustomerMenu implements MenuSystemSecure {
 				case 1:
 					log.info("Exiting Customer Menu");
 					break;
+				
 				case 2:
-					//System.out.println("2");
-					log.debug("Getting Checking Account Balance");
+					log.debug("Getting checking account balance");
 					log.info( "Checking account balance "+CustomerService.getAccountBalance("accountNumber", "checking account balance", accountNumber));
 					break;					
+				
 				case 3:
-					//System.out.println("3");
-					log.debug("Getting Saving Account Balance");
+					log.debug("Getting saving account balance");
 					log.info( "Saving account balance "+CustomerService.getAccountBalance("accountNumber", "savings account balance", accountNumber));
-
 					break;
+
 				case 4:
-					//System.out.println("4");
-					log.debug("Heading to Deposit Money");
+					log.debug("Heading to deposit money");
 					MenuSystemSecure depositMoney= new DepositMoney(); 
 					depositMoney.displaySecure(accountNumber);
 					break;
+
 				case 5:
-					//System.out.println("5");
-					log.debug("Heading to Withdraw Money");
+					log.debug("Heading to withdraw money");
 					MenuSystemSecure withdrawMoney= new WithdrawMoney(); 
 					withdrawMoney.displaySecure(accountNumber);
 					break;					
+
 				case 6:
-					//System.out.println("6");
-					log.debug("Getting Checking Account Transactions");
-					//EmployeeService.transactions(accountNumber*10+1);
+					log.debug("Getting checking account transactions");
 					List<CustomerTransaction> checkingTransactions=EmployeeService.transactions(accountNumber*10+1);
 					SortingTransactionsMenu sortingCheckingTransactionsMenu=new SortingTransactionsMenu();
 					sortingCheckingTransactionsMenu.display(checkingTransactions);
 					break;
+
 				case 7:
-					//System.out.println("7");
-					log.debug("Getting Saving Account Transactions");
-					//EmployeeService.transactions(accountNumber*10+2);
+					log.debug("Getting saving account transactions");
 					List<CustomerTransaction> savingsTransactions=EmployeeService.transactions(accountNumber*10+2);
 					SortingTransactionsMenu sortingSavingsTransactionsMenu=new SortingTransactionsMenu();
 					sortingSavingsTransactionsMenu.display(savingsTransactions);

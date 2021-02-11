@@ -39,18 +39,22 @@ public class SortingTransactionsMenu{
 				case 1:
 					log.info("Exiting Transactions Sort Menu");
 					break;
+		
 				case 2:
 					log.debug("sorting by amount");
 					transations=Comparator.compareAmount(transations);
 					break;
+				
 				case 3:
 					log.debug("sorting by date");
 					transations=Comparator.compareDate(transations);
 					break;
+				
 				case 4:
 					log.debug("sorting by time");
 					transations=Comparator.compareTime(transations);
 					break;
+				
 				case 5:
 					log.debug("sorting by transaction partner");
 					transations=Comparator.compareTrasanciontPartner(transations);

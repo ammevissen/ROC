@@ -18,14 +18,20 @@ public class EmployeeService {
 	private static Logger log=Logger.getLogger(EmployeeService.class);
 	
 	public static void customer(String searchBy, String name) {
+		//Search for customer by first or last name
+		
 		CustomerDAO DAO=new CustomerDAOImpl();
 		List<CustomerAccount> result=new ArrayList<>();
 		
+		//Call the DAO layer to get the customer account(s) that have the given first or last name
 		try {
 			result = DAO.getAccountInfo(searchBy, name);
 		} catch (DatabaseConnectionException | AccountNotFoundException e) {
-			e.printStackTrace();
+			
+			//e.printStackTrace();
 		}
+		
+		//Print customer account(s) info
 		if (result.size()>0) {
 			for (CustomerAccount account: result) {
 				log.info(account);
@@ -37,9 +43,12 @@ public class EmployeeService {
 	}
 
 	public static void customer(String searchBy, int account) {
+		//Get customer account by account number, checking account number or savings account number
+		
 		CustomerDAO DAO=new CustomerDAOImpl();
 		CustomerAccount result=null;
-		
+
+		//Call the DAO layer to get the customer account(s) that have the given account number, checking account number or savings account number
 		try {
 			result = DAO.getAccountInfo(searchBy, account);
 		} catch (DatabaseConnectionException e){
@@ -56,12 +65,15 @@ public class EmployeeService {
 			}
 			log.info("no accounts found with "+searchBySpace+" "+account);
 		}
+
+		//Print customer account info
 		if (result!=null) {
 			log.info(result);
 		}
 	}
 	
 	public static List<CustomerTransaction> allAccountTransactions(int accountNumber) {
+		//Get customer transactions for both checking and savings accounts
 		List<CustomerTransaction> results=new ArrayList<>();
 		
 		List<CustomerTransaction> temp1=EmployeeService.transactions(accountNumber*10+1);
@@ -83,13 +95,16 @@ public class EmployeeService {
 	}
 	
 	public static List<CustomerTransaction> transactions(int accountNumber) {
+		//Get customer transactions for either checking or savings account
 		CustomerDAO DAO=new CustomerDAOImpl();
 		List<CustomerTransaction> result=new ArrayList<>();
-		
+
+		//Call the DAO layer to get the customer transactions for the given account		
 		try {
 			result = DAO.getTransactionsInfo(accountNumber);
 		} catch (DatabaseConnectionException e) {
-			e.printStackTrace();
+			log.info("no account found with account "+accountNumber);			
+			//e.printStackTrace();
 		}
 		if (result.size()>0) {
 			//now handled by transaction class

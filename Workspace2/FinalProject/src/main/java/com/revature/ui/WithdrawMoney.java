@@ -32,15 +32,15 @@ public class WithdrawMoney implements MenuSystemSecure{
 				case 1:
 					log.info("Exiting Withdraw Menu");
 					break;
+	
 				case 2:
-					log.debug("Withdraw Cash or Check");
+					log.debug("Withdraw cash or check");
 					CustomerService.MoneyExchange(accountNumber, "Withdraw", 0);
-					System.out.println("2");
 					break;					
+				
 				case 3:
-					log.debug("Withdraw from another Account");
+					log.debug("Withdraw from another account");
 					CustomerService.MoneyExchange(accountNumber, "Withdraw", -1);
-					System.out.println("3");
 					break;
 
 				default:

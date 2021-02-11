@@ -155,8 +155,5 @@ public class CustomerAccount {
 		if (savingsID != other.savingsID)
 			return false;
 		return true;
-	}
-
-
-		
+	}		
 }

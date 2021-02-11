@@ -11,7 +11,7 @@ public class CreateAccountMenu implements MenuSystem {
 
 	@Override
 	public void display() {
-		log.debug("heading to create account");		
+		log.debug("Heading to Create Account");		
 		CustomerService accountCreation=new CustomerService();	
 		accountCreation.accountCreation();
 	}

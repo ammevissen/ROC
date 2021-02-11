@@ -39,20 +39,20 @@ public class MainMenu implements MenuSystem {
 				case 1:
 					log.info("Exiting Main Menu");
 					break;
+
 				case 2:
-					log.debug("attempting to login to employee menu");
-					//EmployeeLogin employeeLogin=new EmployeeLogin();
+					log.debug("Attempting to login to employee menu");
 					if (EmployeeLogin.login(EmployeeLogin.getAccountNumber(), EmployeeLogin.getPassword())) {
 						log.debug("heading to employee menu");
 						MenuSystem employeeMenu=new EmployeeMenu();
 						employeeMenu.display();						
 					}else {
 						log.info("Incorrect employee account number and/or password");
-					}
+					}	
+					break;
 					
-					break;					
 				case 3:
-					log.debug("attempting to login to customer menu");
+					log.debug("Attempting to login to customer menu");
 					log.info("Please enter account number");  //combine login methods, pass employee/customer to differentiate 
 
 					try {

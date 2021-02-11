@@ -1293,3 +1293,655 @@
 {INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 16:29:07   
 {INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 16:29:07   
 {INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 16:29:07   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 3    02-10-2021 Wednesday CST 16:29:09   
+{DEBUG}   [com.revature.ui.MainMenu]  attempting to login to customer menu    02-10-2021 Wednesday CST 16:29:09   
+{INFO}   [com.revature.ui.MainMenu]  Please enter account number    02-10-2021 Wednesday CST 16:29:09   
+{DEBUG}   [com.revature.ui.MainMenu]  4    02-10-2021 Wednesday CST 16:29:10   
+{INFO}   [com.revature.ui.MainMenu]  Please enter password    02-10-2021 Wednesday CST 16:29:10   
+{DEBUG}   [com.revature.ui.MainMenu]  password entered    02-10-2021 Wednesday CST 16:29:12   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@2d363fb3    02-10-2021 Wednesday CST 16:29:12   
+{INFO}   [com.revature.util.CustomerLogin]  account not found    02-10-2021 Wednesday CST 16:29:12   
+{DEBUG}   [com.revature.util.CustomerLogin]  incorrect password    02-10-2021 Wednesday CST 16:29:12   
+{INFO}   [com.revature.ui.MainMenu]  Incorrect account number and/or password    02-10-2021 Wednesday CST 16:29:12   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 16:29:12   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 16:29:12   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 16:29:12   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 16:29:12   
+{INFO}   [com.revature.main.Application]  Welcome to the bank    02-10-2021 Wednesday CST 17:58:52   
+{INFO}   [com.revature.ui.MainMenu]  Main Menu    02-10-2021 Wednesday CST 17:58:52   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 17:58:52   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 17:58:52   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 17:58:52   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 17:58:52   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 2    02-10-2021 Wednesday CST 17:58:55   
+{DEBUG}   [com.revature.ui.MainMenu]  Attempting to login to employee menu    02-10-2021 Wednesday CST 17:58:55   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee account number    02-10-2021 Wednesday CST 17:58:55   
+{DEBUG}   [com.revature.util.EmployeeLogin]  1    02-10-2021 Wednesday CST 17:58:56   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee password    02-10-2021 Wednesday CST 17:58:56   
+{DEBUG}   [com.revature.util.EmployeeLogin]  password entered    02-10-2021 Wednesday CST 17:59:01   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@2d363fb3    02-10-2021 Wednesday CST 17:59:01   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  about to execute Query for account: 1    02-10-2021 Wednesday CST 17:59:01   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  Query executed    02-10-2021 Wednesday CST 17:59:01   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  pswd.next()    02-10-2021 Wednesday CST 17:59:01   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  password: p@55w0rd    02-10-2021 Wednesday CST 17:59:01   
+{DEBUG}   [com.revature.util.EmployeeLogin]  correct password    02-10-2021 Wednesday CST 17:59:01   
+{DEBUG}   [com.revature.ui.MainMenu]  heading to employee menu    02-10-2021 Wednesday CST 17:59:01   
+{INFO}   [com.revature.ui.EmployeeMenu]  Employee Menu    02-10-2021 Wednesday CST 17:59:01   
+{INFO}   [com.revature.ui.EmployeeMenu]  1.) Exit Employee Menu    02-10-2021 Wednesday CST 17:59:01   
+{INFO}   [com.revature.ui.EmployeeMenu]  2.) Search for account    02-10-2021 Wednesday CST 17:59:01   
+{INFO}   [com.revature.ui.EmployeeMenu]  3.) View transactions log    02-10-2021 Wednesday CST 17:59:01   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  user's choice was 2    02-10-2021 Wednesday CST 17:59:03   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  Heading to search for account as employee menu    02-10-2021 Wednesday CST 17:59:03   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  Search for Account as Employee Menu    02-10-2021 Wednesday CST 17:59:03   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  1.) Exit Employee Search for Account Menu    02-10-2021 Wednesday CST 17:59:03   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  2.) Search for account by first name    02-10-2021 Wednesday CST 17:59:03   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  3.) Search for account by last name    02-10-2021 Wednesday CST 17:59:03   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  4.) Search for account by account number    02-10-2021 Wednesday CST 17:59:03   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  5.) Search for account by checking account number    02-10-2021 Wednesday CST 17:59:03   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  6.) Search for account by savings account number    02-10-2021 Wednesday CST 17:59:03   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  user's choice was 2    02-10-2021 Wednesday CST 17:59:06   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  Enter the first name of the account to search for:    02-10-2021 Wednesday CST 17:59:06   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  Entering Search for Account by First Name    02-10-2021 Wednesday CST 17:59:08   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@3b192d32    02-10-2021 Wednesday CST 17:59:08   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.customer WHERE firstName = 'fred'    02-10-2021 Wednesday CST 17:59:08   
+{INFO}   [com.revature.service.EmployeeService]  no accounts found with firstName fred    02-10-2021 Wednesday CST 17:59:08   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  1.) Exit Employee Search for Account Menu    02-10-2021 Wednesday CST 17:59:08   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  2.) Search for account by first name    02-10-2021 Wednesday CST 17:59:08   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  3.) Search for account by last name    02-10-2021 Wednesday CST 17:59:08   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  4.) Search for account by account number    02-10-2021 Wednesday CST 17:59:08   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  5.) Search for account by checking account number    02-10-2021 Wednesday CST 17:59:08   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  6.) Search for account by savings account number    02-10-2021 Wednesday CST 17:59:08   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  user's choice was 3    02-10-2021 Wednesday CST 17:59:14   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  Enter the last name of the account to search for:    02-10-2021 Wednesday CST 17:59:14   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  Entering Search for Account by Last Name    02-10-2021 Wednesday CST 17:59:20   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@12bb4df8    02-10-2021 Wednesday CST 17:59:20   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  SELECT * FROM ROC_Banking.customer WHERE lastName = 'McCormack'    02-10-2021 Wednesday CST 17:59:20   
+{INFO}   [com.revature.service.EmployeeService]  no accounts found with lastName McCormack    02-10-2021 Wednesday CST 17:59:20   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  1.) Exit Employee Search for Account Menu    02-10-2021 Wednesday CST 17:59:20   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  2.) Search for account by first name    02-10-2021 Wednesday CST 17:59:20   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  3.) Search for account by last name    02-10-2021 Wednesday CST 17:59:20   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  4.) Search for account by account number    02-10-2021 Wednesday CST 17:59:20   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  5.) Search for account by checking account number    02-10-2021 Wednesday CST 17:59:20   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  6.) Search for account by savings account number    02-10-2021 Wednesday CST 17:59:20   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  user's choice was 4    02-10-2021 Wednesday CST 17:59:24   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  Enter the account number of the account to search for:    02-10-2021 Wednesday CST 17:59:24   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  Entering Search for Account by Account Number: 4    02-10-2021 Wednesday CST 17:59:27   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@7a7b0070    02-10-2021 Wednesday CST 17:59:28   
+{INFO}   [com.revature.service.EmployeeService]  no accounts found with account Number 4    02-10-2021 Wednesday CST 17:59:28   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  1.) Exit Employee Search for Account Menu    02-10-2021 Wednesday CST 17:59:28   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  2.) Search for account by first name    02-10-2021 Wednesday CST 17:59:28   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  3.) Search for account by last name    02-10-2021 Wednesday CST 17:59:28   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  4.) Search for account by account number    02-10-2021 Wednesday CST 17:59:28   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  5.) Search for account by checking account number    02-10-2021 Wednesday CST 17:59:28   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  6.) Search for account by savings account number    02-10-2021 Wednesday CST 17:59:28   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  user's choice was 5    02-10-2021 Wednesday CST 17:59:30   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  Enter the checking account number of the account to search for:    02-10-2021 Wednesday CST 17:59:30   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  Entering Search for checking Account by Checking Account Number: 4    02-10-2021 Wednesday CST 17:59:32   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@71bc1ae4    02-10-2021 Wednesday CST 17:59:32   
+{INFO}   [com.revature.service.EmployeeService]  no accounts found with checking account number 4    02-10-2021 Wednesday CST 17:59:32   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  1.) Exit Employee Search for Account Menu    02-10-2021 Wednesday CST 17:59:32   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  2.) Search for account by first name    02-10-2021 Wednesday CST 17:59:32   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  3.) Search for account by last name    02-10-2021 Wednesday CST 17:59:32   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  4.) Search for account by account number    02-10-2021 Wednesday CST 17:59:32   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  5.) Search for account by checking account number    02-10-2021 Wednesday CST 17:59:32   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  6.) Search for account by savings account number    02-10-2021 Wednesday CST 17:59:32   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  user's choice was 6    02-10-2021 Wednesday CST 17:59:35   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  Enter the savings account number of the account to search for:    02-10-2021 Wednesday CST 17:59:35   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  Entering Search for savings account by Saving Account Number: 6    02-10-2021 Wednesday CST 17:59:36   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@2437c6dc    02-10-2021 Wednesday CST 17:59:36   
+{INFO}   [com.revature.service.EmployeeService]  no accounts found with saving account number 6    02-10-2021 Wednesday CST 17:59:36   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  1.) Exit Employee Search for Account Menu    02-10-2021 Wednesday CST 17:59:36   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  2.) Search for account by first name    02-10-2021 Wednesday CST 17:59:36   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  3.) Search for account by last name    02-10-2021 Wednesday CST 17:59:36   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  4.) Search for account by account number    02-10-2021 Wednesday CST 17:59:36   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  5.) Search for account by checking account number    02-10-2021 Wednesday CST 17:59:36   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  6.) Search for account by savings account number    02-10-2021 Wednesday CST 17:59:36   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  user's choice was 5    02-10-2021 Wednesday CST 17:59:39   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  Enter the checking account number of the account to search for:    02-10-2021 Wednesday CST 17:59:39   
+{INFO}   [com.revature.main.Application]  Welcome to the bank    02-10-2021 Wednesday CST 18:06:33   
+{INFO}   [com.revature.ui.MainMenu]  Main Menu    02-10-2021 Wednesday CST 18:06:33   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 18:06:33   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 18:06:33   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 18:06:33   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 18:06:33   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 2    02-10-2021 Wednesday CST 18:06:36   
+{DEBUG}   [com.revature.ui.MainMenu]  Attempting to login to employee menu    02-10-2021 Wednesday CST 18:06:36   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee account number    02-10-2021 Wednesday CST 18:06:36   
+{DEBUG}   [com.revature.util.EmployeeLogin]  1    02-10-2021 Wednesday CST 18:06:37   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee password    02-10-2021 Wednesday CST 18:06:37   
+{DEBUG}   [com.revature.util.EmployeeLogin]  password entered    02-10-2021 Wednesday CST 18:06:40   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@2d363fb3    02-10-2021 Wednesday CST 18:06:40   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  about to execute Query for account: 1    02-10-2021 Wednesday CST 18:06:40   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  Query executed    02-10-2021 Wednesday CST 18:06:40   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  pswd.next()    02-10-2021 Wednesday CST 18:06:40   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  password: p@55w0rd    02-10-2021 Wednesday CST 18:06:40   
+{DEBUG}   [com.revature.util.EmployeeLogin]  correct password    02-10-2021 Wednesday CST 18:06:40   
+{DEBUG}   [com.revature.ui.MainMenu]  heading to employee menu    02-10-2021 Wednesday CST 18:06:40   
+{INFO}   [com.revature.ui.EmployeeMenu]  Employee Menu    02-10-2021 Wednesday CST 18:06:40   
+{INFO}   [com.revature.ui.EmployeeMenu]  1.) Exit Employee Menu    02-10-2021 Wednesday CST 18:06:40   
+{INFO}   [com.revature.ui.EmployeeMenu]  2.) Search for account    02-10-2021 Wednesday CST 18:06:40   
+{INFO}   [com.revature.ui.EmployeeMenu]  3.) View transactions log    02-10-2021 Wednesday CST 18:06:40   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  user's choice was 2    02-10-2021 Wednesday CST 18:06:43   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  Heading to search for account as employee menu    02-10-2021 Wednesday CST 18:06:43   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  Search for Account as Employee Menu    02-10-2021 Wednesday CST 18:06:43   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  1.) Exit Employee Search for Account Menu    02-10-2021 Wednesday CST 18:06:43   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  2.) Search for account by first name    02-10-2021 Wednesday CST 18:06:43   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  3.) Search for account by last name    02-10-2021 Wednesday CST 18:06:43   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  4.) Search for account by account number    02-10-2021 Wednesday CST 18:06:43   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  5.) Search for account by checking account number    02-10-2021 Wednesday CST 18:06:43   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  6.) Search for account by savings account number    02-10-2021 Wednesday CST 18:06:43   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  user's choice was 4    02-10-2021 Wednesday CST 18:06:46   
+{INFO}   [com.revature.util.GetAccountNumber]  Enter the account number of the account to search for:    02-10-2021 Wednesday CST 18:06:46   
+{INFO}   [com.revature.util.GetAccountNumber]  Please enter a valid account number    02-10-2021 Wednesday CST 18:06:47   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  Entering Search for Account by Account Number: -1    02-10-2021 Wednesday CST 18:06:47   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@3b192d32    02-10-2021 Wednesday CST 18:06:47   
+{INFO}   [com.revature.service.EmployeeService]  no accounts found with account Number -1    02-10-2021 Wednesday CST 18:06:47   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  1.) Exit Employee Search for Account Menu    02-10-2021 Wednesday CST 18:06:47   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  2.) Search for account by first name    02-10-2021 Wednesday CST 18:06:47   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  3.) Search for account by last name    02-10-2021 Wednesday CST 18:06:47   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  4.) Search for account by account number    02-10-2021 Wednesday CST 18:06:47   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  5.) Search for account by checking account number    02-10-2021 Wednesday CST 18:06:47   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  6.) Search for account by savings account number    02-10-2021 Wednesday CST 18:06:47   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  user's choice was 1    02-10-2021 Wednesday CST 18:08:41   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  Exiting Employee Search for Account Menu    02-10-2021 Wednesday CST 18:08:41   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  Out of while loop, exiting Search for Account as Employee Menu    02-10-2021 Wednesday CST 18:08:41   
+{INFO}   [com.revature.ui.EmployeeMenu]  1.) Exit Employee Menu    02-10-2021 Wednesday CST 18:08:41   
+{INFO}   [com.revature.ui.EmployeeMenu]  2.) Search for account    02-10-2021 Wednesday CST 18:08:41   
+{INFO}   [com.revature.ui.EmployeeMenu]  3.) View transactions log    02-10-2021 Wednesday CST 18:08:41   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  user's choice was 1    02-10-2021 Wednesday CST 18:08:41   
+{INFO}   [com.revature.ui.EmployeeMenu]  Exiting Employee Menu    02-10-2021 Wednesday CST 18:08:41   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  Out of while loop, exiting Employee Menu    02-10-2021 Wednesday CST 18:08:41   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 18:08:41   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 18:08:41   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 18:08:41   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 18:08:41   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 1    02-10-2021 Wednesday CST 18:08:41   
+{INFO}   [com.revature.ui.MainMenu]  Exiting Main Menu    02-10-2021 Wednesday CST 18:08:41   
+{DEBUG}   [com.revature.ui.MainMenu]  Out of while loop, exiting Main Menu    02-10-2021 Wednesday CST 18:08:41   
+{INFO}   [com.revature.main.Application]  Goodbye!    02-10-2021 Wednesday CST 18:08:41   
+{INFO}   [com.revature.main.Application]  Welcome to the bank    02-10-2021 Wednesday CST 18:08:45   
+{INFO}   [com.revature.ui.MainMenu]  Main Menu    02-10-2021 Wednesday CST 18:08:45   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 18:08:45   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 18:08:45   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 18:08:45   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 18:08:45   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 2    02-10-2021 Wednesday CST 18:08:47   
+{DEBUG}   [com.revature.ui.MainMenu]  Attempting to login to employee menu    02-10-2021 Wednesday CST 18:08:47   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee account number    02-10-2021 Wednesday CST 18:08:47   
+{DEBUG}   [com.revature.util.EmployeeLogin]  1    02-10-2021 Wednesday CST 18:08:49   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee password    02-10-2021 Wednesday CST 18:08:49   
+{DEBUG}   [com.revature.util.EmployeeLogin]  password entered    02-10-2021 Wednesday CST 18:08:52   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@2d363fb3    02-10-2021 Wednesday CST 18:08:53   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  about to execute Query for account: 1    02-10-2021 Wednesday CST 18:08:53   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  Query executed    02-10-2021 Wednesday CST 18:08:53   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  pswd.next()    02-10-2021 Wednesday CST 18:08:53   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  password: p@55w0rd    02-10-2021 Wednesday CST 18:08:53   
+{DEBUG}   [com.revature.util.EmployeeLogin]  correct password    02-10-2021 Wednesday CST 18:08:53   
+{DEBUG}   [com.revature.ui.MainMenu]  heading to employee menu    02-10-2021 Wednesday CST 18:08:53   
+{INFO}   [com.revature.ui.EmployeeMenu]  Employee Menu    02-10-2021 Wednesday CST 18:08:53   
+{INFO}   [com.revature.ui.EmployeeMenu]  1.) Exit Employee Menu    02-10-2021 Wednesday CST 18:08:53   
+{INFO}   [com.revature.ui.EmployeeMenu]  2.) Search for account    02-10-2021 Wednesday CST 18:08:53   
+{INFO}   [com.revature.ui.EmployeeMenu]  3.) View transactions log    02-10-2021 Wednesday CST 18:08:53   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  user's choice was 2    02-10-2021 Wednesday CST 18:08:54   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  Heading to search for account as employee menu    02-10-2021 Wednesday CST 18:08:54   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  Search for Account as Employee Menu    02-10-2021 Wednesday CST 18:08:54   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  1.) Exit Employee Search for Account Menu    02-10-2021 Wednesday CST 18:08:54   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  2.) Search for account by first name    02-10-2021 Wednesday CST 18:08:54   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  3.) Search for account by last name    02-10-2021 Wednesday CST 18:08:54   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  4.) Search for account by account number    02-10-2021 Wednesday CST 18:08:54   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  5.) Search for account by checking account number    02-10-2021 Wednesday CST 18:08:54   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  6.) Search for account by savings account number    02-10-2021 Wednesday CST 18:08:54   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  user's choice was 6    02-10-2021 Wednesday CST 18:08:56   
+{INFO}   [com.revature.util.GetAccountNumber]  Enter the savings account number of the account to search for:    02-10-2021 Wednesday CST 18:08:56   
+{INFO}   [com.revature.util.GetAccountNumber]  Please enter a valid account number    02-10-2021 Wednesday CST 18:09:00   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  Entering Search for savings account by Saving Account Number: -1    02-10-2021 Wednesday CST 18:09:00   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  1.) Exit Employee Search for Account Menu    02-10-2021 Wednesday CST 18:09:00   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  2.) Search for account by first name    02-10-2021 Wednesday CST 18:09:00   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  3.) Search for account by last name    02-10-2021 Wednesday CST 18:09:00   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  4.) Search for account by account number    02-10-2021 Wednesday CST 18:09:00   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  5.) Search for account by checking account number    02-10-2021 Wednesday CST 18:09:00   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  6.) Search for account by savings account number    02-10-2021 Wednesday CST 18:09:00   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  user's choice was 1    02-10-2021 Wednesday CST 18:09:06   
+{INFO}   [com.revature.ui.SearchForAccountEmployee]  Exiting Employee Search for Account Menu    02-10-2021 Wednesday CST 18:09:06   
+{DEBUG}   [com.revature.ui.SearchForAccountEmployee]  Out of while loop, exiting Search for Account as Employee Menu    02-10-2021 Wednesday CST 18:09:06   
+{INFO}   [com.revature.ui.EmployeeMenu]  1.) Exit Employee Menu    02-10-2021 Wednesday CST 18:09:06   
+{INFO}   [com.revature.ui.EmployeeMenu]  2.) Search for account    02-10-2021 Wednesday CST 18:09:06   
+{INFO}   [com.revature.ui.EmployeeMenu]  3.) View transactions log    02-10-2021 Wednesday CST 18:09:06   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  user's choice was 1    02-10-2021 Wednesday CST 18:09:06   
+{INFO}   [com.revature.ui.EmployeeMenu]  Exiting Employee Menu    02-10-2021 Wednesday CST 18:09:06   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  Out of while loop, exiting Employee Menu    02-10-2021 Wednesday CST 18:09:06   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 18:09:06   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 18:09:06   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 18:09:06   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 18:09:06   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 1    02-10-2021 Wednesday CST 18:09:09   
+{INFO}   [com.revature.ui.MainMenu]  Exiting Main Menu    02-10-2021 Wednesday CST 18:09:09   
+{DEBUG}   [com.revature.ui.MainMenu]  Out of while loop, exiting Main Menu    02-10-2021 Wednesday CST 18:09:09   
+{INFO}   [com.revature.main.Application]  Goodbye!    02-10-2021 Wednesday CST 18:09:09   
+{INFO}   [com.revature.main.Application]  Welcome to the bank    02-10-2021 Wednesday CST 19:42:02   
+{INFO}   [com.revature.ui.MainMenu]  Main Menu    02-10-2021 Wednesday CST 19:42:02   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 19:42:02   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 19:42:02   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 19:42:02   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 19:42:02   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 2    02-10-2021 Wednesday CST 19:42:05   
+{DEBUG}   [com.revature.ui.MainMenu]  Attempting to login to employee menu    02-10-2021 Wednesday CST 19:42:05   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee account number    02-10-2021 Wednesday CST 19:42:05   
+{DEBUG}   [com.revature.util.EmployeeLogin]  1    02-10-2021 Wednesday CST 19:42:06   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee password    02-10-2021 Wednesday CST 19:42:06   
+{DEBUG}   [com.revature.util.EmployeeLogin]  password entered    02-10-2021 Wednesday CST 19:42:10   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@2d363fb3    02-10-2021 Wednesday CST 19:42:11   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  about to execute Query for account: 1    02-10-2021 Wednesday CST 19:42:11   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  Query executed    02-10-2021 Wednesday CST 19:42:11   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  pswd.next()    02-10-2021 Wednesday CST 19:42:11   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  password: p@55w0rd    02-10-2021 Wednesday CST 19:42:11   
+{DEBUG}   [com.revature.util.EmployeeLogin]  correct password    02-10-2021 Wednesday CST 19:42:11   
+{DEBUG}   [com.revature.ui.MainMenu]  heading to employee menu    02-10-2021 Wednesday CST 19:42:11   
+{INFO}   [com.revature.ui.EmployeeMenu]  Employee Menu    02-10-2021 Wednesday CST 19:42:11   
+{INFO}   [com.revature.ui.EmployeeMenu]  1.) Exit Employee Menu    02-10-2021 Wednesday CST 19:42:11   
+{INFO}   [com.revature.ui.EmployeeMenu]  2.) Search for account    02-10-2021 Wednesday CST 19:42:11   
+{INFO}   [com.revature.ui.EmployeeMenu]  3.) View transactions log    02-10-2021 Wednesday CST 19:42:11   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  user's choice was 3    02-10-2021 Wednesday CST 19:42:13   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  Heading to view transactions as employee menu    02-10-2021 Wednesday CST 19:42:13   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Employee View Transactions Menu    02-10-2021 Wednesday CST 19:42:13   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-10-2021 Wednesday CST 19:42:13   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by account number    02-10-2021 Wednesday CST 19:42:13   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by checking account number    02-10-2021 Wednesday CST 19:42:13   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by savings account number    02-10-2021 Wednesday CST 19:42:13   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 3    02-10-2021 Wednesday CST 19:42:16   
+{INFO}   [com.revature.util.GetAccountNumber]  Please enter the checking account number of interest:     02-10-2021 Wednesday CST 19:42:16   
+{INFO}   [com.revature.util.GetAccountNumber]  Please enter a valid account number    02-10-2021 Wednesday CST 19:42:20   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  please enter a valid checking account number    02-10-2021 Wednesday CST 19:42:20   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-10-2021 Wednesday CST 19:42:20   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by account number    02-10-2021 Wednesday CST 19:42:20   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by checking account number    02-10-2021 Wednesday CST 19:42:20   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by savings account number    02-10-2021 Wednesday CST 19:42:20   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 1    02-10-2021 Wednesday CST 19:47:05   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Exiting Employee View Transactions Menu    02-10-2021 Wednesday CST 19:47:05   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  Out of while loop, exiting View Transactions as Employee Menu    02-10-2021 Wednesday CST 19:47:05   
+{INFO}   [com.revature.ui.EmployeeMenu]  1.) Exit Employee Menu    02-10-2021 Wednesday CST 19:47:05   
+{INFO}   [com.revature.ui.EmployeeMenu]  2.) Search for account    02-10-2021 Wednesday CST 19:47:05   
+{INFO}   [com.revature.ui.EmployeeMenu]  3.) View transactions log    02-10-2021 Wednesday CST 19:47:05   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  user's choice was 1    02-10-2021 Wednesday CST 19:47:05   
+{INFO}   [com.revature.ui.EmployeeMenu]  Exiting Employee Menu    02-10-2021 Wednesday CST 19:47:05   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  Out of while loop, exiting Employee Menu    02-10-2021 Wednesday CST 19:47:05   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 19:47:05   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 19:47:05   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 19:47:05   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 19:47:05   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 1    02-10-2021 Wednesday CST 19:47:06   
+{INFO}   [com.revature.ui.MainMenu]  Exiting Main Menu    02-10-2021 Wednesday CST 19:47:06   
+{DEBUG}   [com.revature.ui.MainMenu]  Out of while loop, exiting Main Menu    02-10-2021 Wednesday CST 19:47:06   
+{INFO}   [com.revature.main.Application]  Goodbye!    02-10-2021 Wednesday CST 19:47:06   
+{INFO}   [com.revature.main.Application]  Welcome to the bank    02-10-2021 Wednesday CST 19:56:41   
+{INFO}   [com.revature.ui.MainMenu]  Main Menu    02-10-2021 Wednesday CST 19:56:41   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 19:56:41   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 19:56:41   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 19:56:41   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 19:56:41   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 2    02-10-2021 Wednesday CST 19:56:44   
+{DEBUG}   [com.revature.ui.MainMenu]  Attempting to login to employee menu    02-10-2021 Wednesday CST 19:56:44   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee account number    02-10-2021 Wednesday CST 19:56:44   
+{DEBUG}   [com.revature.util.EmployeeLogin]  1    02-10-2021 Wednesday CST 19:56:44   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee password    02-10-2021 Wednesday CST 19:56:44   
+{DEBUG}   [com.revature.util.EmployeeLogin]  password entered    02-10-2021 Wednesday CST 19:56:53   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@2d363fb3    02-10-2021 Wednesday CST 19:56:53   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  about to execute Query for account: 1    02-10-2021 Wednesday CST 19:56:53   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  Query executed    02-10-2021 Wednesday CST 19:56:53   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  pswd.next()    02-10-2021 Wednesday CST 19:56:53   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  password: p@55w0rd    02-10-2021 Wednesday CST 19:56:53   
+{DEBUG}   [com.revature.util.EmployeeLogin]  correct password    02-10-2021 Wednesday CST 19:56:53   
+{DEBUG}   [com.revature.ui.MainMenu]  heading to employee menu    02-10-2021 Wednesday CST 19:56:53   
+{INFO}   [com.revature.ui.EmployeeMenu]  Employee Menu    02-10-2021 Wednesday CST 19:56:53   
+{INFO}   [com.revature.ui.EmployeeMenu]  1.) Exit Employee Menu    02-10-2021 Wednesday CST 19:56:53   
+{INFO}   [com.revature.ui.EmployeeMenu]  2.) Search for account    02-10-2021 Wednesday CST 19:56:53   
+{INFO}   [com.revature.ui.EmployeeMenu]  3.) View transactions log    02-10-2021 Wednesday CST 19:56:53   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  user's choice was 3    02-10-2021 Wednesday CST 19:56:55   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  Heading to view transactions as employee menu    02-10-2021 Wednesday CST 19:56:55   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Employee View Transactions Menu    02-10-2021 Wednesday CST 19:56:55   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-10-2021 Wednesday CST 19:56:55   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by account number    02-10-2021 Wednesday CST 19:56:55   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by checking account number    02-10-2021 Wednesday CST 19:56:55   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by savings account number    02-10-2021 Wednesday CST 19:56:55   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 4    02-10-2021 Wednesday CST 19:56:59   
+{INFO}   [com.revature.util.GetAccountNumber]  Please enter the saving account number of interest:     02-10-2021 Wednesday CST 19:56:59   
+{DEBUG}   [com.revature.util.GetAccountNumber]  4    02-10-2021 Wednesday CST 19:57:04   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  savingAccNumber: 4    02-10-2021 Wednesday CST 19:57:04   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  Invalid savingAccNumber    02-10-2021 Wednesday CST 19:57:04   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-10-2021 Wednesday CST 19:57:04   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by account number    02-10-2021 Wednesday CST 19:57:04   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by checking account number    02-10-2021 Wednesday CST 19:57:04   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by savings account number    02-10-2021 Wednesday CST 19:57:04   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 1    02-10-2021 Wednesday CST 19:57:49   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Exiting Employee View Transactions Menu    02-10-2021 Wednesday CST 19:57:49   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  Out of while loop, exiting View Transactions as Employee Menu    02-10-2021 Wednesday CST 19:57:49   
+{INFO}   [com.revature.ui.EmployeeMenu]  1.) Exit Employee Menu    02-10-2021 Wednesday CST 19:57:49   
+{INFO}   [com.revature.ui.EmployeeMenu]  2.) Search for account    02-10-2021 Wednesday CST 19:57:49   
+{INFO}   [com.revature.ui.EmployeeMenu]  3.) View transactions log    02-10-2021 Wednesday CST 19:57:49   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  user's choice was 1    02-10-2021 Wednesday CST 19:57:49   
+{INFO}   [com.revature.ui.EmployeeMenu]  Exiting Employee Menu    02-10-2021 Wednesday CST 19:57:49   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  Out of while loop, exiting Employee Menu    02-10-2021 Wednesday CST 19:57:49   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 19:57:49   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 19:57:49   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 19:57:49   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 19:57:49   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 1    02-10-2021 Wednesday CST 19:57:49   
+{INFO}   [com.revature.ui.MainMenu]  Exiting Main Menu    02-10-2021 Wednesday CST 19:57:49   
+{DEBUG}   [com.revature.ui.MainMenu]  Out of while loop, exiting Main Menu    02-10-2021 Wednesday CST 19:57:49   
+{INFO}   [com.revature.main.Application]  Goodbye!    02-10-2021 Wednesday CST 19:57:49   
+{INFO}   [com.revature.main.Application]  Welcome to the bank    02-10-2021 Wednesday CST 19:57:53   
+{INFO}   [com.revature.ui.MainMenu]  Main Menu    02-10-2021 Wednesday CST 19:57:53   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 19:57:53   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 19:57:53   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 19:57:53   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 19:57:53   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 2    02-10-2021 Wednesday CST 19:57:56   
+{DEBUG}   [com.revature.ui.MainMenu]  Attempting to login to employee menu    02-10-2021 Wednesday CST 19:57:56   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee account number    02-10-2021 Wednesday CST 19:57:56   
+{DEBUG}   [com.revature.util.EmployeeLogin]  1    02-10-2021 Wednesday CST 19:57:58   
+{INFO}   [com.revature.util.EmployeeLogin]  Please enter employee password    02-10-2021 Wednesday CST 19:57:58   
+{DEBUG}   [com.revature.util.EmployeeLogin]  password entered    02-10-2021 Wednesday CST 19:58:02   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@2d363fb3    02-10-2021 Wednesday CST 19:58:02   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  about to execute Query for account: 1    02-10-2021 Wednesday CST 19:58:02   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  Query executed    02-10-2021 Wednesday CST 19:58:02   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  pswd.next()    02-10-2021 Wednesday CST 19:58:02   
+{DEBUG}   [com.revature.DAO.EmployeeDAOImpl]  password: p@55w0rd    02-10-2021 Wednesday CST 19:58:02   
+{DEBUG}   [com.revature.util.EmployeeLogin]  correct password    02-10-2021 Wednesday CST 19:58:02   
+{DEBUG}   [com.revature.ui.MainMenu]  heading to employee menu    02-10-2021 Wednesday CST 19:58:02   
+{INFO}   [com.revature.ui.EmployeeMenu]  Employee Menu    02-10-2021 Wednesday CST 19:58:02   
+{INFO}   [com.revature.ui.EmployeeMenu]  1.) Exit Employee Menu    02-10-2021 Wednesday CST 19:58:02   
+{INFO}   [com.revature.ui.EmployeeMenu]  2.) Search for account    02-10-2021 Wednesday CST 19:58:02   
+{INFO}   [com.revature.ui.EmployeeMenu]  3.) View transactions log    02-10-2021 Wednesday CST 19:58:02   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  user's choice was 3    02-10-2021 Wednesday CST 19:58:03   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  Heading to view transactions as employee menu    02-10-2021 Wednesday CST 19:58:03   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Employee View Transactions Menu    02-10-2021 Wednesday CST 19:58:03   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-10-2021 Wednesday CST 19:58:03   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by account number    02-10-2021 Wednesday CST 19:58:03   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by checking account number    02-10-2021 Wednesday CST 19:58:03   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by savings account number    02-10-2021 Wednesday CST 19:58:03   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 4    02-10-2021 Wednesday CST 19:58:07   
+{INFO}   [com.revature.util.GetAccountNumber]  Please enter the saving account number of interest:     02-10-2021 Wednesday CST 19:58:07   
+{DEBUG}   [com.revature.util.GetAccountNumber]  4    02-10-2021 Wednesday CST 19:58:08   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  savingAccNumber: 4    02-10-2021 Wednesday CST 19:58:08   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Invalid savingAccNumber    02-10-2021 Wednesday CST 19:58:08   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-10-2021 Wednesday CST 19:58:08   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by account number    02-10-2021 Wednesday CST 19:58:08   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by checking account number    02-10-2021 Wednesday CST 19:58:08   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by savings account number    02-10-2021 Wednesday CST 19:58:08   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 4    02-10-2021 Wednesday CST 19:58:24   
+{INFO}   [com.revature.util.GetAccountNumber]  Please enter the saving account number of interest:     02-10-2021 Wednesday CST 19:58:24   
+{INFO}   [com.revature.util.GetAccountNumber]  Please enter a valid account number    02-10-2021 Wednesday CST 19:58:27   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  savingAccNumber: -1    02-10-2021 Wednesday CST 19:58:27   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Invalid savingAccNumber    02-10-2021 Wednesday CST 19:58:27   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-10-2021 Wednesday CST 19:58:27   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by account number    02-10-2021 Wednesday CST 19:58:27   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by checking account number    02-10-2021 Wednesday CST 19:58:27   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by savings account number    02-10-2021 Wednesday CST 19:58:27   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 4    02-10-2021 Wednesday CST 19:59:48   
+{INFO}   [com.revature.util.GetAccountNumber]  Please enter the saving account number of interest:     02-10-2021 Wednesday CST 19:59:48   
+{INFO}   [com.revature.util.GetAccountNumber]  Please enter a valid account number    02-10-2021 Wednesday CST 19:59:49   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  savingAccNumber: -1    02-10-2021 Wednesday CST 19:59:49   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Invalid savingAccNumber    02-10-2021 Wednesday CST 19:59:49   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-10-2021 Wednesday CST 19:59:49   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by account number    02-10-2021 Wednesday CST 19:59:49   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by checking account number    02-10-2021 Wednesday CST 19:59:49   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by savings account number    02-10-2021 Wednesday CST 19:59:49   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 3    02-10-2021 Wednesday CST 20:01:39   
+{INFO}   [com.revature.util.GetAccountNumber]  Please enter the checking account number of interest:     02-10-2021 Wednesday CST 20:01:39   
+{DEBUG}   [com.revature.util.GetAccountNumber]  -1    02-10-2021 Wednesday CST 20:01:42   
+{INFO}   [com.revature.util.GetAccountNumber]  Please enter a valid account number    02-10-2021 Wednesday CST 20:01:42   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  checkingAccNumber: -1    02-10-2021 Wednesday CST 20:01:42   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Invalid checkingAccNumber    02-10-2021 Wednesday CST 20:01:42   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  1.) Exit Employee View Transactions Menu    02-10-2021 Wednesday CST 20:01:42   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  2.) View by account number    02-10-2021 Wednesday CST 20:01:42   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  3.) View by checking account number    02-10-2021 Wednesday CST 20:01:42   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  4.) View by savings account number    02-10-2021 Wednesday CST 20:01:42   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  user's choice was 1    02-10-2021 Wednesday CST 20:02:02   
+{INFO}   [com.revature.ui.ViewTransactionsAsEmployee]  Exiting Employee View Transactions Menu    02-10-2021 Wednesday CST 20:02:02   
+{DEBUG}   [com.revature.ui.ViewTransactionsAsEmployee]  Out of while loop, exiting View Transactions as Employee Menu    02-10-2021 Wednesday CST 20:02:02   
+{INFO}   [com.revature.ui.EmployeeMenu]  1.) Exit Employee Menu    02-10-2021 Wednesday CST 20:02:02   
+{INFO}   [com.revature.ui.EmployeeMenu]  2.) Search for account    02-10-2021 Wednesday CST 20:02:02   
+{INFO}   [com.revature.ui.EmployeeMenu]  3.) View transactions log    02-10-2021 Wednesday CST 20:02:02   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  user's choice was 1    02-10-2021 Wednesday CST 20:02:02   
+{INFO}   [com.revature.ui.EmployeeMenu]  Exiting Employee Menu    02-10-2021 Wednesday CST 20:02:02   
+{DEBUG}   [com.revature.ui.EmployeeMenu]  Out of while loop, exiting Employee Menu    02-10-2021 Wednesday CST 20:02:02   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 20:02:02   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 20:02:02   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 20:02:02   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 20:02:02   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 1    02-10-2021 Wednesday CST 20:02:02   
+{INFO}   [com.revature.ui.MainMenu]  Exiting Main Menu    02-10-2021 Wednesday CST 20:02:02   
+{DEBUG}   [com.revature.ui.MainMenu]  Out of while loop, exiting Main Menu    02-10-2021 Wednesday CST 20:02:02   
+{INFO}   [com.revature.main.Application]  Goodbye!    02-10-2021 Wednesday CST 20:02:02   
+{INFO}   [com.revature.main.Application]  Welcome to the bank    02-10-2021 Wednesday CST 20:29:06   
+{INFO}   [com.revature.ui.MainMenu]  Main Menu    02-10-2021 Wednesday CST 20:29:06   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 20:29:06   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 20:29:06   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 20:29:06   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 20:29:06   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 3    02-10-2021 Wednesday CST 20:29:53   
+{DEBUG}   [com.revature.ui.MainMenu]  Attempting to login to customer menu    02-10-2021 Wednesday CST 20:29:53   
+{INFO}   [com.revature.ui.MainMenu]  Please enter account number    02-10-2021 Wednesday CST 20:29:53   
+{DEBUG}   [com.revature.ui.MainMenu]  1    02-10-2021 Wednesday CST 20:29:56   
+{INFO}   [com.revature.ui.MainMenu]  Please enter password    02-10-2021 Wednesday CST 20:29:56   
+{DEBUG}   [com.revature.ui.MainMenu]  password entered    02-10-2021 Wednesday CST 20:30:01   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@2d363fb3    02-10-2021 Wednesday CST 20:30:01   
+{DEBUG}   [com.revature.util.CustomerLogin]  correct password    02-10-2021 Wednesday CST 20:30:01   
+{DEBUG}   [com.revature.ui.MainMenu]  heading to customer menu    02-10-2021 Wednesday CST 20:30:01   
+{INFO}   [com.revature.ui.CustomerMenu]  Customer Menu    02-10-2021 Wednesday CST 20:30:01   
+{INFO}   [com.revature.ui.CustomerMenu]  1.) Exit Customer Menu    02-10-2021 Wednesday CST 20:30:01   
+{INFO}   [com.revature.ui.CustomerMenu]  2.) View checking account balance    02-10-2021 Wednesday CST 20:30:01   
+{INFO}   [com.revature.ui.CustomerMenu]  3.) View savings account balance    02-10-2021 Wednesday CST 20:30:01   
+{INFO}   [com.revature.ui.CustomerMenu]  4.) Deposit money    02-10-2021 Wednesday CST 20:30:01   
+{INFO}   [com.revature.ui.CustomerMenu]  5.) Withdraw money    02-10-2021 Wednesday CST 20:30:01   
+{INFO}   [com.revature.ui.CustomerMenu]  6.) View checking account transactions    02-10-2021 Wednesday CST 20:30:01   
+{INFO}   [com.revature.ui.CustomerMenu]  7.) View savings account transactions    02-10-2021 Wednesday CST 20:30:01   
+{DEBUG}   [com.revature.ui.CustomerMenu]  user's choice was 4    02-10-2021 Wednesday CST 20:30:13   
+{DEBUG}   [com.revature.ui.CustomerMenu]  Heading to deposit money    02-10-2021 Wednesday CST 20:30:13   
+{INFO}   [com.revature.ui.DepositMoney]  Deposit Menu    02-10-2021 Wednesday CST 20:30:13   
+{INFO}   [com.revature.ui.DepositMoney]  1.) Exit Deposit Menu    02-10-2021 Wednesday CST 20:30:13   
+{INFO}   [com.revature.ui.DepositMoney]  2.) Deposit cash or check    02-10-2021 Wednesday CST 20:30:13   
+{INFO}   [com.revature.ui.DepositMoney]  3.) Deposit money from another account    02-10-2021 Wednesday CST 20:30:13   
+{DEBUG}   [com.revature.ui.DepositMoney]  user's choice was 3    02-10-2021 Wednesday CST 20:30:20   
+{DEBUG}   [com.revature.ui.DepositMoney]  Deposit money from another account    02-10-2021 Wednesday CST 20:30:20   
+{INFO}   [com.revature.service.CustomerService]  Please, enter the other account number (checking accounts should end in a 1 and savings accounts should end in a 2)    02-10-2021 Wednesday CST 20:30:20   
+{DEBUG}   [com.revature.service.CustomerService]  Other account: 22    02-10-2021 Wednesday CST 20:30:23   
+{INFO}   [com.revature.service.CustomerService]  1.) Deposit to/from checking account    02-10-2021 Wednesday CST 20:30:23   
+{INFO}   [com.revature.service.CustomerService]  2.) Deposit to/from savings account    02-10-2021 Wednesday CST 20:30:23   
+{DEBUG}   [com.revature.service.CustomerService]  Account type: 2    02-10-2021 Wednesday CST 20:30:29   
+{INFO}   [com.revature.util.GetCurrencyNumber]  Please enter the Deposit amount    02-10-2021 Wednesday CST 20:30:29   
+{DEBUG}   [com.revature.util.GetCurrencyNumber]  value: 1.0    02-10-2021 Wednesday CST 20:30:32   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@3b192d32    02-10-2021 Wednesday CST 20:30:32   
+{DEBUG}   [com.revature.service.CustomerService]  CustomerAccount [accountNumber=2, firstName=Vin, lastName=Ing, checkingID=21, savingsID=22, checkingBalance=10000.0, savingBalance=19314.0, dob=1990-06-03]    02-10-2021 Wednesday CST 20:30:32   
+{INFO}   [com.revature.service.CustomerService]  12 will Deposit 1.0 to 22    02-10-2021 Wednesday CST 20:30:32   
+{INFO}   [com.revature.service.CustomerService]  To complete transaction, 22 must enter password    02-10-2021 Wednesday CST 20:30:32   
+{INFO}   [com.revature.service.CustomerService]  Please enter password    02-10-2021 Wednesday CST 20:30:32   
+{DEBUG}   [com.revature.service.CustomerService]  password entered    02-10-2021 Wednesday CST 20:30:37   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@2a33fae0    02-10-2021 Wednesday CST 20:30:37   
+{DEBUG}   [com.revature.util.CustomerLogin]  correct password    02-10-2021 Wednesday CST 20:30:37   
+{INFO}   [com.revature.service.CustomerService]  Login successful    02-10-2021 Wednesday CST 20:30:37   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@11028347    02-10-2021 Wednesday CST 20:30:37   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  result: 1    02-10-2021 Wednesday CST 20:30:37   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  commited    02-10-2021 Wednesday CST 20:30:37   
+{INFO}   [com.revature.service.CustomerService]  Transaction succesful    02-10-2021 Wednesday CST 20:30:37   
+{INFO}   [com.revature.ui.DepositMoney]  1.) Exit Deposit Menu    02-10-2021 Wednesday CST 20:30:37   
+{INFO}   [com.revature.ui.DepositMoney]  2.) Deposit cash or check    02-10-2021 Wednesday CST 20:30:37   
+{INFO}   [com.revature.ui.DepositMoney]  3.) Deposit money from another account    02-10-2021 Wednesday CST 20:30:37   
+{DEBUG}   [com.revature.ui.DepositMoney]  user's choice was 3    02-10-2021 Wednesday CST 20:31:05   
+{DEBUG}   [com.revature.ui.DepositMoney]  Deposit money from another account    02-10-2021 Wednesday CST 20:31:05   
+{INFO}   [com.revature.service.CustomerService]  Please, enter the other account number (checking accounts should end in a 1 and savings accounts should end in a 2)    02-10-2021 Wednesday CST 20:31:05   
+{DEBUG}   [com.revature.service.CustomerService]  Other account: 22    02-10-2021 Wednesday CST 20:31:08   
+{INFO}   [com.revature.service.CustomerService]  1.) Deposit to/from checking account    02-10-2021 Wednesday CST 20:31:08   
+{INFO}   [com.revature.service.CustomerService]  2.) Deposit to/from savings account    02-10-2021 Wednesday CST 20:31:08   
+{DEBUG}   [com.revature.service.CustomerService]  Account type: 1    02-10-2021 Wednesday CST 20:31:10   
+{INFO}   [com.revature.util.GetCurrencyNumber]  Please enter the Deposit amount    02-10-2021 Wednesday CST 20:31:10   
+{DEBUG}   [com.revature.util.GetCurrencyNumber]  value: 1.0    02-10-2021 Wednesday CST 20:31:13   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@1f89ab83    02-10-2021 Wednesday CST 20:31:13   
+{DEBUG}   [com.revature.service.CustomerService]  CustomerAccount [accountNumber=2, firstName=Vin, lastName=Ing, checkingID=21, savingsID=22, checkingBalance=10000.0, savingBalance=19313.0, dob=1990-06-03]    02-10-2021 Wednesday CST 20:31:13   
+{INFO}   [com.revature.service.CustomerService]  11 will Deposit 1.0 to 22    02-10-2021 Wednesday CST 20:31:13   
+{INFO}   [com.revature.service.CustomerService]  To complete transaction, 22 must enter password    02-10-2021 Wednesday CST 20:31:13   
+{INFO}   [com.revature.service.CustomerService]  Please enter password    02-10-2021 Wednesday CST 20:31:13   
+{DEBUG}   [com.revature.service.CustomerService]  password entered    02-10-2021 Wednesday CST 20:31:19   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@61064425    02-10-2021 Wednesday CST 20:31:20   
+{DEBUG}   [com.revature.util.CustomerLogin]  correct password    02-10-2021 Wednesday CST 20:31:20   
+{INFO}   [com.revature.service.CustomerService]  Login successful    02-10-2021 Wednesday CST 20:31:20   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@299a06ac    02-10-2021 Wednesday CST 20:31:20   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  result: 1    02-10-2021 Wednesday CST 20:31:20   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  commited    02-10-2021 Wednesday CST 20:31:20   
+{INFO}   [com.revature.service.CustomerService]  Transaction succesful    02-10-2021 Wednesday CST 20:31:20   
+{INFO}   [com.revature.ui.DepositMoney]  1.) Exit Deposit Menu    02-10-2021 Wednesday CST 20:31:20   
+{INFO}   [com.revature.ui.DepositMoney]  2.) Deposit cash or check    02-10-2021 Wednesday CST 20:31:20   
+{INFO}   [com.revature.ui.DepositMoney]  3.) Deposit money from another account    02-10-2021 Wednesday CST 20:31:20   
+{DEBUG}   [com.revature.ui.DepositMoney]  user's choice was 3    02-10-2021 Wednesday CST 20:31:22   
+{DEBUG}   [com.revature.ui.DepositMoney]  Deposit money from another account    02-10-2021 Wednesday CST 20:31:22   
+{INFO}   [com.revature.service.CustomerService]  Please, enter the other account number (checking accounts should end in a 1 and savings accounts should end in a 2)    02-10-2021 Wednesday CST 20:31:22   
+{DEBUG}   [com.revature.service.CustomerService]  Other account: 2    02-10-2021 Wednesday CST 20:31:27   
+{INFO}   [com.revature.service.CustomerService]  1.) Deposit to/from checking account    02-10-2021 Wednesday CST 20:31:27   
+{INFO}   [com.revature.service.CustomerService]  2.) Deposit to/from savings account    02-10-2021 Wednesday CST 20:31:27   
+{DEBUG}   [com.revature.service.CustomerService]  Account type: 2    02-10-2021 Wednesday CST 20:31:28   
+{INFO}   [com.revature.util.GetCurrencyNumber]  Please enter the Deposit amount    02-10-2021 Wednesday CST 20:31:28   
+{DEBUG}   [com.revature.util.GetCurrencyNumber]  value: 100000.0    02-10-2021 Wednesday CST 20:31:32   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@7b3300e5    02-10-2021 Wednesday CST 20:31:32   
+{DEBUG}   [com.revature.service.CustomerService]  customer account not found    02-10-2021 Wednesday CST 20:31:32   
+{INFO}   [com.revature.service.CustomerService]  Insufficient Funds    02-10-2021 Wednesday CST 20:31:32   
+{INFO}   [com.revature.ui.DepositMoney]  1.) Exit Deposit Menu    02-10-2021 Wednesday CST 20:31:32   
+{INFO}   [com.revature.ui.DepositMoney]  2.) Deposit cash or check    02-10-2021 Wednesday CST 20:31:32   
+{INFO}   [com.revature.ui.DepositMoney]  3.) Deposit money from another account    02-10-2021 Wednesday CST 20:31:32   
+{DEBUG}   [com.revature.ui.DepositMoney]  user's choice was 3    02-10-2021 Wednesday CST 20:31:36   
+{DEBUG}   [com.revature.ui.DepositMoney]  Deposit money from another account    02-10-2021 Wednesday CST 20:31:36   
+{INFO}   [com.revature.service.CustomerService]  Please, enter the other account number (checking accounts should end in a 1 and savings accounts should end in a 2)    02-10-2021 Wednesday CST 20:31:36   
+{DEBUG}   [com.revature.service.CustomerService]  Other account: 22    02-10-2021 Wednesday CST 20:31:38   
+{INFO}   [com.revature.service.CustomerService]  1.) Deposit to/from checking account    02-10-2021 Wednesday CST 20:31:38   
+{INFO}   [com.revature.service.CustomerService]  2.) Deposit to/from savings account    02-10-2021 Wednesday CST 20:31:38   
+{DEBUG}   [com.revature.service.CustomerService]  Account type: 1    02-10-2021 Wednesday CST 20:31:39   
+{INFO}   [com.revature.util.GetCurrencyNumber]  Please enter the Deposit amount    02-10-2021 Wednesday CST 20:31:40   
+{INFO}   [com.revature.util.GetCurrencyNumber]  Please enter a number in the form of 0.00 for initial checking and savings account values    02-10-2021 Wednesday CST 20:31:43   
+{INFO}   [com.revature.util.GetCurrencyNumber]  Your account was not succesfully created please try again    02-10-2021 Wednesday CST 20:31:43   
+{INFO}   [com.revature.service.CustomerService]  The amount for the Deposit should be greater and or equal to 0 and contain no more than 2 digits after the decimal    02-10-2021 Wednesday CST 20:31:43   
+{INFO}   [com.revature.ui.DepositMoney]  1.) Exit Deposit Menu    02-10-2021 Wednesday CST 20:31:43   
+{INFO}   [com.revature.ui.DepositMoney]  2.) Deposit cash or check    02-10-2021 Wednesday CST 20:31:43   
+{INFO}   [com.revature.ui.DepositMoney]  3.) Deposit money from another account    02-10-2021 Wednesday CST 20:31:43   
+{DEBUG}   [com.revature.ui.DepositMoney]  user's choice was 3    02-10-2021 Wednesday CST 20:31:57   
+{DEBUG}   [com.revature.ui.DepositMoney]  Deposit money from another account    02-10-2021 Wednesday CST 20:31:57   
+{INFO}   [com.revature.service.CustomerService]  Please, enter the other account number (checking accounts should end in a 1 and savings accounts should end in a 2)    02-10-2021 Wednesday CST 20:31:57   
+{DEBUG}   [com.revature.service.CustomerService]  Other account: 22    02-10-2021 Wednesday CST 20:32:00   
+{INFO}   [com.revature.service.CustomerService]  1.) Deposit to/from checking account    02-10-2021 Wednesday CST 20:32:00   
+{INFO}   [com.revature.service.CustomerService]  2.) Deposit to/from savings account    02-10-2021 Wednesday CST 20:32:00   
+{INFO}   [com.revature.service.CustomerService]  Please enter a number 1 or a 2 for the account type    02-10-2021 Wednesday CST 20:32:05   
+{INFO}   [com.revature.ui.DepositMoney]  1.) Exit Deposit Menu    02-10-2021 Wednesday CST 20:32:05   
+{INFO}   [com.revature.ui.DepositMoney]  2.) Deposit cash or check    02-10-2021 Wednesday CST 20:32:05   
+{INFO}   [com.revature.ui.DepositMoney]  3.) Deposit money from another account    02-10-2021 Wednesday CST 20:32:05   
+{DEBUG}   [com.revature.ui.DepositMoney]  user's choice was 3    02-10-2021 Wednesday CST 20:32:25   
+{DEBUG}   [com.revature.ui.DepositMoney]  Deposit money from another account    02-10-2021 Wednesday CST 20:32:25   
+{INFO}   [com.revature.service.CustomerService]  Please, enter the other account number (checking accounts should end in a 1 and savings accounts should end in a 2)    02-10-2021 Wednesday CST 20:32:25   
+{DEBUG}   [com.revature.service.CustomerService]  Other account: 22    02-10-2021 Wednesday CST 20:32:27   
+{INFO}   [com.revature.service.CustomerService]  1.) Deposit to/from checking account    02-10-2021 Wednesday CST 20:32:27   
+{INFO}   [com.revature.service.CustomerService]  2.) Deposit to/from savings account    02-10-2021 Wednesday CST 20:32:27   
+{DEBUG}   [com.revature.service.CustomerService]  Account type: 2    02-10-2021 Wednesday CST 20:32:28   
+{INFO}   [com.revature.util.GetCurrencyNumber]  Please enter the Deposit amount    02-10-2021 Wednesday CST 20:32:28   
+{DEBUG}   [com.revature.util.GetCurrencyNumber]  value: 20.254    02-10-2021 Wednesday CST 20:32:34   
+{INFO}   [com.revature.service.CustomerService]  The amount for the Deposit should be greater and or equal to 0 and contain no more than 2 digits after the decimal    02-10-2021 Wednesday CST 20:32:34   
+{INFO}   [com.revature.ui.DepositMoney]  1.) Exit Deposit Menu    02-10-2021 Wednesday CST 20:32:34   
+{INFO}   [com.revature.ui.DepositMoney]  2.) Deposit cash or check    02-10-2021 Wednesday CST 20:32:34   
+{INFO}   [com.revature.ui.DepositMoney]  3.) Deposit money from another account    02-10-2021 Wednesday CST 20:32:34   
+{DEBUG}   [com.revature.ui.DepositMoney]  user's choice was 1    02-10-2021 Wednesday CST 20:33:13   
+{INFO}   [com.revature.ui.DepositMoney]  Exiting Deposit Menu    02-10-2021 Wednesday CST 20:33:13   
+{DEBUG}   [com.revature.ui.DepositMoney]  Out of while loop, exiting Deposit Menu    02-10-2021 Wednesday CST 20:33:13   
+{INFO}   [com.revature.ui.CustomerMenu]  1.) Exit Customer Menu    02-10-2021 Wednesday CST 20:33:13   
+{INFO}   [com.revature.ui.CustomerMenu]  2.) View checking account balance    02-10-2021 Wednesday CST 20:33:13   
+{INFO}   [com.revature.ui.CustomerMenu]  3.) View savings account balance    02-10-2021 Wednesday CST 20:33:13   
+{INFO}   [com.revature.ui.CustomerMenu]  4.) Deposit money    02-10-2021 Wednesday CST 20:33:13   
+{INFO}   [com.revature.ui.CustomerMenu]  5.) Withdraw money    02-10-2021 Wednesday CST 20:33:13   
+{INFO}   [com.revature.ui.CustomerMenu]  6.) View checking account transactions    02-10-2021 Wednesday CST 20:33:13   
+{INFO}   [com.revature.ui.CustomerMenu]  7.) View savings account transactions    02-10-2021 Wednesday CST 20:33:13   
+{DEBUG}   [com.revature.ui.CustomerMenu]  user's choice was 1    02-10-2021 Wednesday CST 20:33:13   
+{INFO}   [com.revature.ui.CustomerMenu]  Exiting Customer Menu    02-10-2021 Wednesday CST 20:33:13   
+{DEBUG}   [com.revature.ui.CustomerMenu]  Out of while loop, exiting Customer Menu    02-10-2021 Wednesday CST 20:33:13   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 20:33:13   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 20:33:13   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 20:33:13   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 20:33:13   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 1    02-10-2021 Wednesday CST 20:33:14   
+{INFO}   [com.revature.ui.MainMenu]  Exiting Main Menu    02-10-2021 Wednesday CST 20:33:14   
+{DEBUG}   [com.revature.ui.MainMenu]  Out of while loop, exiting Main Menu    02-10-2021 Wednesday CST 20:33:14   
+{INFO}   [com.revature.main.Application]  Goodbye!    02-10-2021 Wednesday CST 20:33:14   
+{INFO}   [com.revature.main.Application]  Welcome to the bank    02-10-2021 Wednesday CST 20:58:21   
+{INFO}   [com.revature.ui.MainMenu]  Main Menu    02-10-2021 Wednesday CST 20:58:21   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 20:58:21   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 20:58:21   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 20:58:21   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 20:58:21   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 3    02-10-2021 Wednesday CST 20:58:24   
+{DEBUG}   [com.revature.ui.MainMenu]  Attempting to login to customer menu    02-10-2021 Wednesday CST 20:58:24   
+{INFO}   [com.revature.ui.MainMenu]  Please enter account number    02-10-2021 Wednesday CST 20:58:24   
+{DEBUG}   [com.revature.ui.MainMenu]  1    02-10-2021 Wednesday CST 20:58:27   
+{INFO}   [com.revature.ui.MainMenu]  Please enter password    02-10-2021 Wednesday CST 20:58:27   
+{DEBUG}   [com.revature.ui.MainMenu]  password entered    02-10-2021 Wednesday CST 20:58:32   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@2d363fb3    02-10-2021 Wednesday CST 20:58:32   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  about to execute Query for account: 1    02-10-2021 Wednesday CST 20:58:32   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  Query executed    02-10-2021 Wednesday CST 20:58:32   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  pswd.next()    02-10-2021 Wednesday CST 20:58:32   
+{DEBUG}   [com.revature.util.CustomerLogin]  correct password    02-10-2021 Wednesday CST 20:58:32   
+{DEBUG}   [com.revature.ui.MainMenu]  heading to customer menu    02-10-2021 Wednesday CST 20:58:32   
+{INFO}   [com.revature.ui.CustomerMenu]  Customer Menu    02-10-2021 Wednesday CST 20:58:32   
+{INFO}   [com.revature.ui.CustomerMenu]  1.) Exit Customer Menu    02-10-2021 Wednesday CST 20:58:32   
+{INFO}   [com.revature.ui.CustomerMenu]  2.) View checking account balance    02-10-2021 Wednesday CST 20:58:32   
+{INFO}   [com.revature.ui.CustomerMenu]  3.) View savings account balance    02-10-2021 Wednesday CST 20:58:32   
+{INFO}   [com.revature.ui.CustomerMenu]  4.) Deposit money    02-10-2021 Wednesday CST 20:58:32   
+{INFO}   [com.revature.ui.CustomerMenu]  5.) Withdraw money    02-10-2021 Wednesday CST 20:58:32   
+{INFO}   [com.revature.ui.CustomerMenu]  6.) View checking account transactions    02-10-2021 Wednesday CST 20:58:32   
+{INFO}   [com.revature.ui.CustomerMenu]  7.) View savings account transactions    02-10-2021 Wednesday CST 20:58:32   
+{DEBUG}   [com.revature.ui.CustomerMenu]  user's choice was 1    02-10-2021 Wednesday CST 20:58:33   
+{INFO}   [com.revature.ui.CustomerMenu]  Exiting Customer Menu    02-10-2021 Wednesday CST 20:58:33   
+{DEBUG}   [com.revature.ui.CustomerMenu]  Out of while loop, exiting Customer Menu    02-10-2021 Wednesday CST 20:58:33   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 20:58:33   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 20:58:33   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 20:58:33   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 20:58:33   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 3    02-10-2021 Wednesday CST 20:58:36   
+{DEBUG}   [com.revature.ui.MainMenu]  Attempting to login to customer menu    02-10-2021 Wednesday CST 20:58:36   
+{INFO}   [com.revature.ui.MainMenu]  Please enter account number    02-10-2021 Wednesday CST 20:58:36   
+{DEBUG}   [com.revature.ui.MainMenu]  1    02-10-2021 Wednesday CST 20:58:36   
+{INFO}   [com.revature.ui.MainMenu]  Please enter password    02-10-2021 Wednesday CST 20:58:36   
+{DEBUG}   [com.revature.ui.MainMenu]  password entered    02-10-2021 Wednesday CST 20:58:41   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@3b192d32    02-10-2021 Wednesday CST 20:58:41   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  about to execute Query for account: 1    02-10-2021 Wednesday CST 20:58:41   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  Query executed    02-10-2021 Wednesday CST 20:58:41   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  pswd.next()    02-10-2021 Wednesday CST 20:58:41   
+{DEBUG}   [com.revature.util.CustomerLogin]  incorrect password    02-10-2021 Wednesday CST 20:58:41   
+{INFO}   [com.revature.ui.MainMenu]  Incorrect account number and/or password    02-10-2021 Wednesday CST 20:58:41   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 20:58:41   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 20:58:41   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 20:58:41   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 20:58:41   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 3    02-10-2021 Wednesday CST 20:58:46   
+{DEBUG}   [com.revature.ui.MainMenu]  Attempting to login to customer menu    02-10-2021 Wednesday CST 20:58:46   
+{INFO}   [com.revature.ui.MainMenu]  Please enter account number    02-10-2021 Wednesday CST 20:58:46   
+{DEBUG}   [com.revature.ui.MainMenu]  2    02-10-2021 Wednesday CST 20:58:47   
+{INFO}   [com.revature.ui.MainMenu]  Please enter password    02-10-2021 Wednesday CST 20:58:47   
+{DEBUG}   [com.revature.ui.MainMenu]  password entered    02-10-2021 Wednesday CST 20:58:49   
+{DEBUG}   [com.revature.util.ConnectionUtil]  connected: org.postgresql.jdbc.PgConnection@311d617d    02-10-2021 Wednesday CST 20:58:49   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  about to execute Query for account: 2    02-10-2021 Wednesday CST 20:58:49   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  Query executed    02-10-2021 Wednesday CST 20:58:49   
+{DEBUG}   [com.revature.DAO.CustomerDAOImpl]  pswd.next()    02-10-2021 Wednesday CST 20:58:49   
+{DEBUG}   [com.revature.util.CustomerLogin]  correct password    02-10-2021 Wednesday CST 20:58:49   
+{DEBUG}   [com.revature.ui.MainMenu]  heading to customer menu    02-10-2021 Wednesday CST 20:58:49   
+{INFO}   [com.revature.ui.CustomerMenu]  Customer Menu    02-10-2021 Wednesday CST 20:58:49   
+{INFO}   [com.revature.ui.CustomerMenu]  1.) Exit Customer Menu    02-10-2021 Wednesday CST 20:58:49   
+{INFO}   [com.revature.ui.CustomerMenu]  2.) View checking account balance    02-10-2021 Wednesday CST 20:58:49   
+{INFO}   [com.revature.ui.CustomerMenu]  3.) View savings account balance    02-10-2021 Wednesday CST 20:58:49   
+{INFO}   [com.revature.ui.CustomerMenu]  4.) Deposit money    02-10-2021 Wednesday CST 20:58:49   
+{INFO}   [com.revature.ui.CustomerMenu]  5.) Withdraw money    02-10-2021 Wednesday CST 20:58:49   
+{INFO}   [com.revature.ui.CustomerMenu]  6.) View checking account transactions    02-10-2021 Wednesday CST 20:58:49   
+{INFO}   [com.revature.ui.CustomerMenu]  7.) View savings account transactions    02-10-2021 Wednesday CST 20:58:49   
+{DEBUG}   [com.revature.ui.CustomerMenu]  user's choice was 1    02-10-2021 Wednesday CST 20:58:53   
+{INFO}   [com.revature.ui.CustomerMenu]  Exiting Customer Menu    02-10-2021 Wednesday CST 20:58:53   
+{DEBUG}   [com.revature.ui.CustomerMenu]  Out of while loop, exiting Customer Menu    02-10-2021 Wednesday CST 20:58:53   
+{INFO}   [com.revature.ui.MainMenu]  1.) Exit application    02-10-2021 Wednesday CST 20:58:53   
+{INFO}   [com.revature.ui.MainMenu]  2.) Login as employee    02-10-2021 Wednesday CST 20:58:53   
+{INFO}   [com.revature.ui.MainMenu]  3.) Login as customer    02-10-2021 Wednesday CST 20:58:53   
+{INFO}   [com.revature.ui.MainMenu]  4.) Create customer account    02-10-2021 Wednesday CST 20:58:53   
+{DEBUG}   [com.revature.ui.MainMenu]  user's choice was 1    02-10-2021 Wednesday CST 20:58:53   
+{INFO}   [com.revature.ui.MainMenu]  Exiting Main Menu    02-10-2021 Wednesday CST 20:58:53   
+{DEBUG}   [com.revature.ui.MainMenu]  Out of while loop, exiting Main Menu    02-10-2021 Wednesday CST 20:58:53   
+{INFO}   [com.revature.main.Application]  Goodbye!    02-10-2021 Wednesday CST 20:58:53   

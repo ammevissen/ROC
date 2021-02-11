@@ -3,6 +3,8 @@ package com.revature.ui;
 import org.apache.log4j.Logger;
 
 import com.revature.service.EmployeeService;
+import com.revature.util.GetAccountNumber;
+import com.revature.util.ValidAccount;
 
 
 public class SearchForAccountEmployee implements MenuSystem{
@@ -35,40 +37,45 @@ public class SearchForAccountEmployee implements MenuSystem{
 				case 1:
 					log.info("Exiting Employee Search for Account Menu");
 					break;
+
 				case 2:
-					//System.out.println("2");
 					log.info("Enter the first name of the account to search for:");
 					String firstName=MenuSystem.sc.nextLine();
-					log.debug("Entering Search for Account by First Name");
+					log.debug("Entering search for account by first name");
 					EmployeeService.customer("firstName", firstName);
 					break;					
+				
 				case 3:
-					//System.out.println("3");
 					log.info("Enter the last name of the account to search for:");
 					String lastName=MenuSystem.sc.nextLine();
-					log.debug("Entering Search for Account by Last Name");
+					log.debug("Entering search for account by last name");
 					EmployeeService.customer("lastName", lastName);
 					break;
+				
 				case 4:
-					//System.out.println("4");
-					log.info("Enter the account number of the account to search for:");
-					int acc=Integer.parseInt(MenuSystem.sc.nextLine());
-					log.debug("Entering Search for Account by Account Number: "+acc);
-					EmployeeService.customer("accountNumber", acc);
+					int acc=GetAccountNumber.getAccountNumber("Enter the account number of the account to search for:");
+					log.debug("Entering search for account by account number: "+acc);
+					if (!ValidAccount.isNotValidAccount(acc)) {
+						EmployeeService.customer("accountNumber", acc);
+					}
+					
 					break;
+				
 				case 5:
-					//System.out.println("5");
-					log.info("Enter the checking account number of the account to search for:");
-					int accChecking=Integer.parseInt(MenuSystem.sc.nextLine());
-					log.debug("Entering Search for checking Account by Checking Account Number: "+accChecking);
-					EmployeeService.customer("checkingID", accChecking);
+					int accChecking=GetAccountNumber.getAccountNumber("Enter the checking account number of the account to search for:");
+					log.debug("Entering search for checking account by checking account number: "+accChecking);
+					if (!ValidAccount.isNotValidAccount(accChecking)) {
+						EmployeeService.customer("checkingID", accChecking);
+					}
+					
 					break;
+				
 				case 6:
-					//System.out.println("6");
-					log.info("Enter the savings account number of the account to search for:");
-					int accSaving=Integer.parseInt(MenuSystem.sc.nextLine());
-					log.debug("Entering Search for savings account by Saving Account Number: "+accSaving);
-					EmployeeService.customer("savnigsID", accSaving);
+					int accSaving=GetAccountNumber.getAccountNumber("Enter the savings account number of the account to search for:");
+					log.debug("Entering search for savings account by saving account number: "+accSaving);
+					if (!ValidAccount.isNotValidAccount(accSaving)) {
+						EmployeeService.customer("savnigsID", accSaving);
+					}
 					break;
 
 				default:

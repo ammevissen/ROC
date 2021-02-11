@@ -29,18 +29,22 @@ public class EmployeeMenu implements MenuSystem {
 				case 1:
 					log.info("Exiting Employee Menu");
 					break;
+
 				case 2:
-					log.debug("heading to search for account as employee menu");
+					log.debug("Heading to search for account as employee menu");
 					MenuSystem searchForAccountEmployee=new SearchForAccountEmployee();
 					searchForAccountEmployee.display();
 					break;					
+				
 				case 3:
-					log.debug("heading to view transactions as employee menu");
+					log.debug("Heading to view transactions as employee menu");
 					MenuSystem viewTransactionsAsEmployee=new ViewTransactionsAsEmployee();
 					viewTransactionsAsEmployee.display();
 					break;
+
 				//case 4:
 				//	break;
+
 				default:
 					log.info("Pease enter a value between 1 and 3");
 					break;

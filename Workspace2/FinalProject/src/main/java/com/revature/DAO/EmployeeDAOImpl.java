@@ -19,22 +19,26 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 	
 	@Override
 	public String getPassword(int accountNumber) throws DatabaseConnectionException {
+		//Get employee password
 		String password;
 		
 		try(Connection connection=ConnectionUtil.getConnection()){
 	
+			//Setting the PreparedStatment
 			String getPassword="SELECT employeePassword FROM roc_banking.employee WHERE employeeNumber=?";
 			PreparedStatement pstmt=connection.prepareStatement(getPassword);		
 			pstmt.setInt(1, accountNumber);
 			
+			//Executing the call to SQL
 			log.debug("about to execute Query for account: "+accountNumber);
 			ResultSet pswd=pstmt.executeQuery();
 			log.debug("Query executed");
 
+			//Retrieving the password from the call to SQL 
 			if(pswd.next()){
 				log.debug("pswd.next()");
 				password=pswd.getString(1);
-				log.debug("password: "+password);
+				//log.debug("password: "+password);
 			}else {
 				password=null;
 			}

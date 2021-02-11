@@ -12,7 +12,6 @@ public class DepositMoney implements MenuSystemSecure{
 		int choice=0;
 		log.info("Deposit Menu");
 
-		
 		do {
 			log.info("1.) Exit Deposit Menu");
 			log.info("2.) Deposit cash or check");
@@ -29,14 +28,14 @@ public class DepositMoney implements MenuSystemSecure{
 				case 1:
 					log.info("Exiting Deposit Menu");
 					break;
+
 				case 2:
-					//System.out.println("2");
-					log.debug("Deposit Cash or Check");
+					log.debug("Deposit cash or check");
 					CustomerService.MoneyExchange(accountNumber, "Deposit", 0);
 					break;					
+				
 				case 3:
-					//System.out.println("3");
-					log.debug("Deposit from another Account");
+					log.debug("Deposit money from another account");
 					CustomerService.MoneyExchange(accountNumber, "Deposit", -1);
 					break;
 
@@ -48,7 +47,6 @@ public class DepositMoney implements MenuSystemSecure{
 		}while (choice!=1);
 		log.debug("Out of while loop, exiting Deposit Menu");
 
-		
 	}
 
 }
